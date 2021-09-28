@@ -32,6 +32,11 @@ class Actualites
      */
     private $texte;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=chocolaterie::class)
+     */
+    private $chocolaterie;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Actualites
     public function setTexte(string $texte): self
     {
         $this->texte = $texte;
+
+        return $this;
+    }
+
+    public function getChocolaterie(): ?chocolaterie
+    {
+        return $this->chocolaterie;
+    }
+
+    public function setChocolaterie(?chocolaterie $chocolaterie): self
+    {
+        $this->chocolaterie = $chocolaterie;
 
         return $this;
     }

@@ -32,6 +32,12 @@ class Actualitesimg
      */
     private $titre;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=actualites::class)
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $actualites;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +75,18 @@ class Actualitesimg
     public function setTitre(string $titre): self
     {
         $this->titre = $titre;
+
+        return $this;
+    }
+
+    public function getActualites(): ?actualites
+    {
+        return $this->actualites;
+    }
+
+    public function setActualites(?actualites $actualites): self
+    {
+        $this->actualites = $actualites;
 
         return $this;
     }

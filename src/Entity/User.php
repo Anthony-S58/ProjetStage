@@ -77,6 +77,12 @@ class User
      */
     private $linkedin;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=chocolaterie::class)
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $chocolaterie;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -222,6 +228,18 @@ class User
     public function setLinkedin(?string $linkedin): self
     {
         $this->linkedin = $linkedin;
+
+        return $this;
+    }
+
+    public function getChocolaterie(): ?chocolaterie
+    {
+        return $this->chocolaterie;
+    }
+
+    public function setChocolaterie(?chocolaterie $chocolaterie): self
+    {
+        $this->chocolaterie = $chocolaterie;
 
         return $this;
     }
