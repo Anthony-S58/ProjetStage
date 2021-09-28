@@ -28,12 +28,6 @@ class Post
     private $description;
 
     /**
-     * @ORM\ManyToOne(targetEntity=user::class)
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $user;
-
-    /**
      * @ORM\ManyToOne(targetEntity=categories::class)
      * @ORM\JoinColumn(nullable=false)
      */
@@ -64,18 +58,6 @@ class Post
     public function setDescription(string $description): self
     {
         $this->description = $description;
-
-        return $this;
-    }
-
-    public function getUser(): ?user
-    {
-        return $this->user;
-    }
-
-    public function setUser(?user $user): self
-    {
-        $this->user = $user;
 
         return $this;
     }

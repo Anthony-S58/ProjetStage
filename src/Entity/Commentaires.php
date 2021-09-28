@@ -28,12 +28,6 @@ class Commentaires
     private $date;
 
     /**
-     * @ORM\ManyToOne(targetEntity=user::class)
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $user;
-
-    /**
      * @ORM\ManyToOne(targetEntity=post::class)
      * @ORM\JoinColumn(nullable=false)
      */
@@ -64,18 +58,6 @@ class Commentaires
     public function setDate(\DateTimeInterface $date): self
     {
         $this->date = $date;
-
-        return $this;
-    }
-
-    public function getUser(): ?user
-    {
-        return $this->user;
-    }
-
-    public function setUser(?user $user): self
-    {
-        $this->user = $user;
 
         return $this;
     }
