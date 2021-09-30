@@ -28,13 +28,13 @@ class Post
     private $description;
 
     /**
-     * @ORM\ManyToOne(targetEntity=categories::class)
+     * @ORM\ManyToOne(targetEntity=Categories::class)
      * @ORM\JoinColumn(nullable=false)
      */
     private $categories;
 
     /**
-     * @ORM\ManyToOne(targetEntity=user::class)
+     * @ORM\ManyToOne(targetEntity=User::class)
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;

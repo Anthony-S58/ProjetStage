@@ -18,13 +18,13 @@ class Likes
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=post::class)
+     * @ORM\ManyToOne(targetEntity=Post::class)
      * @ORM\JoinColumn(nullable=false)
      */
     private $post;
 
     /**
-     * @ORM\ManyToOne(targetEntity=user::class)
+     * @ORM\ManyToOne(targetEntity=User::class)
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;

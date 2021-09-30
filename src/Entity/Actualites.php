@@ -33,7 +33,7 @@ class Actualites
     private $texte;
 
     /**
-     * @ORM\ManyToOne(targetEntity=chocolaterie::class)
+     * @ORM\ManyToOne(targetEntity=Chocolaterie::class)
      */
     private $chocolaterie;
 

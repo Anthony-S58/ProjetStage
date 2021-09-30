@@ -33,7 +33,7 @@ class Actualitesimg
     private $titre;
 
     /**
-     * @ORM\ManyToOne(targetEntity=actualites::class)
+     * @ORM\ManyToOne(targetEntity=Actualites::class)
      * @ORM\JoinColumn(nullable=false)
      */
     private $actualites;

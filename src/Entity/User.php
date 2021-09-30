@@ -76,7 +76,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $linkedin;
 
     /**
-     * @ORM\ManyToOne(targetEntity=chocolaterie::class)
+     * @ORM\ManyToOne(targetEntity=Chocolaterie::class)
      * @ORM\JoinColumn(nullable=false)
      */
     private $chocolaterie;

@@ -33,7 +33,7 @@ class Postimg
     private $titre;
 
     /**
-     * @ORM\ManyToOne(targetEntity=post::class)
+     * @ORM\ManyToOne(targetEntity=Post::class)
      * @ORM\JoinColumn(nullable=false)
      */
     private $post;
