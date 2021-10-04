@@ -38,4 +38,7 @@ class Chocolaterie
 
         return $this;
     }
+    public function __tostring(){
+        return $this->ville;
+    }
 }
