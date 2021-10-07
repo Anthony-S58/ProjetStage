@@ -19,7 +19,7 @@
    
     h1{
         font-family: 'Playfair Display', serif;
-        font-size: 4em;
+        font-size: 3.8em;
     }
     h2{
         font-family: 'Montserrat', sans-serif;
@@ -30,6 +30,7 @@
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    font-family: 'Montserrat', sans-serif;
     .col1{
        .colonnes;
     }
@@ -38,38 +39,33 @@
     }
     input{
         .formstyle;
-        width: 320px;
+        width: 300px;
         height: 40px;
         display: flex;
         flex-direction: column;
-    }
-    textarea{
-       .formstyle; 
-       width: 320px;
-        height: 175px;
-        padding-top: 5px;
-        resize: none;
-        display: flex;
-        flex-direction: column
+        margin-bottom: 10px;
     }
     select {
        .formstyle; 
-       width: 320px;
+       width: 300px;
         height: 40px;
         display: flex;
         flex-direction: column;
         padding-top: 10px; 
+        margin-bottom: 10px;
+        font-weight: bold;
+
     }
     
     ::placeholder{
-        font-family: 'Montserrat', sans-serif;
         padding-left: 5px;
         color: #fff;
     }
 }
 .required{
-    color: #fff;
-    
+    color: #fff; 
+    display: flex;
+    justify-content: flex-start;
 }
 
 .btn{
@@ -80,9 +76,18 @@
     height: 40px;
     border-radius: 2px;
     font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin: auto;
 }
 #validform{
-    margin-top: 30px;
+    margin-top: 10px;  
+
+    .required{
+        display: flex;
+        justify-content: center;
+    } 
+    input{
+        width: 20px;
+        height: 20px;
+        margin-bottom: 20px;
+    }
 }
