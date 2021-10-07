@@ -16,7 +16,7 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 class RegistrationController extends AbstractController
 {
     /**
-     * @Route("/register", name="app_register")
+     * @Route("/register-superadmin", name="app_registersuperadmin")
      */
     
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasherInterface): Response
@@ -36,30 +36,30 @@ class RegistrationController extends AbstractController
             $user->setRoles(
               ['ROLE_SUPER_ADMIN']
             );
-            $user->setDescription(
-                $form->get('description')->getData()
-            );
             $user->setPoste(
                 $form->get('poste')->getData()
             );
-            $user->setPhotoprofil(
-                $form->get('photoprofil')->getData()
-            );
-            $user->setPhotobandeau(
-                $form->get('photobandeau')->getData()
-            );
-            $user->setFacebook(
-                $form->get('facebook')->getData()
-            );
-            $user->setTwitter(
-                $form->get('twitter')->getData()
-            );
-            $user->setInstagram(
-                $form->get('instagram')->getData()
-            );
-            $user->setLinkedin(
-                $form->get('linkedin')->getData()
-            );
+            // $user->setDescription(
+            //     $form->get('description')->getData()
+            // );
+            // $user->setPhotoprofil(
+            //     $form->get('photoprofil')->getData()
+            // );
+            // $user->setPhotobandeau(
+            //     $form->get('photobandeau')->getData()
+            // );
+            // $user->setFacebook(
+            //     $form->get('facebook')->getData()
+            // );
+            // $user->setTwitter(
+            //     $form->get('twitter')->getData()
+            // );
+            // $user->setInstagram(
+            //     $form->get('instagram')->getData()
+            // );
+            // $user->setLinkedin(
+            //     $form->get('linkedin')->getData()
+            // );
             $user->setChocolaterie(
                 $form->get('chocolaterie')->getData()
             );
@@ -103,30 +103,30 @@ class RegistrationController extends AbstractController
             $user->setRoles(
               ['ROLE_USER']
             );
-            $user->setDescription(
-                $form->get('description')->getData()
-            );
             $user->setPoste(
                 $form->get('poste')->getData()
             );
-            $user->setPhotoprofil(
-                $form->get('photoprofil')->getData()
-            );
-            $user->setPhotobandeau(
-                $form->get('photobandeau')->getData()
-            );
-            $user->setFacebook(
-                $form->get('facebook')->getData()
-            );
-            $user->setTwitter(
-                $form->get('twitter')->getData()
-            );
-            $user->setInstagram(
-                $form->get('instagram')->getData()
-            );
-            $user->setLinkedin(
-                $form->get('linkedin')->getData()
-            );
+            // $user->setDescription(
+            //     $form->get('description')->getData()
+            // );
+            // $user->setPhotoprofil(
+            //     $form->get('photoprofil')->getData()
+            // );
+            // $user->setPhotobandeau(
+            //     $form->get('photobandeau')->getData()
+            // );
+            // $user->setFacebook(
+            //     $form->get('facebook')->getData()
+            // );
+            // $user->setTwitter(
+            //     $form->get('twitter')->getData()
+            // );
+            // $user->setInstagram(
+            //     $form->get('instagram')->getData()
+            // );
+            // $user->setLinkedin(
+            //     $form->get('linkedin')->getData()
+            // );
             $user->setChocolaterie(
                 $form->get('chocolaterie')->getData()
             );
@@ -172,30 +172,30 @@ class RegistrationController extends AbstractController
             $user->setRoles(
               ['ROLE_ADMIN']
             );
-            $user->setDescription(
-                $form->get('description')->getData()
-            );
             $user->setPoste(
                 $form->get('poste')->getData()
             );
-            $user->setPhotoprofil(
-                $form->get('photoprofil')->getData()
-            );
-            $user->setPhotobandeau(
-                $form->get('photobandeau')->getData()
-            );
-            $user->setFacebook(
-                $form->get('facebook')->getData()
-            );
-            $user->setTwitter(
-                $form->get('twitter')->getData()
-            );
-            $user->setInstagram(
-                $form->get('instagram')->getData()
-            );
-            $user->setLinkedin(
-                $form->get('linkedin')->getData()
-            );
+            // $user->setDescription(
+            //     $form->get('description')->getData()
+            // );
+            // $user->setPhotoprofil(
+            //     $form->get('photoprofil')->getData()
+            // );
+            // $user->setPhotobandeau(
+            //     $form->get('photobandeau')->getData()
+            // );
+            // $user->setFacebook(
+            //     $form->get('facebook')->getData()
+            // );
+            // $user->setTwitter(
+            //     $form->get('twitter')->getData()
+            // );
+            // $user->setInstagram(
+            //     $form->get('instagram')->getData()
+            // );
+            // $user->setLinkedin(
+            //     $form->get('linkedin')->getData()
+            // );
             $user->setChocolaterie(
                 $form->get('chocolaterie')->getData()
             );

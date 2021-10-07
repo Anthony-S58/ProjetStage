@@ -3,3 +3,86 @@
 @import 'registerresponsive.less';
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#register{
+    height: 100vh;
+    width: 100%;
+    
+}
+#registertitle{
+    color: @color2;
+   
+    h1{
+        font-family: 'Playfair Display', serif;
+        font-size: 4em;
+    }
+    h2{
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+#registerform{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    .col1{
+       .colonnes;
+    }
+    .col2{
+        .colonnes;
+    }
+    input{
+        .formstyle;
+        width: 320px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    textarea{
+       .formstyle; 
+       width: 320px;
+        height: 175px;
+        padding-top: 5px;
+        resize: none;
+        display: flex;
+        flex-direction: column
+    }
+    select {
+       .formstyle; 
+       width: 320px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px; 
+    }
+    
+    ::placeholder{
+        font-family: 'Montserrat', sans-serif;
+        padding-left: 5px;
+        color: #fff;
+    }
+}
+.required{
+    color: #fff;
+    
+}
+
+.btn{
+    font-family: 'Montserrat', sans-serif;
+    background-color: @color2 ;
+    border: none;
+    width: 200px;
+    height: 40px;
+    border-radius: 2px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+#validform{
+    margin-top: 30px;
+}
