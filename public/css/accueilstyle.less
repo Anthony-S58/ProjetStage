@@ -1,4 +1,7 @@
-@import 'loginvariables.less';
+@import 'registervariables.less';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 
 *{
     margin: 0;
@@ -12,7 +15,7 @@ body{
 }
 
 #bandeau{
-    width: 18%;
+    width: 250px;
     height: 100vh;
     background-color: @color3;
     row-gap: 10px;
@@ -20,17 +23,29 @@ body{
 #bloc1{
 width: 100%;
 height:45vh;
-
 display: flex;
-justify-content: space-around;
 text-align: center;
 align-items: center;
 flex-direction: column;
 
+    #nomprofil {
+        color:#fff;
+        margin-top: 20px;
+        #firstname{
+        font-family: 'Playfair Display', serif;
+        font-weight: 200;
+        }
+        #lastname{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: lighter;
+        }   
+    }
+
     #imageprofil{
-    width: 50%;
-    height: 50%;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
+    margin-top: 30px;
     display: flex;
     justify-content: space-around;
     text-align: center;
@@ -43,17 +58,23 @@ flex-direction: column;
         }
            
     }
-    h2{
+    
+    a{
         color: #fff;
+        text-decoration: none;
     }
     button{
-        width: 200px;
+        width: 180px;
         height: 40px;
+        margin-top: 20px;
         background-color: @color2;
         font-size: 1.1em;
         border-radius: 5px;
         border: none;
         color:#fff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: lighter;
+
     }
 
 }
@@ -66,6 +87,8 @@ flex-direction: column;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
 
     h3{
         margin-bottom: 20px;

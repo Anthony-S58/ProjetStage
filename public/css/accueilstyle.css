@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +23,7 @@ body {
   flex-direction: row;
 }
 #bandeau {
-  width: 18%;
+  width: 250px;
   height: 100vh;
   background-color: #191e39;
   row-gap: 10px;
@@ -18,15 +32,27 @@ body {
   width: 100%;
   height: 45vh;
   display: flex;
-  justify-content: space-around;
   text-align: center;
   align-items: center;
   flex-direction: column;
 }
+#bloc1 #nomprofil {
+  color: #fff;
+  margin-top: 20px;
+}
+#bloc1 #nomprofil #firstname {
+  font-family: 'Playfair Display', serif;
+  font-weight: 200;
+}
+#bloc1 #nomprofil #lastname {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
 #bloc1 #imageprofil {
-  width: 50%;
-  height: 50%;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
+  margin-top: 30px;
   display: flex;
   justify-content: space-around;
   text-align: center;
@@ -37,17 +63,21 @@ body {
   overflow: hidden;
   border-radius: 50%;
 }
-#bloc1 h2 {
+#bloc1 a {
   color: #fff;
+  text-decoration: none;
 }
 #bloc1 button {
-  width: 200px;
+  width: 180px;
   height: 40px;
+  margin-top: 20px;
   background-color: #0baa9f;
   font-size: 1.1em;
   border-radius: 5px;
   border: none;
   color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
 }
 #bloc2 {
   width: 100%;
@@ -58,6 +88,8 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
 }
 #bloc2 h3 {
   margin-bottom: 20px;
