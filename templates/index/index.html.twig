@@ -1,20 +1,38 @@
-{% extends 'base.html.twig' %}
+{# {% extends 'base.html.twig' %} #}
 
-{% block title %}Hello IndexController!{% endblock %}
-
+{% block title %}{% endblock %}
+{% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+            <link rel="stylesheet" href="{{ asset ('css/accueilstyle.css') }}">
+        {% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<div id="bandeau">
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+        <div id="bloc1">
+            <div id="imageprofil">
+                <img src="../img/profils/anthony riviere/anthony-riviere.jpg" alt="">
+            </div>
+            <div id="nomprofil">
+                <h2>Anthony RIVIERE</h2>
+            </div>
+            <div id="button">
+            <button><i class="fas fa-user-alt"></i> Voir mon profil</button>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/laragon/www/ProjetStage/src/Controller/IndexController.php'|file_link(0) }}">src/Controller/IndexController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/laragon/www/ProjetStage/templates/index/index.html.twig'|file_link(0) }}">templates/index/index.html.twig</a></code></li>
-    </ul>
-</div>
+            </div>
+        
+        </div>
+        <div id="bloc2">
+        <div id="liens">
+            <h3 id="accueil">Accueil</h3>
+            <h3>Actualités de l'entreprise</h3>
+            <h3>Trombinoscope</h3>
+            <h3>La vie des chocolateries</h3>
+            <h3><i class="fas fa-power-off"></i> Déconnexion</h3>
+        </div>
+            <img src="../img/logo-david-kenos-blanc.png" width="150px" height="150px" alt="">
+        </div>
+        
+
+    
+    </div>
 {% endblock %}

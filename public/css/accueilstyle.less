@@ -1,0 +1,79 @@
+@import 'loginvariables.less';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(128, 128, 128, 0.300);
+    display: flex;
+    flex-direction: row;
+}
+
+#bandeau{
+    width: 18%;
+    height: 100vh;
+    background-color: @color3;
+    row-gap: 10px;
+}
+#bloc1{
+width: 100%;
+height:45vh;
+
+display: flex;
+justify-content: space-around;
+text-align: center;
+align-items: center;
+flex-direction: column;
+
+    #imageprofil{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+        img{
+            overflow: hidden;
+            border-radius: 50%;
+        }
+           
+    }
+    h2{
+        color: #fff;
+    }
+    button{
+        width: 200px;
+        height: 40px;
+        background-color: @color2;
+        font-size: 1.1em;
+        border-radius: 5px;
+        border: none;
+        color:#fff;
+    }
+
+}
+#bloc2{
+    width: 100%;
+    height:55vh;
+    display: flex;
+    color: #fff;
+    background-color: #13172c;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    h3{
+        margin-bottom: 20px;
+    }
+    #liens{
+        margin-top: 20px;
+        #accueil{
+            background-color: #0baa9f4f;
+        }
+    }
+}
