@@ -23,10 +23,14 @@ body {
   flex-direction: row;
 }
 #bandeau {
-  width: 250px;
+  width: 280px;
   height: 100vh;
   background-color: #191e39;
   row-gap: 10px;
+}
+a {
+  color: #fff;
+  text-decoration: none;
 }
 #bloc1 {
   width: 100%;
@@ -63,16 +67,11 @@ body {
   overflow: hidden;
   border-radius: 50%;
 }
-#bloc1 a {
-  color: #fff;
-  text-decoration: none;
-}
 #bloc1 button {
-  width: 180px;
+  width: 200px;
   height: 40px;
   margin-top: 20px;
   background-color: #0baa9f;
-  font-size: 1.1em;
   border-radius: 5px;
   border: none;
   color: #fff;
@@ -96,6 +95,20 @@ body {
 }
 #bloc2 #liens {
   margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+}
+#bloc2 #liens a {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  padding-left: 40px;
+}
+#bloc2 #liens a:hover {
+  color: #f2bf2c;
+  background-color: #191e39;
 }
 #bloc2 #liens #accueil {
   background-color: #0baa9f4f;

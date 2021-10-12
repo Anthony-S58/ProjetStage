@@ -15,10 +15,15 @@ body{
 }
 
 #bandeau{
-    width: 250px;
+    width: 280px;
     height: 100vh;
     background-color: @color3;
     row-gap: 10px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    
 }
 #bloc1{
 width: 100%;
@@ -59,16 +64,11 @@ flex-direction: column;
            
     }
     
-    a{
-        color: #fff;
-        text-decoration: none;
-    }
     button{
-        width: 180px;
+        width: 200px;
         height: 40px;
         margin-top: 20px;
         background-color: @color2;
-        font-size: 1.1em;
         border-radius: 5px;
         border: none;
         color:#fff;
@@ -95,6 +95,21 @@ flex-direction: column;
     }
     #liens{
         margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 100%;
+
+        a{
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            padding-left:40px;
+        }
+        a:hover{
+            color: @color1;
+            background-color: @color3 ;
+        }
         #accueil{
             background-color: #0baa9f4f;
         }
