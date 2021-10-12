@@ -1,5 +1,8 @@
 {% extends 'base.html.twig' %} {% block title %}Log in!{% endblock %} {% block
-body %}
+stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/loginstyle.css') }}" /> {#{{
+  encore_entry_link_tags("app")
+}}#} {% endblock %} {% blockbody %}
 <form method="post">
   {% if error %}
   <div class="alert alert-danger">
