@@ -6,7 +6,7 @@
             <link rel="stylesheet" href="{{ asset ('css/accueilstyle.css') }}">
         {% endblock %}
 {% block body %}
-<div id="bandeau">
+    <div id="bandeau">
 
         <div id="bloc1">
             <div id="imageprofil">
@@ -16,24 +16,30 @@
                 <h2><span id="firstname">Anthony </span><span id="lastname"> RIVIERE</span></h2>
             </div>
             <div id="button">
-            <button><a href="#"><i class="fas fa-user-alt"></i> Voir mon profil</a></button>
-
+                <button><a href="#"><i class="fas fa-user-alt"></i> Voir mon profil</a></button>
             </div>
         
         </div>
         <div id="bloc2">
-        <div id="liens">
-            <a href="#" id="accueil">Accueil</a>
-            <a href="#">Actualités de l'entreprise</a>
-            <a href="#">Trombinoscope</a>
-            <a href="#">La vie des chocolateries</a>
-            <a href="/logout"><i class="fas fa-power-off"></i> Déconnexion</a>
-        </div>
+            <div id="liens">
+                <a href="#" id="select">Accueil</a>
+                <a href="#">Actualités de l'entreprise</a>
+                <a href="#">Trombinoscope</a>
+                <a href="#">La vie des chocolateries</a>
+                <a href="/logout"><i class="fas fa-power-off"></i> Déconnexion</a>
+            </div>
             <img src="../img/logo-david-kenos-blanc.png" width="150px" height="150px" alt="">
         </div>
         
+    </div>
 
-    
+    <div id="cadres">
+        <div id="posts">
+            
+        </div>
+        <div id="actus">
+                
+        </div>
     </div>
         <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
 

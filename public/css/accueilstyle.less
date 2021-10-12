@@ -13,21 +13,18 @@ body{
     display: flex;
     flex-direction: row;
 }
-
 #bandeau{
     width: 280px;
-    height: 100vh;
+    height: 100%;
     background-color: @color3;
-    row-gap: 10px;
 }
 a{
     color: #fff;
-    text-decoration: none;
-    
+    text-decoration: none;   
 }
 #bloc1{
 width: 100%;
-height:45vh;
+height:45%;
 display: flex;
 text-align: center;
 align-items: center;
@@ -35,7 +32,7 @@ flex-direction: column;
 
     #nomprofil {
         color:#fff;
-        margin-top: 20px;
+        margin-top: 10px;
         #firstname{
         font-family: 'Playfair Display', serif;
         font-weight: 200;
@@ -50,7 +47,7 @@ flex-direction: column;
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    margin-top: 30px;
+    margin-top: 40px;
     display: flex;
     justify-content: space-around;
     text-align: center;
@@ -60,8 +57,7 @@ flex-direction: column;
         img{
             overflow: hidden;
             border-radius: 50%;
-        }
-           
+        }     
     }
     
     button{
@@ -74,13 +70,11 @@ flex-direction: column;
         color:#fff;
         font-family: 'Montserrat', sans-serif;
         font-weight: lighter;
-
     }
-
 }
 #bloc2{
     width: 100%;
-    height:55vh;
+    height:55%;
     display: flex;
     color: #fff;
     background-color: #13172c;
@@ -110,8 +104,43 @@ flex-direction: column;
             color: @color1;
             background-color: @color3 ;
         }
-        #accueil{
+        #select{
             background-color: #0baa9f4f;
         }
     }
+}
+
+#cadres{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    // flex-wrap: wrap;
+    height: 90%;
+    width: 90%;
+
+
+#posts{
+    height: 100%;
+    width: 50%;
+    margin: 40px;
+    border-top: 5px solid @color1;
+    box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+   
+}
+#actus{
+    height: 100%;
+    width: 35%;
+    margin: 40px;
+    margin-left: 20px;
+    border-top: 5px solid @color1;
+    box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+   
+   
+}
 }
