@@ -118,6 +118,7 @@ a {
   flex-direction: row;
   height: 90%;
   width: 90%;
+  font-family: 'Montserrat', sans-serif;
 }
 #cadres #posts {
   height: 100%;
@@ -130,6 +131,14 @@ a {
   justify-content: flex-start;
   flex-direction: column;
 }
+#cadres #posts #titleposts {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+#cadres #posts #titleposts h3 {
+  font-weight: 300;
+}
 #cadres #actus {
   height: 100%;
   width: 35%;
@@ -138,4 +147,12 @@ a {
   border-top: 5px solid #f2bf2c;
   box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
   background-color: #fff;
+}
+#cadres #actus #titleactus {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+#cadres #actus #titleactus h3 {
+  font-weight: 300;
 }

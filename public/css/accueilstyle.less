@@ -117,30 +117,51 @@ flex-direction: column;
     // flex-wrap: wrap;
     height: 90%;
     width: 90%;
+    font-family: 'Montserrat', sans-serif;
 
 
-#posts{
-    height: 100%;
-    width: 50%;
-    margin: 40px;
-    border-top: 5px solid @color1;
-    box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
-    background-color: #fff;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
 
-   
-}
-#actus{
-    height: 100%;
-    width: 35%;
-    margin: 40px;
-    margin-left: 20px;
-    border-top: 5px solid @color1;
-    box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
-    background-color: #fff;
-   
-   
-}
+    #posts{
+        height: 100%;
+        width: 50%;
+        margin: 40px;
+        border-top: 5px solid @color1;
+        box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
+        background-color: #fff;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+
+            #titleposts{
+                display: flex;
+                flex-direction: column;
+                padding: 30px;
+
+                h3{
+                    font-weight: 300;
+                }
+            }
+            
+    
+    }
+    #actus{
+        height: 100%;
+        width: 35%;
+        margin: 40px;
+        margin-left: 20px;
+        border-top: 5px solid @color1;
+        box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
+        background-color: #fff;
+    
+        #titleactus{
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+
+            h3{
+                font-weight: 300;
+            }
+        }
+    
+    }
 }
