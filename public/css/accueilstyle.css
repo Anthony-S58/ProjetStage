@@ -128,7 +128,6 @@ a {
   box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
   background-color: #fff;
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
 }
 #cadres #posts #titleposts {
@@ -139,6 +138,14 @@ a {
 #cadres #posts #titleposts h3 {
   font-weight: 300;
 }
+#cadres #posts #lastposts {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 #cadres #actus {
   height: 100%;
   width: 35%;
@@ -147,6 +154,8 @@ a {
   border-top: 5px solid #f2bf2c;
   box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 #cadres #actus #titleactus {
   display: flex;
@@ -155,4 +164,35 @@ a {
 }
 #cadres #actus #titleactus h3 {
   font-weight: 300;
+}
+#cadres #actus #lastactus {
+  height: 100%;
+  width: 100%;
+}
+#cadres #actus #lastactus .ville {
+  height: 30px;
+  width: 100px;
+  background-color: #f2bf2c;
+  position: relative;
+  top: 50px;
+  left: 340px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: smaller;
+  font-weight: bold;
+}
+#cadres #actus #lastactus .imageactus {
+  display: flex;
+  justify-content: center;
+}
+#cadres #actus #lastactus .descriptactus {
+  margin-inline: 20px;
+  padding-inline: 25px;
+  font-size: smaller;
+}
+#cadres #actus #lastactus .descriptactus h3 {
+  padding-top: 10px;
+  color: #0baa9f;
 }

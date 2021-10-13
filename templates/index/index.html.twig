@@ -1,13 +1,13 @@
 {# {% extends 'base.html.twig' %} #}
 
 {% block title %}{% endblock %}
-{% block stylesheets %}
-          
-            <link rel="stylesheet" href="{{ asset ('css/accueilstyle.css') }}">
-        {% endblock %}
+
+{% block stylesheets %}         
+    <link rel="stylesheet" href="{{ asset ('css/accueilstyle.css') }}">
+{% endblock %}
+
 {% block body %}
     <div id="bandeau">
-
         <div id="bloc1">
             <div id="imageprofil">
                 <img src="../img/profils/anthony riviere/anthony-riviere.jpg" alt="">
@@ -17,8 +17,7 @@
             </div>
             <div id="button">
                 <button><a href="#"><i class="fas fa-user-alt"></i> Voir mon profil</a></button>
-            </div>
-        
+            </div>      
         </div>
         <div id="bloc2">
             <div id="liens">
@@ -29,26 +28,56 @@
                 <a href="/logout"><i class="fas fa-power-off"></i> Déconnexion</a>
             </div>
             <img src="../img/logo-david-kenos-blanc.png" width="150px" height="150px" alt="">
-        </div>
-        
+        </div>       
     </div>
-
     <div id="cadres">
+
         <div id="posts">
 
             <div id="titleposts">
                 <h2>Bienvenue sur ton espace,</h2>
                 <h3>voici les derniers posts publiés</h3>
             </div>
+
+            <div id="lastposts">
+            
+            </div>
             
         </div>
+
         <div id="actus">
-        <div id="titleactus">
+
+            <div id="titleactus">
                 <h2>Les dernières actualités</h2>
                 <h3>de l'entreprise</h3>
             </div>
+
+            <div id="lastactus">
+
+                    <div class="ville">Nevers</div>
+                <div class="imageactus">
+                    <img src="../img/posts/paysage.jpeg" width="380px" height="160px" alt="">
+                </div>
+                <div class="descriptactus">
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque ducimus perferendis possimus perspiciatis vitae.</p>
+                </div>
+
+                <br>
+
+                <div class="ville">Nevers</div>
+                <div class="imageactus">
+                    <img src="../img/posts/paysage.jpeg" width="380px" height="160px" alt="">
+                </div>
+                <div class="descriptactus">
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque ducimus perferendis possimus perspiciatis vitae.</p>
+                </div>
+            
+            </div>
                 
         </div>
+
     </div>
         <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
 

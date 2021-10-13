@@ -114,7 +114,6 @@ flex-direction: column;
     display: flex;
     justify-content: center;
     flex-direction: row;
-    // flex-wrap: wrap;
     height: 90%;
     width: 90%;
     font-family: 'Montserrat', sans-serif;
@@ -129,7 +128,6 @@ flex-direction: column;
         box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
         background-color: #fff;
         display: flex;
-        justify-content: flex-start;
         flex-direction: column;
 
             #titleposts{
@@ -140,6 +138,14 @@ flex-direction: column;
                 h3{
                     font-weight: 300;
                 }
+            }
+            #lastposts{
+              border: 1px solid red;
+              display: flex;
+              justify-content: center;
+              height: 100%;
+              width: 100%;  
+              overflow: hidden;
             }
             
     
@@ -152,6 +158,8 @@ flex-direction: column;
         border-top: 5px solid @color1;
         box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
         background-color: #fff;
+        display: flex;
+        flex-direction: column;
     
         #titleactus{
             display: flex;
@@ -161,6 +169,37 @@ flex-direction: column;
             h3{
                 font-weight: 300;
             }
+        }
+        #lastactus{
+            height: 100%;
+            width: 100%;
+
+            .ville{
+                height: 30px;
+                width: 100px;
+                background-color: @color1;
+                position: relative;
+                top: 50px;
+                left: 340px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                font-size: smaller;
+                font-weight: bold;
+            }
+            .imageactus{
+                display: flex;
+                justify-content: center;
+
+            }
+            .descriptactus{
+                margin-inline: 20px;
+                padding-inline: 25px;
+                font-size: smaller;
+            h3{padding-top: 10px;
+            color: @color2;}
+        }
         }
     
     }
