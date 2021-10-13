@@ -41,7 +41,7 @@ a {
 }
 #bloc1 #nomprofil {
   color: #fff;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 #bloc1 #nomprofil #firstname {
   font-family: 'Playfair Display', serif;
@@ -52,9 +52,7 @@ a {
   font-weight: lighter;
 }
 #bloc1 #imageprofil {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  border-radius: 200px;
   margin-top: 40px;
   display: flex;
   justify-content: space-around;
@@ -69,7 +67,7 @@ a {
 #bloc1 button {
   width: 200px;
   height: 40px;
-  margin-top: 20px;
+  margin-top: 30px;
   background-color: #0baa9f;
   border-radius: 5px;
   border: none;
@@ -139,12 +137,56 @@ a {
   font-weight: 300;
 }
 #cadres #posts #lastposts {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   height: 100%;
   width: 100%;
   overflow: hidden;
+}
+#cadres #posts #lastposts .col {
+  height: 520px;
+  width: 190px;
+  margin-inline: 10px;
+}
+#cadres #posts #lastposts .col .art1 {
+  height: 55%;
+  width: 100%;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#cadres #posts #lastposts .col .art1 p {
+  font-size: smaller;
+}
+#cadres #posts #lastposts .col .art1 span {
+  color: #0baa9f;
+}
+#cadres #posts #lastposts .col .art2 {
+  height: 45%;
+  width: 100%;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#cadres #posts #lastposts .col .art2 p {
+  font-size: smaller;
+}
+#cadres #posts #lastposts .col .art2 span {
+  color: #0baa9f;
 }
 #cadres #actus {
   height: 100%;

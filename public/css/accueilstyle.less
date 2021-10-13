@@ -32,7 +32,7 @@ flex-direction: column;
 
     #nomprofil {
         color:#fff;
-        margin-top: 10px;
+        margin-top: 20px;
         #firstname{
         font-family: 'Playfair Display', serif;
         font-weight: 200;
@@ -44,9 +44,7 @@ flex-direction: column;
     }
 
     #imageprofil{
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
+    border-radius: 200px;
     margin-top: 40px;
     display: flex;
     justify-content: space-around;
@@ -63,7 +61,7 @@ flex-direction: column;
     button{
         width: 200px;
         height: 40px;
-        margin-top: 20px;
+        margin-top: 30px;
         background-color: @color2;
         border-radius: 5px;
         border: none;
@@ -140,12 +138,62 @@ flex-direction: column;
                 }
             }
             #lastposts{
-              border: 1px solid red;
               display: flex;
               justify-content: center;
               height: 100%;
               width: 100%;  
               overflow: hidden;
+
+                .col{
+                    height: 520px;
+                    width: 190px;
+                    margin-inline: 10px;
+                    
+                    
+                    
+                    .art1{
+                        height: 55%;
+                        width: 100%;
+                        margin-bottom: 20px;
+                        background-size: cover;
+                        background-position: center;
+                        background-blend-mode: darken;
+                        color: #fff;
+                        display: flex;
+                        justify-content: flex-end;
+                        flex-direction: column;
+                        padding: 15px;
+                        background-color: rgba(0, 0, 0, 0.700);
+                        p{
+                            font-size: smaller;
+                        }
+                        span{
+                            color: @color2;
+                        }
+
+                    }
+                    .art2{
+                        height: 45%;
+                        width: 100%;
+                        margin-bottom: 20px;
+                        background-size: cover;
+                        background-position: center;
+                        background-blend-mode: darken;
+                        color: #fff;
+                        display: flex;
+                        justify-content: flex-end;
+                        flex-direction: column;
+                        padding: 15px;
+                        background-color: rgba(0, 0, 0, 0.700);
+                        p{
+                            font-size: smaller;
+                        }
+                        span{
+                            color: @color2;
+                        }
+
+                    }
+                }
             }
             
     
@@ -197,9 +245,11 @@ flex-direction: column;
                 margin-inline: 20px;
                 padding-inline: 25px;
                 font-size: smaller;
-            h3{padding-top: 10px;
-            color: @color2;}
-        }
+                h3{
+                padding-top: 10px;
+                color: @color2;
+                }
+            }
         }
     
     }
