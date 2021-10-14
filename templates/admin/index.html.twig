@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %} {% block title %}Hello AdminController!{%
+endblock %} {% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/adminstyle.css') }}" />
+{#{{ encore_entry_link_tags("app") }}#} {% endblock %} {% block body %}
+
+<header>
+  <div class="logoheader">
+    <img src="../img/logo-david-kenos.png" alt="logo de David Kenos" />
+  </div>
+
+  <div class="titreheader">
+    <h1>Bienvenue,</h1>
+    <h2>dans votre administration</h2>
+  </div>
+
+  <div class="menuheader">
+    <nav class="menu">
+      <ul>
+        <li class="menu"><a href="#"> Accueil </a></li>
+
+        <li class="menu">
+          <a href="#"> Déconnexion <i class="fas fa-power-off"></i></a>
+        </li>
+
+        <li class="menu">
+          <a href="#"> Chocolaterie Nevers</a>
+        </li>
+        <div id="circle"></div>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="grandblock">
+  <div class="block1">
+    <div class="utilisateur">
+      <div class="utilisateur2">
+        <div id="circle2"><p class="circle">10</p></div>
+        <div class="utilisateur3">
+          <p class="texte1">UTILISATEURS</p>
+          <p class="texte2">sont inscrits</p>
+        </div>
+      </div>
+
+      <button class="bouton" type="button">Gérer les utilisateurs</button>
+    </div>
+
+    <div class="categorie">
+      <div class="categorie2">
+        <div id="circle2"><p class="circle3">5</p></div>
+        <div class="categorie3">
+          <p class="texte1">CATÉGORIES</p>
+          <p class="texte2">de posts sont disponibles</p>
+        </div>
+      </div>
+
+      <button class="bouton" type="button">Gérer les catégories</button>
+    </div>
+  </div>
+
+  <div class="block2">
+    <div class="actualite">
+      <div class="actualite1">
+        <div id="circle2"><p class="circle">35</p></div>
+        <div class="actualite2">
+          <p class="texte1">ACTUALITÉS</p>
+          <p class="texte2">sont disponibles</p>
+        </div>
+      </div>
+
+      <div class="actualite3">
+        <div class="text">
+          <p class="texte2">Le 12/09/2021</p>
+          <p class="text3">-</p>
+          <p class="texte1">Lorem ipsum dolor sit amet</p>
+        </div>
+        <div class="text">
+          <p class="texte2">Le 12/09/2021</p>
+          <p class="text3">-</p>
+          <p class="texte1">Lorem ipsum dolor sit amet</p>
+        </div>
+        <div class="text">
+          <p class="texte2">Le 12/09/2021</p>
+          <p class="text3">-</p>
+          <p class="texte1">Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+
+      <button class="bouton" type="button">Gérer les actualités</button>
+    </div>
+  </div>
+
+  <div class="block3">
+    <div class="post">
+      <div class="post2">
+        <div id="circle2"><p class="circle">48</p></div>
+        <div class="post3">
+          <p class="texte1">POSTS</p>
+          <p class="texte2">sont disponibles</p>
+        </div>
+      </div>
+
+      <button class="bouton" type="button">Gérer les posts</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Administration développée par EILEA - 2021</p>
+</footer>
+
+<script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
+
+{% endblock %}
