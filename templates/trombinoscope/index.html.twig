@@ -1,20 +1,137 @@
-{% extends 'base.html.twig' %}
+{# {% extends 'base.html.twig' %} #}
 
-{% block title %}Hello TrombinoscopeController!{% endblock %}
+{% block title %}{% endblock %}
+
+{% block stylesheets %}         
+    <link rel="stylesheet" href="{{ asset ('css/trombinoscopestyle.css') }}">
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div id="bandeau">
+        <div id="bloc1">
+            <div id="imageprofil">
+                <img src="../img/profils/anthony riviere/anthony-riviere.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="nomprofil">
+                <h2><span id="firstname">Anthony </span><span id="lastname"> RIVIERE</span></h2>
+            </div>
+            <div id="button">
+                <button><a href="/profil"><i class="fas fa-user-alt"></i> Voir mon profil</a></button>
+            </div>      
+        </div>
+        <div id="bloc2">
+            <div id="liens">
+                <a href="/index">Accueil</a>
+                <a href="/actualites">Actualités de l'entreprise</a>
+                <a href="#" id="select">Trombinoscope</a>
+                <a href="/vie-des-chocolateries">La vie des chocolateries</a>
+                <a href="/logout"><i class="fas fa-power-off"></i> Déconnexion</a>
+            </div>
+            <img src="../img/logo-david-kenos-blanc.png" width="150px" height="150px" alt="">
+        </div>       
+    </div>
+    <div id="cadres">
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+            <div id="banniere" style="background-image:url('../img/profils/anthony riviere/foret-bandeau-profil.jpeg');">
+            
+                <img src="../img/profils/anthony riviere/anthony-riviere.jpg" width="180px" height="180px" alt="">
+            </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/laragon/www/ProjetStage/src/Controller/TrombinoscopeController.php'|file_link(0) }}">src/Controller/TrombinoscopeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/laragon/www/ProjetStage/templates/trombinoscope/index.html.twig'|file_link(0) }}">templates/trombinoscope/index.html.twig</a></code></li>
-    </ul>
-</div>
+            <h1>Le Trombinoscope</h1>
+
+            <div id="search">
+                <div id="villes">
+                    
+                        <div id="btnsearch"><i class="fas fa-search"></div></i><input type="text" placeholder="Rechercher...">
+                </div>
+
+            </div>
+            <div id="cartes">
+                <div id="carte">
+                    <div id="imgfond" style="background-image:url('../img/profils/evelyne alebat/paysage-montagne-bandeau.jpeg');">
+                        <img src="../img/profils/evelyne alebat/woman-blond-smile.jpeg" width="80px" height="80px" alt="">
+                    </div>
+                <div class="ville">Nevers</div>
+                    <div id="identite">
+                        <h2>Evelyne Alebat</h2>
+                        <h3>Chargée de clientèle</h3>
+                    </div>
+                    <div id="icones">
+                        <div class="icone"><i class="fab fa-facebook-f"></i></div>
+                        <div class="icone"><i class="fab fa-instagram"></i></div>
+                        <div class="icone"><i class="fab fa-twitter"></i></div>
+                        <div class="icone"><i class="fab fa-linkedin-in"></i></div>
+                    </div>
+
+                    <a href=""><button><i class="fas fa-eye"></i> Voir le profil </button></a>
+                </div>
+
+                <div id="carte">
+                    <div id="imgfond" style="background-image:url('../img/profils/arthur allemand/cities-skyline.jpeg');">
+                        <img src="../img/profils/arthur allemand/arthur-allemand-homme.jpeg" width="80px" height="80px" alt="">
+                    </div>
+                <div class="ville">La Charité</div>
+                    <div id="identite">
+                        <h2>Arthur Allemand</h2>
+                        <h3>Gérant</h3>
+                    </div>
+                    <div id="icones">
+                        <div class="icone"><i class="fab fa-facebook-f"></i></div>
+                        <div class="icone"><i class="fab fa-instagram"></i></div>
+                        <div class="icone"><i class="fab fa-twitter"></i></div>
+                        <div class="icone"><i class="fab fa-linkedin-in"></i></div>
+                    </div>
+
+                    <a href=""><button><i class="fas fa-eye"></i> Voir le profil </button></a>
+                </div>
+
+                <div id="carte">
+                    <div id="imgfond" style="background-image:url('../img/profils/romain mylenas/ville-mer-montagne.jpeg');">
+                        <img src="../img/profils/romain mylenas/romain-mylenas-chemise.jpeg" width="80px" height="80px" alt="">
+                    </div>
+                <div class="ville">Nevers</div>
+                    <div id="identite">
+                        <h2>Romain Mylenast</h2>
+                        <h3>Chargé de clientèle</h3>
+                    </div>
+                    <div id="icones">
+                        <div class="icone"><i class="fab fa-facebook-f"></i></div>
+                        <div class="icone"><i class="fab fa-instagram"></i></div>
+                        <div class="icone"><i class="fab fa-twitter"></i></div>
+                        <div class="icone"><i class="fab fa-linkedin-in"></i></div>
+                    </div>
+
+                    <a href=""><button><i class="fas fa-eye"></i> Voir le profil </button></a>
+                </div>
+
+                <div id="carte">
+                    <div id="imgfond" style="background-image:url('../img/profils/sukaina ousbema/flowers-pink-butterfly.jpeg');">
+                        <img src="../img/profils/sukaina ousbema/sukaina-ousbema-femme.jpeg" width="80px" height="80px" alt="">
+                    </div>
+                <div class="ville">Marzy</div>
+                    <div id="identite">
+                        <h2>Sukaina Ousbema</h2>
+                        <h3>Chocolatière</h3>
+                    </div>
+                    <div id="icones">
+                        <div class="icone"><i class="fab fa-facebook-f"></i></div>
+                        <div class="icone"><i class="fab fa-instagram"></i></div>
+                        <div class="icone"><i class="fab fa-twitter"></i></div>
+                        <div class="icone"><i class="fab fa-linkedin-in"></i></div>
+                    </div>
+
+                    <a href=""><button><i class="fas fa-eye"></i> Voir le profil </button></a>
+                </div>
+
+                
+                
+                </div>
+            </div>
+        
+        
+    </div>
+
+       
+        <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
+
 {% endblock %}
