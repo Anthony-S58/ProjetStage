@@ -34,8 +34,10 @@ header {
 }
 @media all and (max-width: 500px) {
   .logoheader img {
+    display: flex;
+    margin: auto;
     width: 100px;
-    height: 100px;
+    height: 90px;
   }
 }
 .titreheader {
@@ -58,6 +60,7 @@ h1 {
 @media all and (max-width: 700px) {
   .menuheader ul {
     flex-wrap: wrap;
+    text-align: center;
     display: flex;
     flex-direction: column;
   }
@@ -77,6 +80,13 @@ ul {
   height: 20px;
   border-radius: 50%;
 }
+@media all and (max-width: 700px) {
+  #circle {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+}
 .grandblock {
   margin-top: -20px;
   display: flex;
@@ -92,7 +102,8 @@ ul {
 }
 @media all and (max-width: 450px) {
   .block1 {
-    margin-top: 100px;
+    height: 400px;
+    margin-top: 50px;
     width: 300px;
   }
 }
@@ -166,8 +177,10 @@ ul {
   margin-top: 20px;
   background-color: #191e39;
   color: white;
-  border-radius: 7px;
+  border-radius: 5px;
   width: 140px;
+  height: 17px;
+  border: none;
 }
 .categorie {
   background-color: white;
@@ -188,6 +201,12 @@ ul {
 .categorie3 {
   margin-top: 35px;
   margin-left: 20px;
+}
+@media all and (max-width: 450px) {
+  .actualite {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .actualite1 {
   display: flex;
@@ -225,8 +244,8 @@ ul {
 }
 .circle {
   font-size: 30px;
-  margin-top: 7px;
-  margin-left: 10px;
+  margin-top: 9px;
+  margin-left: 11px;
 }
 .circle3 {
   font-size: 30px;
@@ -300,8 +319,10 @@ header {
 }
 @media all and (max-width: 500px) {
   .logoheader img {
+    display: flex;
+    margin: auto;
     width: 100px;
-    height: 100px;
+    height: 90px;
   }
 }
 .titreheader {
@@ -324,6 +345,7 @@ h1 {
 @media all and (max-width: 700px) {
   .menuheader ul {
     flex-wrap: wrap;
+    text-align: center;
     display: flex;
     flex-direction: column;
   }
@@ -343,6 +365,13 @@ ul {
   height: 20px;
   border-radius: 50%;
 }
+@media all and (max-width: 700px) {
+  #circle {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+}
 .grandblock {
   margin-top: -20px;
   display: flex;
@@ -358,7 +387,8 @@ ul {
 }
 @media all and (max-width: 450px) {
   .block1 {
-    margin-top: 100px;
+    height: 400px;
+    margin-top: 50px;
     width: 300px;
   }
 }
@@ -432,8 +462,10 @@ ul {
   margin-top: 20px;
   background-color: #191e39;
   color: white;
-  border-radius: 7px;
+  border-radius: 5px;
   width: 140px;
+  height: 17px;
+  border: none;
 }
 .categorie {
   background-color: white;
@@ -454,6 +486,12 @@ ul {
 .categorie3 {
   margin-top: 35px;
   margin-left: 20px;
+}
+@media all and (max-width: 450px) {
+  .actualite {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .actualite1 {
   display: flex;
@@ -491,8 +529,8 @@ ul {
 }
 .circle {
   font-size: 30px;
-  margin-top: 7px;
-  margin-left: 10px;
+  margin-top: 9px;
+  margin-left: 11px;
 }
 .circle3 {
   font-size: 30px;
