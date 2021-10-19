@@ -155,6 +155,7 @@ a {
 }
 #cadres #cadre2 #lastregister .person img {
   border-radius: 60px;
+  object-fit: cover;
 }
 #cadres #cadre2 #lastregister .person .identite {
   display: flex;
