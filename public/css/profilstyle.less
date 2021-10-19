@@ -114,13 +114,11 @@ flex-direction: column;
     flex-direction: column;
     height: 100%;
     width: 90%;
-    font-family: 'Montserrat', sans-serif;
-    
+    font-family: 'Montserrat', sans-serif;    
     
     #banniere{
         width: 92%;
         height: 10rem;
-        // border: 1px solid red;
         position: relative;
         top: 0;
         margin-left: 55px;
@@ -138,9 +136,205 @@ flex-direction: column;
             left: 42%;
             top: 30px;
         }     
-        }
-
-        
+    }
 
     
+    
+    
+    #cadre2{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        height: 75%;
+        padding-left: 55px;
+        padding-right: 20px;
+
+        #descriptprofil{
+            height: 65%;
+            width: 20%;
+            margin-top: 30px;
+            background-color: #fff;
+
+            #nomprenom{
+                margin-top: 20px;
+                padding-inline: 20px;
+                #firstname{
+                    font-family: 'Playfair Display', serif;
+                    font-weight: 500;
+                    }
+                    #lastname{
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: lighter;
+                    }   
+
+            }
+            #posteville{
+                margin-top: 10px;
+                padding-inline: 20px;
+                font-size: 0.8em;
+
+                .ville{
+                    color: @color2;
+                }
+
+            }
+            #description{
+                margin-top: 30px;
+                padding-inline: 20px;
+
+            }
+            #icones{
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+
+                .icone{
+                    width: 30px;
+                    height: 30px;
+                    border: 2px solid @color1;
+                    border-radius: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-inline: 10px;
+                }
+            }
+            #mail{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                margin-top: 30px;
+
+                button{
+                    width: 70%;
+                    height: 30px;
+                    background-color: @color3;
+                    color: #fff;
+                    border-radius: 5px;
+                    border: none;
+                    font-family: 'Montserrat', sans-serif;
+                }
+            }
+        }
+
+        #lastposts{
+            margin: 30px;
+            margin-top: 80px;
+            width: 50%;
+            height: 85%;
+
+            span{
+                font-weight: 300;
+            }
+            #cadrespost{
+                width: 105%;
+                height: 85%;
+                margin-top: 20px;
+                overflow-y: scroll;
+
+           
+            .cadrepost{
+                width: 95%;
+                height: 190px;
+                margin-top: 30px;
+                background-color: #fff;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+            box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
+
+
+                #postimgprofil{
+                    margin: 20px;
+
+                    img{
+                        border-radius: 150px;
+                    }
+                }
+                
+                #postcontent{
+                    
+                    display: flex;
+                    flex-direction: column;
+
+                    #postnomprenom{
+                        padding-top: 20px;
+                        font-size: 0.8em;
+                        #firstname{
+                            font-family: 'Playfair Display', serif;
+                            font-weight: 500;
+                            }
+                            #lastname{
+                            font-family: 'Montserrat', sans-serif;
+                            font-weight: lighter;
+                            }   
+        
+                    }
+                    #postdatepubli{
+                        color: @color2;
+                        font-size: 0.8em;
+                        font-weight: bold;
+                    }
+                    #posttitre{
+                        margin-top: 10px;
+                        font-weight: bold;
+                        font-size: 0.8em;
+                    }
+                    #postdescript{
+                        font-size: 0.8em;
+                    }
+                    #postcategorie{
+                        height: 20px;
+                        width: 150px;
+                        background-color: @color1;
+                        position: absolute;
+                        top: 15px;
+                        right: -15px;
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        align-items: center;
+                        font-size: smaller;
+                        font-weight: bold;
+                    }
+                    #postinteract{
+                        margin-top: 20px;
+                        width: 250px;
+                        font-size: 0.8em;
+                        font-weight: bold;
+                        color: @color3;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: row;
+                    }
+                }
+            }
+        }
+    }
+
+        #buttons{
+                display: flex;
+                flex-direction: column;
+                margin: 30px;
+
+                button{
+                    width: 200px;
+                    height: 40px;
+                    margin-bottom: 10px;
+                    background-color: @color3;
+                    border-radius: 5px;
+                    border: none;
+                    color:#fff;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: lighter;
+                }
+                #selected{
+                    background-color: @color2;
+                }
+
+        }
+    }
 }

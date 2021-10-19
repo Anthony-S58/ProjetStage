@@ -137,3 +137,177 @@ a {
   left: 42%;
   top: 30px;
 }
+#cadres #cadre2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  height: 75%;
+  padding-left: 55px;
+  padding-right: 20px;
+}
+#cadres #cadre2 #descriptprofil {
+  height: 65%;
+  width: 20%;
+  margin-top: 30px;
+  background-color: #fff;
+}
+#cadres #cadre2 #descriptprofil #nomprenom {
+  margin-top: 20px;
+  padding-inline: 20px;
+}
+#cadres #cadre2 #descriptprofil #nomprenom #firstname {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+#cadres #cadre2 #descriptprofil #nomprenom #lastname {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+#cadres #cadre2 #descriptprofil #posteville {
+  margin-top: 10px;
+  padding-inline: 20px;
+  font-size: 0.8em;
+}
+#cadres #cadre2 #descriptprofil #posteville .ville {
+  color: #0baa9f;
+}
+#cadres #cadre2 #descriptprofil #description {
+  margin-top: 30px;
+  padding-inline: 20px;
+}
+#cadres #cadre2 #descriptprofil #icones {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+#cadres #cadre2 #descriptprofil #icones .icone {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #f2bf2c;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 10px;
+}
+#cadres #cadre2 #descriptprofil #mail {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 30px;
+}
+#cadres #cadre2 #descriptprofil #mail button {
+  width: 70%;
+  height: 30px;
+  background-color: #191e39;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+}
+#cadres #cadre2 #lastposts {
+  margin: 30px;
+  margin-top: 80px;
+  width: 50%;
+  height: 85%;
+}
+#cadres #cadre2 #lastposts span {
+  font-weight: 300;
+}
+#cadres #cadre2 #lastposts #cadrespost {
+  width: 105%;
+  height: 85%;
+  margin-top: 20px;
+  overflow-y: scroll;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost {
+  width: 95%;
+  height: 190px;
+  margin-top: 30px;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postimgprofil {
+  margin: 20px;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postimgprofil img {
+  border-radius: 150px;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent {
+  display: flex;
+  flex-direction: column;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postnomprenom {
+  padding-top: 20px;
+  font-size: 0.8em;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postnomprenom #firstname {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postnomprenom #lastname {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postdatepubli {
+  color: #0baa9f;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #posttitre {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postdescript {
+  font-size: 0.8em;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postcategorie {
+  height: 20px;
+  width: 150px;
+  background-color: #f2bf2c;
+  position: absolute;
+  top: 15px;
+  right: -15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: smaller;
+  font-weight: bold;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postinteract {
+  margin-top: 20px;
+  width: 250px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #191e39;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#cadres #cadre2 #buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+#cadres #cadre2 #buttons button {
+  width: 200px;
+  height: 40px;
+  margin-bottom: 10px;
+  background-color: #191e39;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+#cadres #cadre2 #buttons #selected {
+  background-color: #0baa9f;
+}
