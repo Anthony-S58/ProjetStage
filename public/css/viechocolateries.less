@@ -110,13 +110,199 @@ flex-direction: column;
 
 #cadres{
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    height: 90%;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
     width: 90%;
     font-family: 'Montserrat', sans-serif;
-
-
-
     
-}
+    #title{
+        padding: 50px;
+        
+        .lighter{
+            font-weight: lighter;
+        }
+        .categ{
+            color: @color2;
+        }
+    }
+    
+    #cadre2{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        height: 75%;
+        padding-left: 55px;
+        padding-right: 40px;
+
+        #lastregister{
+            width: 25%;
+            height: 90%;
+            background-color: #fff;
+            box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
+            border-top: 5px solid @color1;
+
+            h2{
+                font-size: 1.2em;
+                padding: 40px;
+            }
+            .person{
+                display: flex;
+                flex-direction: row;
+                padding-inline: 40px;
+                margin-bottom: 25px;
+
+                img{
+                    border-radius: 60px;
+                }
+
+                .identite{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    text-align: center;
+                    justify-content: center;
+                    padding-inline: 20px;
+                    font-weight: bold;
+
+                    .prenom{
+                        font-family: 'Playfair Display', serif;
+                        font-weight: 200;
+                    }
+                    .nom{
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: lighter;
+                    }   
+                }
+
+            }
+
+        }
+
+        #lastposts{
+            width: 50%;
+            height: 90%;
+
+            span{
+                font-weight: 300;
+            }
+            #cadrespost{
+                width: 100%;
+                height: 100%;
+                overflow-y: scroll;
+
+           
+            .cadrepost{
+                width: 95%;
+                height: 190px;
+                margin-top: 30px;
+                margin-bottom: 20px;
+                background-color: #fff;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+            box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
+
+
+                #postimgprofil{
+                    margin: 20px;
+
+                    img{
+                        border-radius: 150px;
+                    }
+                }
+                
+                #postcontent{
+                    
+                    display: flex;
+                    flex-direction: column;
+
+                    #postnomprenom{
+                        padding-top: 20px;
+                        font-size: 0.8em;
+                        #firstname{
+                            font-family: 'Playfair Display', serif;
+                            font-weight: 500;
+                            }
+                            #lastname{
+                            font-family: 'Montserrat', sans-serif;
+                            font-weight: lighter;
+                            }   
+        
+                    }
+
+                    #postdatepubli{
+                        color: @color2;
+                        font-size: 0.7em;
+                        font-weight: bold;
+                    }
+                    #posttitre{
+                        margin-top: 10px;
+                        font-weight: bold;
+                        font-size: 0.8em;
+                    }
+                    #postdescript{
+                        font-size: 0.8em;
+                        padding-right: 10px;
+                    }
+                    #postcategorie{
+                        height: 20px;
+                        width: 150px;
+                        background-color: @color1;
+                        position: absolute;
+                        top: 15px;
+                        right: -15px;
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        align-items: center;
+                        font-size: smaller;
+                        font-weight: bold;
+                    }
+                    #postinteract{
+                        margin-top: 20px;
+                        width: 250px;
+                        font-size: 0.8em;
+                        font-weight: bold;
+                        color: @color3;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: row;
+                    }
+                }
+            }
+        }
+    }
+    #categories{
+        width: 20%;
+        height: 50%;
+        background-color: @color1;
+        display: flex;
+        flex-direction: column;
+
+        a{
+            display: flex;
+            justify-content: flex-start;
+            text-align: center;
+            align-items: center;
+            padding-inline: 20px;
+        }
+        a:hover.linkcateg{
+            background-color: #f1d787;
+
+        }
+        
+        .linkcateg{
+            color: black;
+            font-weight: bold;
+            width: 100%;
+            height: 50px;
+            
+        }
+        #select{
+            background-color: #f1d787;
+        }
+
+    }
+    }}
