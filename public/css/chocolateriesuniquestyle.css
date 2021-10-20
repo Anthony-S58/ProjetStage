@@ -1,0 +1,384 @@
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(128, 128, 128, 0.3);
+  display: flex;
+  flex-direction: row;
+}
+#bandeau {
+  width: 280px;
+  height: 100%;
+  background-color: #191e39;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+#bloc1 {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+#bloc1 #nomprofil {
+  color: #fff;
+  margin-top: 20px;
+}
+#bloc1 #nomprofil #firstname {
+  font-family: 'Playfair Display', serif;
+  font-weight: 200;
+}
+#bloc1 #nomprofil #lastname {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+#bloc1 #imageprofil {
+  border-radius: 200px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+#bloc1 #imageprofil img {
+  overflow: hidden;
+  border-radius: 50%;
+}
+#bloc1 button {
+  width: 200px;
+  height: 40px;
+  margin-top: 30px;
+  background-color: #0baa9f;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+#bloc2 {
+  width: 100%;
+  height: 55%;
+  display: flex;
+  color: #fff;
+  background-color: #13172c;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+#bloc2 h3 {
+  margin-bottom: 20px;
+}
+#bloc2 #liens {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+}
+#bloc2 #liens a {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  padding-left: 40px;
+}
+#bloc2 #liens a:hover {
+  color: #f2bf2c;
+  background-color: #191e39;
+}
+#bloc2 #liens #select {
+  background-color: #0baa9f4f;
+}
+#cadres {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  width: 90%;
+  font-family: 'Montserrat', sans-serif;
+}
+#cadres #title {
+  padding: 50px;
+}
+#cadres #title .lighter {
+  font-weight: lighter;
+}
+#cadres #title .categ {
+  color: #0baa9f;
+}
+#cadres #cadre2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  height: 75%;
+  padding-left: 55px;
+  padding-right: 40px;
+}
+#cadres #cadre2 #lastregister {
+  width: 25%;
+  height: 90%;
+  background-color: #fff;
+  box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
+  border-top: 5px solid #f2bf2c;
+}
+#cadres #cadre2 #lastregister h2 {
+  font-size: 1.2em;
+  padding: 40px;
+}
+#cadres #cadre2 #lastregister .person {
+  display: flex;
+  flex-direction: row;
+  padding-inline: 40px;
+  margin-bottom: 25px;
+}
+#cadres #cadre2 #lastregister .person img {
+  border-radius: 60px;
+  object-fit: cover;
+}
+#cadres #cadre2 #lastregister .person .identite {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  justify-content: center;
+  padding-inline: 20px;
+  font-weight: bold;
+}
+#cadres #cadre2 #lastregister .person .identite .prenom {
+  font-family: 'Playfair Display', serif;
+  font-weight: 200;
+}
+#cadres #cadre2 #lastregister .person .identite .nom {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+#cadres #cadre2 #lastposts {
+  width: 50%;
+  height: 90%;
+}
+#cadres #cadre2 #lastposts span {
+  font-weight: 300;
+}
+#cadres #cadre2 #lastposts #cadrespost {
+  width: 100%;
+  height: 100%;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost {
+  width: 95%;
+  height: 190px;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postimgprofil {
+  margin: 20px;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postimgprofil img {
+  border-radius: 150px;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent {
+  display: flex;
+  flex-direction: column;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postnomprenom {
+  padding-top: 20px;
+  font-size: 0.8em;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postnomprenom #firstname {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postnomprenom #lastname {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postdatepubli {
+  color: #0baa9f;
+  font-size: 0.7em;
+  font-weight: bold;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #posttitre {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postdescript {
+  font-size: 0.8em;
+  padding-right: 10px;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postcategorie {
+  height: 20px;
+  width: 150px;
+  background-color: #f2bf2c;
+  position: absolute;
+  top: 15px;
+  right: -15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: smaller;
+  font-weight: bold;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postinteract {
+  margin-top: 20px;
+  width: 250px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #191e39;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires {
+  width: 95%;
+  height: 70%;
+  background-color: #efefef;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #textarea {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #textarea textarea {
+  resize: none;
+  font-family: 'Montserrat', sans-serif;
+  width: 80%;
+  height: 80px;
+  padding: 10px;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #submitbutton {
+  padding-top: 10px;
+  padding-inline: 60px;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #submitbutton button {
+  width: 100px;
+  height: 25px;
+  background-color: #191e39;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #titlecomment {
+  padding-top: 30px;
+  padding-inline: 60px;
+  font-size: 0.8em;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #comments {
+  width: 100%;
+  height: 50%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #comments p {
+  font-size: 0.6em;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #comments .commentrow {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #comments .commentrow .comment1 {
+  border: 1px solid black;
+  background-color: #c3d4d3;
+  border-radius: 10px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 20px;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #comments .commentrow .comment1 .imgcomment {
+  padding: 5px;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #comments .commentrow .comment1 .imgcomment img {
+  border-radius: 50px;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #comments .commentrow .comment1 .textcomment {
+  padding: 10px;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #comments .commentrow .comment1 .textcomment .date {
+  padding-top: 5px;
+  font-weight: bold;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #comments .commentrow .comment2 {
+  border: 1px solid black;
+  background-color: #8eb1af;
+  border-radius: 10px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 46%;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #comments .commentrow .comment2 .imgcomment {
+  padding: 5px;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #comments .commentrow .comment2 .imgcomment img {
+  border-radius: 50px;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #comments .commentrow .comment2 .textcomment {
+  padding: 10px;
+}
+#cadres #cadre2 #lastposts #cadrespost #commentaires #comments .commentrow .comment2 .textcomment .date {
+  padding-top: 5px;
+  font-weight: bold;
+}
+#cadres #cadre2 #categories {
+  width: 20%;
+  height: 50%;
+  background-color: #f2bf2c;
+  display: flex;
+  flex-direction: column;
+}
+#cadres #cadre2 #categories a {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: center;
+  padding-inline: 20px;
+}
+#cadres #cadre2 #categories a:hover.linkcateg {
+  background-color: #f1d787;
+}
+#cadres #cadre2 #categories .linkcateg {
+  color: black;
+  font-weight: bold;
+  width: 100%;
+  height: 50px;
+}
+#cadres #cadre2 #categories #select {
+  background-color: #f1d787;
+}
