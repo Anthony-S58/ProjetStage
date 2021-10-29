@@ -125,7 +125,7 @@
                     <button><a href="{{ path('admin') }}">Admin</a></button>
                     {% endif %}
                     <button><a href="{{ path('modif_profil_edit', {'id': user.id}) }}">Modifier mon profil</a></button>
-                    <button>Publier un post</button>
+                    <button><a href="{{ path('post_new') }}">Publier un post</a></button>
                     <button id="selected">Trombinoscope</button>
                 </div>
             </div>
