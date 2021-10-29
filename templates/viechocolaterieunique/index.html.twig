@@ -13,7 +13,7 @@
                 <img src="../img/profils/anthony riviere/anthony-riviere.jpg" width="150px" height="150px" alt="">
             </div>
             <div id="nomprofil">
-                <h2><span id="firstname">Anthony </span><span id="lastname"> RIVIERE</span></h2>
+                <h2><span id="firstname">{{user.prenom}} </span><span id="lastname"> {{user.nom}}</span></h2>
             </div>
             <div id="button">
                 <button><a href="/profil"><i class="fas fa-user-alt"></i> Voir mon profil</a></button>
@@ -37,42 +37,14 @@
         <div id="cadre2">
             <div id="lastregister">
                 <h2>Les derniers inscrits</h2>
-
+                {% for user in users %}
                 <div class="person">
                     <img src="../img/profils/arthur allemand/arthur-allemand-homme.jpeg" width="60px" height="60px" alt="">   
                         <div class="identite">
-                        <p class="prenom">Arthur</p><p class="nom">ALLEMAND</p>
+                        <p class="prenom">{{user.prenom}}</p><p class="nom">{{user.nom}}</p>
                         </div>
                 </div>
-
-                <div class="person">
-                    <img src="../img/profils/eliott treik/man-lunettes.jpeg" width="60px" height="60px" alt="">   
-                        <div class="identite">
-                        <p class="prenom">Eliott</p><p class="nom">TREIK</p>
-                        </div>
-                </div>
-
-                <div class="person">
-                    <img src="../img/profils/evelyne alebat/woman-blond-smile.jpeg" width="60px" height="60px" alt="">   
-                        <div class="identite">
-                        <p class="prenom">Evelyne</p><p class="nom">ALEBAT</p>
-                        </div>
-                </div>
-
-                <div class="person">
-                    <img src="../img/profils/leslie espinosa/femme-chapeau.jpeg" width="60px" height="60px" alt="">   
-                        <div class="identite">
-                        <p class="prenom">Leslie</p><p class="nom">ESPINOSA</p>
-                        </div>
-                </div>
-
-                <div class="person">
-                    <img src="../img/profils/marvin raoul/homme-lumieres.jpeg" width="60px" height="60px" alt="">   
-                        <div class="identite">
-                        <p class="prenom">Marvin</p><p class="nom">RAOUL</p>
-                        </div>
-                </div>
-                        
+                {% endfor %}              
             </div>
 
             <div id="lastposts">
@@ -83,12 +55,12 @@
                                 <img src="../img/profils/anthony riviere/anthony-riviere.jpg" width="100px" height="100px" alt="">   
                             </div>
                             <div id="postcontent">
-                                <div id="postnomprenom"><h2><span id="firstname">Anthony </span><span id="lastname"> RIVIERE</span></h2></div>
-                                <div id="postdatepubli"><p>Publié le 19/09/2021</p></div>
+                                <div id="postnomprenom"><h2><span id="firstname">{{post.user.prenom}} </span><span id="lastname"> {{post.user.nom}}</span></h2></div>
+                                <div id="postdatepubli"><p>Publié le {{post.date|date('d/m/Y')}}</p></div>
 
-                                <div id="posttitre"><h3>Lorem ipsum dolor sit amet</h3></div>
-                                <div id="postdescript"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur alias modi esse qui numquam deserunt iste ut, sunt repellat! Eveniet quis nobis, rem perferendis voluptates animi dolores optio dolorum quisquam!</p></div>
-                                <div id="postcategorie">Animations</div>
+                                <div id="posttitre"><h3>{{post.titre}}</h3></div>
+                                <div id="postdescript"><p>{{post.description}}</p></div>
+                                <div id="postcategorie">{{post.categories}}</div>
 
                                 <div id="postinteract">
                                 <div id="comments">5 <i class="far fa-comments"></i>&nbsp; commentaires</div>

@@ -63,10 +63,14 @@ class ModifProfilController extends AbstractController
      */
     public function edit(Request $request, User $user): Response
     {
+
+        $user = $this->getUser();
+
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('profil', [], Response::HTTP_SEE_OTHER);

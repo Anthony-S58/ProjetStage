@@ -5,16 +5,26 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\User;
+use App\Entity\Post;
 
 class ViechocolaterieuniqueController extends AbstractController
 {
     /**
-     * @Route("/viechocolaterieunique", name="viechocolaterieunique")
+     * @Route("/viechocolaterieunique/{id}", name="viechocolaterieunique")
      */
-    public function index(): Response
+    public function index($id): Response
     {
+        $user = $this->getUser();
+        $users = $this->getDoctrine()->getRepository(User::class)->findBy([], ['id' => 'DESC']);
+        $post = $this->getDoctrine()->getRepository(Post::class)->find($id);
+
+
+
         return $this->render('viechocolaterieunique/index.html.twig', [
-            'controller_name' => 'ViechocolaterieuniqueController',
+            'user' => $user,
+            'users' => $users,
+            'post' => $post
         ]);
     }
 }
