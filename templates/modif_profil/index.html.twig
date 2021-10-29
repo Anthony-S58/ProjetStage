@@ -1,0 +1,61 @@
+{# {% extends 'base.html.twig' %} #}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+    <h1>User index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Roles</th>
+                <th>Password</th>
+                <th>Username</th>
+                <th>Poste</th>
+                <th>Description</th>
+                <th>Photoprofil</th>
+                <th>Photobandeau</th>
+                <th>Facebook</th>
+                <th>Instagram</th>
+                <th>Twitter</th>
+                <th>Linkedin</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+                <td>{{ user.password }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.poste }}</td>
+                <td>{{ user.description }}</td>
+                <td>{{ user.photoprofil }}</td>
+                <td>{{ user.photobandeau }}</td>
+                <td>{{ user.facebook }}</td>
+                <td>{{ user.instagram }}</td>
+                <td>{{ user.twitter }}</td>
+                <td>{{ user.linkedin }}</td>
+                <td>{{ user.nom }}</td>
+                <td>{{ user.prenom }}</td>
+                <td>
+                    <a href="{{ path('modif_profil_show', {'id': user.id}) }}">show</a>
+                    <a href="{{ path('modif_profil_edit', {'id': user.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="16">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('modif_profil_new') }}">Create new</a>
+{% endblock %}

@@ -121,7 +121,10 @@
                 </div>
 
                 <div id="buttons">
-                    <button>Modifier mon profil</button>
+                    {% if is_granted ("ROLE_ADMIN") %}
+                    <button><a href="{{ path('admin') }}">Admin</a></button>
+                    {% endif %}
+                    <button><a href="{{ path('modif_profil_edit', {'id': user.id}) }}">Modifier mon profil</a></button>
                     <button>Publier un post</button>
                     <button id="selected">Trombinoscope</button>
                 </div>
