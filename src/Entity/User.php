@@ -88,6 +88,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $chocolaterie;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $nom;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $prenom;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -288,6 +298,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setChocolaterie(?chocolaterie $chocolaterie): self
     {
         $this->chocolaterie = $chocolaterie;
+
+        return $this;
+    }
+
+    public function getNom(): ?string
+    {
+        return $this->nom;
+    }
+
+    public function setNom(?string $nom): self
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    public function getPrenom(): ?string
+    {
+        return $this->prenom;
+    }
+
+    public function setPrenom(string $prenom): self
+    {
+        $this->prenom = $prenom;
 
         return $this;
     }
