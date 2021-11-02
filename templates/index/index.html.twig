@@ -40,56 +40,59 @@
             </div>
 
             <div id="lastposts">
+                          
+                {% for post in postcol1 %}
 
                 <div class="col">
                     <div class="art1">
                     <img src="img/posts/restaurant-1.jpeg" alt="">
                         <div class="containarticle">
-                            <h3>Lorem, ipsum.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, labore?<span>categorie</span></p>
+                            <h3>{{post.titre}}</h3>
+                            <p>{{post.description}}<span>{{post.categories}}</span></p>
                         </div>
                     </div>
                     <div class="art2">
                         <img src="img/posts/reunion.jpeg" alt="">
                         <div class="containarticle">
-                            <h3>Lorem, ipsum.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, labore?<span>categorie</span></p>
+                            <h3>{{post.titre}}</h3>
+                            <p>{{post.description}}<span>{{post.categories}}</span></p>
                         </div>
                     </div>
                 </div>
+                {% endfor %} 
                 <div class="col">
-                    <div class="art2">
+                    <div class="art3">
                         <img src="img/posts/team-soleil.jpeg" alt="">
                         <div class="containarticle">
-                            <h3>Lorem, ipsum.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, labore?<span>categorie</span></p>
+                            <h3>titre</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur.<span>categories</span></p>
                         </div>
                     </div>
-                    <div class="art1">
+                    <div class="art4">
                         <img src="img/posts/paysage.jpeg" alt="">
                         <div class="containarticle">
-                            <h3>Lorem, ipsum.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, labore?<span>categorie</span></p>
+                            <h3>titre</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur.<span>categories</span></p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="art1">
+                    <div class="art5">
                         <img src="img/posts/restaurant-2.jpeg" alt="">
                         <div class="containarticle">
-                            <h3>Lorem, ipsum.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, labore?<span>categorie</span></p>
+                            <h3>titre</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur.<span>categories</span></p>
                         </div>
                     </div>
-                    <div class="art2">
+                    <div class="art6">
                         <img src="img/posts/visio.jpeg" alt="">
                         <div class="containarticle">
-                            <h3>Lorem, ipsum.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, labore?<span>categorie</span></p>
+                            <h3>titre</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur.<span>categories</span></p>
                         </div>
                     </div>
-
-                </div>            
+                </div>
+                    
             </div>           
         </div>
         <div id="actus">

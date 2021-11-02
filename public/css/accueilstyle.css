@@ -206,6 +206,122 @@ a {
 #cadres #posts #lastposts .col .art2 .containarticle span {
   color: #0baa9f;
 }
+#cadres #posts #lastposts .col .art3 {
+  height: 45%;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  background-color: black;
+  position: relative;
+}
+#cadres #posts #lastposts .col .art3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: opacity(40%);
+}
+#cadres #posts #lastposts .col .art3 .containarticle {
+  padding: 15px;
+  z-index: 2;
+  position: absolute;
+}
+#cadres #posts #lastposts .col .art3 .containarticle p {
+  font-size: smaller;
+}
+#cadres #posts #lastposts .col .art3 .containarticle span {
+  color: #0baa9f;
+}
+#cadres #posts #lastposts .col .art4 {
+  height: 55%;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  background-color: black;
+  position: relative;
+}
+#cadres #posts #lastposts .col .art4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: opacity(40%);
+}
+#cadres #posts #lastposts .col .art4 .containarticle {
+  padding: 15px;
+  z-index: 2;
+  position: absolute;
+}
+#cadres #posts #lastposts .col .art4 .containarticle p {
+  font-size: smaller;
+}
+#cadres #posts #lastposts .col .art4 .containarticle span {
+  color: #0baa9f;
+}
+#cadres #posts #lastposts .col .art5 {
+  height: 55%;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  background-color: black;
+  position: relative;
+}
+#cadres #posts #lastposts .col .art5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: opacity(40%);
+}
+#cadres #posts #lastposts .col .art5 .containarticle {
+  padding: 15px;
+  z-index: 2;
+  position: absolute;
+}
+#cadres #posts #lastposts .col .art5 .containarticle p {
+  font-size: smaller;
+}
+#cadres #posts #lastposts .col .art5 .containarticle span {
+  color: #0baa9f;
+}
+#cadres #posts #lastposts .col .art6 {
+  height: 45%;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  background-color: black;
+  position: relative;
+}
+#cadres #posts #lastposts .col .art6 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: opacity(40%);
+}
+#cadres #posts #lastposts .col .art6 .containarticle {
+  padding: 15px;
+  z-index: 2;
+  position: absolute;
+}
+#cadres #posts #lastposts .col .art6 .containarticle p {
+  font-size: smaller;
+}
+#cadres #posts #lastposts .col .art6 .containarticle span {
+  color: #0baa9f;
+}
 #cadres #actus {
   height: 100%;
   width: 35%;

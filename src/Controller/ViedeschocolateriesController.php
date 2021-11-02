@@ -17,7 +17,7 @@ class ViedeschocolateriesController extends AbstractController
     public function index(): Response
     {
         $user = $this->getUser();
-        $users = $this->getDoctrine()->getRepository(User::class)->findBy([], ['id' => 'DESC']);
+        $users = $this->getDoctrine()->getRepository(User::class)->findBy([], ['id' => 'DESC'], 5);
         $posts = $this->getDoctrine()->getRepository(Post::class)->findBy([], ['id' => 'DESC']);
 
         return $this->render('viedeschocolateries/index.html.twig', [

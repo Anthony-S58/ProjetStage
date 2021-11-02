@@ -16,7 +16,7 @@ class ViechocolaterieuniqueController extends AbstractController
     public function index($id): Response
     {
         $user = $this->getUser();
-        $users = $this->getDoctrine()->getRepository(User::class)->findBy([], ['id' => 'DESC']);
+        $users = $this->getDoctrine()->getRepository(User::class)->findBy([], ['id' => 'DESC'], 5);
         $post = $this->getDoctrine()->getRepository(Post::class)->find($id);
 
 
