@@ -17,9 +17,9 @@ class IndexController extends AbstractController
     public function index(): Response
     {
         $user = $this->getUser();
-        $postcol1 = $this->getDoctrine()->getRepository(Post::class)->findBy([], ['id' => 'DESC'], 1);
-        $postcol2 = $this->getDoctrine()->getRepository(Post::class)->findBy([], ['id' => 'DESC']);
-        $postcol3 = $this->getDoctrine()->getRepository(Post::class)->findBy([], ['id' => 'DESC']);
+        $postcol1 = $this->getDoctrine()->getRepository(Post::class)->findBy([], ['id' => 'DESC'], 2, 0);
+        $postcol2 = $this->getDoctrine()->getRepository(Post::class)->findBy([], ['id' => 'DESC'], 2, 2);
+        $postcol3 = $this->getDoctrine()->getRepository(Post::class)->findBy([], ['id' => 'DESC'], 2, 4);
 
 
         return $this->render('index/index.html.twig', [
