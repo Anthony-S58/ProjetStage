@@ -30,7 +30,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Column(type="json")
      */
     private $roles = [];
-    
+
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
@@ -97,6 +97,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $prenom;
+
+    /**
+     * @ORM\OneToOne(targetEntity=Employe::class, mappedBy="User", cascade={"persist", "remove"})
+     */
+    private $employe;
 
     public function getId(): ?int
     {
@@ -177,7 +182,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         return null;
     }
-    
+
     /**
      * @see UserInterface
      */
@@ -186,7 +191,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
     }
-    
+
     public function setUsername(string $username): self
     {
         $this->username = $username;
@@ -322,6 +327,28 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setPrenom(string $prenom): self
     {
         $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    public function getEmploye(): ?Employe
+    {
+        return $this->employe;
+    }
+
+    public function setEmploye(?Employe $employe): self
+    {
+        // unset the owning side of the relation if necessary
+        if ($employe === null && $this->employe !== null) {
+            $this->employe->setUser(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($employe !== null && $employe->getUser() !== $this) {
+            $employe->setUser($this);
+        }
+
+        $this->employe = $employe;
 
         return $this;
     }

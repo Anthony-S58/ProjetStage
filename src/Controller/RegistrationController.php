@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Entity\Employe;
 use App\Form\RegistrationFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,7 +19,7 @@ class RegistrationController extends AbstractController
     /**
      * @Route("/register-superadmin", name="app_registersuperadmin")
      */
-    
+
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasherInterface): Response
     {
         $user = new User();
@@ -34,7 +35,7 @@ class RegistrationController extends AbstractController
                 $form->get('username')->getData()
             );
             $user->setRoles(
-              ['ROLE_SUPER_ADMIN']
+                ['ROLE_SUPER_ADMIN']
             );
             $user->setPoste(
                 $form->get('poste')->getData()
@@ -89,6 +90,7 @@ class RegistrationController extends AbstractController
     public function registerutilisateur(Request $request, UserPasswordHasherInterface $userPasswordHasherInterface): Response
     {
         $user = new User();
+        $employe = new Employe();
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
@@ -101,7 +103,7 @@ class RegistrationController extends AbstractController
                 $form->get('username')->getData()
             );
             $user->setRoles(
-              ['ROLE_USER']
+                ['ROLE_USER']
             );
             $user->setPoste(
                 $form->get('poste')->getData()
@@ -130,17 +132,20 @@ class RegistrationController extends AbstractController
             $user->setChocolaterie(
                 $form->get('chocolaterie')->getData()
             );
-            
-            
+
+
             $user->setPassword(
-            $userPasswordHasherInterface->hashPassword(
+                $userPasswordHasherInterface->hashPassword(
                     $user,
                     $form->get('plainPassword')->getData()
                 )
             );
 
+            $user->setEmploye($employe);
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
+            $entityManager->persist($employe);
             $entityManager->flush();
             // do anything else you need here, like send an email
 
@@ -170,7 +175,7 @@ class RegistrationController extends AbstractController
                 $form->get('username')->getData()
             );
             $user->setRoles(
-              ['ROLE_ADMIN']
+                ['ROLE_ADMIN']
             );
             $user->setPoste(
                 $form->get('poste')->getData()
@@ -199,10 +204,10 @@ class RegistrationController extends AbstractController
             $user->setChocolaterie(
                 $form->get('chocolaterie')->getData()
             );
-            
-            
+
+
             $user->setPassword(
-            $userPasswordHasherInterface->hashPassword(
+                $userPasswordHasherInterface->hashPassword(
                     $user,
                     $form->get('plainPassword')->getData()
                 )
