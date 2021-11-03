@@ -257,6 +257,9 @@ a {
   justify-content: space-between;
   flex-direction: row;
 }
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postinteract #comments a {
+  color: #191e39 !important;
+}
 #cadres #cadre2 #categories {
   width: 20%;
   height: 50%;

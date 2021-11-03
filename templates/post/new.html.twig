@@ -1,11 +1,45 @@
-{% extends 'base.html.twig' %}
+{# {% extends 'base.html.twig' %} #}
 
-{% block title %}New Post{% endblock %}
+{% block title %}{% endblock %}
+
+{% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+            <link rel="stylesheet" href="{{ asset ('css/addpoststyle.css') }}">
+        {% endblock %}
 
 {% block body %}
-    <h1>Create new Post</h1>
+<div id="bandeau">
+        <div id="bloc1">
+            <div id="imageprofil">
+                <img src="../img/profils/anthony riviere/anthony-riviere.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="nomprofil">
+                <h2><span id="firstname">{{user.prenom}} </span><span id="lastname"> {{user.nom}}</span></h2>
+            </div>
+            <div id="button">
+                <button><a href="/profil"><i class="fas fa-user-alt"></i> Voir mon profil</a></button>
+            </div>      
+        </div>
+        <div id="bloc2">
+            <div id="liens">
+                <a href="/index">Accueil</a>
+                <a href="/actualites">Actualités de l'entreprise</a>
+                <a href="/trombinoscope">Trombinoscope</a>
+                <a href="/viedeschocolateries">La vie des chocolateries</a>
+                <a href="/logout"><i class="fas fa-power-off"></i> Déconnexion</a>
+            </div>
+            <img src="../img/logo-david-kenos-blanc.png" width="150px" height="150px" alt="">
+        </div>       
+    </div>
+    <div id="cadres">
+        <div id="title">
+            <h1>Ajouter un Post</h1>
+        </div>
 
     {{ include('post/_form.html.twig') }}
+    <a href="{{ path('profil') }}">Retour au profil</a>
+    </div>
 
-    <a href="{{ path('post_index') }}">back to list</a>
+    {# <a href="{{ path('post_index') }}">back to list</a> #}
+
 {% endblock %}

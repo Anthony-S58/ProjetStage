@@ -6,14 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}Bienvenue!{% endblock %}</title>
     {# Run `composer require symfony/webpack-encore-bundle` and uncomment the
-    following Encore helpers to start using Symfony UX #} {% block stylesheets
-    %} {#{{
-      encore_entry_link_tags("app")
-    }}#} {% endblock %} {% block javascripts %} {#{{
-      encore_entry_script_tags("app")
-    }}#} {% endblock %}
+    following Encore helpers to start using Symfony UX #}
+     {% block stylesheets%} 
+     {#{{encore_entry_link_tags("app")}}#}
+    <link rel="stylesheet" href="{{ asset ('css/accueilstyle.css') }}">
+       {% endblock %}
+     {% block javascripts %}
+      {#{{encore_entry_script_tags("app")}}#}
+     {% endblock %}
   </head>
   <body>
-    {% block body %}{% endblock %}
+    {% block body %}
+    <div id="bandeau">
+        <div id="bloc1">
+            <div id="imageprofil">
+                <img src="../img/profils/anthony riviere/anthony-riviere.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="nomprofil">
+                <h2><span id="firstname">{{user.prenom}} </span><span id="lastname"> {{user.nom}}</span></h2>
+            </div>
+            <div id="button">
+                <button><a href="/profil"><i class="fas fa-user-alt"></i> Voir mon profil</a></button>
+            </div>      
+        </div>
+        <div id="bloc2">
+            <div id="liens">
+                <a href="/index">Accueil</a>
+                <a href="/actualites">Actualités de l'entreprise</a>
+                <a href="/trombinoscope">Trombinoscope</a>
+                <a href="/viedeschocolateries" id="select">La vie des chocolateries</a>
+                <a href="/logout"><i class="fas fa-power-off"></i> Déconnexion</a>
+            </div>
+            <img src="../img/logo-david-kenos-blanc.png" width="150px" height="150px" alt="">
+        </div>       
+    </div>
+    {% endblock %}
   </body>
 </html>
