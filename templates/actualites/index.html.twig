@@ -47,13 +47,13 @@
             <div id="lastactus">
             {% for actu in actus %}
                 <div id="actu1">
-                    <div class="ville">Nevers</div>
+                    <div class="ville">{{actu.chocolaterie}}</div>
                     <div class="imageactus">
                         <img src="../img/posts/paysage.jpeg" width="300px" height="160px" alt="paysage">
                     </div>
                     <div class="descriptactus">
-                        <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores vitae.</p>
+                        <h3>{{actu.titre}}</h3>
+                        <p>{{actu.texte}}</p>
                     </div>
                 </div>
             {% endfor %}               
