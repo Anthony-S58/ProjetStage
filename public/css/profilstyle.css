@@ -193,7 +193,7 @@ a {
   margin-inline: 10px;
 }
 #cadres #cadre2 #descriptprofil #icones a {
-  color: #191e39;
+  color: black;
 }
 #cadres #cadre2 #descriptprofil #mail {
   display: flex;
