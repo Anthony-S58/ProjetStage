@@ -44,14 +44,26 @@
                     <div id="description">{{user.description}}</div>
 
                     <div id="icones">
-                            <div class="icone"><i class="fab fa-facebook-f"></i></div>
-                            <div class="icone"><i class="fab fa-instagram"></i></div>
-                            <div class="icone"><i class="fab fa-twitter"></i></div>
-                            <div class="icone"><i class="fab fa-linkedin-in"></i></div>
-                        </div>
-                        <div id="mail">
-                        <button>Envoyer un mail</button>
-                        </div>
+                    {% if user.facebook > 0 %}                    
+                            <a href="{{user.facebook}}" target="_blank"><div class="icone"><i class="fab fa-facebook-f"></i></div></a>
+                    {% else %}                       
+                    {% endif %}
+                    {% if user.instagram > 0 %}                    
+                            <a href="{{user.instagram}}" target="_blank"><div class="icone"><i class="fab fa-instagram"></i></div></a>
+                    {% else %}                       
+                    {% endif %}
+                    {% if user.twitter > 0 %}                    
+                            <a href="{{user.twitter}}" target="_blank"><div class="icone"><i class="fab fa-twitter"></i></div></a>
+                    {% else %}                       
+                    {% endif %}
+                    {% if user.linkedin > 0 %}                    
+                            <a href="{{user.linkedin}}" target="_blank"><div class="icone"><i class="fab fa-linkedin-in"></i></div></a>
+                    {% else %}                       
+                    {% endif %}
+                    </div>
+                    <div id="mail">
+                    <button>Envoyer un mail</button>
+                    </div>
                 </div>
 
                 <div id="lastposts">

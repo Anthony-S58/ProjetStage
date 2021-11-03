@@ -61,7 +61,7 @@
                         <div class="icone"><i class="fab fa-linkedin-in"></i></div>
                     </div>
 
-                    <a href=""><button><i class="fas fa-eye"></i> Voir le profil </button></a>
+                    <a href="{{ path('profil', {'id': user.id}) }}"><button><i class="fas fa-eye"></i> Voir le profil </button></a>
                 </div>
             {% endfor %}
             </div>

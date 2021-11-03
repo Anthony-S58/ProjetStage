@@ -192,6 +192,9 @@ a {
   align-items: center;
   margin-inline: 10px;
 }
+#cadres #cadre2 #descriptprofil #icones a {
+  color: #191e39;
+}
 #cadres #cadre2 #descriptprofil #mail {
   display: flex;
   justify-content: center;
