@@ -108,4 +108,9 @@ class Post
 
         return $this;
     }
+
+    public function __construct()
+    {
+    $this->date = new \DateTime('now');
+    }
 }

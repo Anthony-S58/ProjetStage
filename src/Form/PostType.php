@@ -15,7 +15,7 @@ class PostType extends AbstractType
             ->add('titre')
             ->add('description')
             ->add('categories')
-            ->add('date')
+            // ->add('date')
             // ->add('user')
         ;
     }
