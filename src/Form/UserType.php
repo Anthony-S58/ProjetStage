@@ -26,14 +26,14 @@ class UserType extends AbstractType
             ->add('instagram')
             ->add('twitter')
             ->add('linkedin')
-            ->add('chocolaterie')
-        ;
+            ->add('chocolaterie');
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
             'data_class' => User::class,
+
         ]);
     }
 }

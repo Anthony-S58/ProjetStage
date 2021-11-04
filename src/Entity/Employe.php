@@ -10,17 +10,22 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Employe
 {
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
+
     private $id;
 
     /**
      * @ORM\OneToOne(targetEntity=User::class, inversedBy="employe", cascade={"persist", "remove"})
      */
     private $User;
+
+
+
 
     public function getId(): ?int
     {

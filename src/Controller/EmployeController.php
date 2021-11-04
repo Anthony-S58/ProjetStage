@@ -39,7 +39,7 @@ class EmployeController extends AbstractController
             $entityManager->persist($employe);
             $entityManager->flush();
 
-            return $this->redirectToRoute('employe_index', [], Response::HTTP_SEE_OTHER);
+            return  $this->redirectToRoute('employe_index', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('employe/new.html.twig', [

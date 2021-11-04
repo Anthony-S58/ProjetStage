@@ -12,8 +12,7 @@ class EmployeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('User')
-        ;
+            ->add('User');
     }
 
     public function configureOptions(OptionsResolver $resolver)

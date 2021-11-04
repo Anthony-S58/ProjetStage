@@ -86,10 +86,22 @@
 								{{employe.user.chocolaterie}}
 							</td>
 							<td>
+
 								<button class="modifier">
-									<i class="fas fa-edit"></i>Modifier</button>
+									<a href="{{ path('employe_edit', {'id': employe.id}) }}">Modifier</a>
+								</button>
 								<button class="supprimer">
-									<i class="far fa-trash-alt"></i>Supprimer</button>
+									<a href="{{ path('employe_delete', {'id': employe.id}) }}">Supprimer</a>
+								</button>
+
+
+								{# 
+															<a href="templates/employe/edit.html.twig">
+															<button class="modifier">
+															<i class="fas fa-edit"></i>Modifier</button>
+															</a>
+															<button class="supprimer">
+														  <i class="far fa-trash-alt"></i>Supprimer</button> #}
 							</td>
 
 						</tr>
