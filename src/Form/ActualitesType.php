@@ -13,7 +13,7 @@ class ActualitesType extends AbstractType
     {
         $builder
             ->add('titre')
-            ->add('date')
+            // ->add('date')
             ->add('texte')
             ->add('chocolaterie')
         ;

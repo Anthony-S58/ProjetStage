@@ -91,4 +91,12 @@ class AddActualitesController extends AbstractController
 
         return $this->redirectToRoute('add_actualites_index', [], Response::HTTP_SEE_OTHER);
     }
+
+    public function createAction(Request $request)
+    {
+    // en créant un object Actualites, le constructeur de l'entité Actualites initialise la date à la date du jour.
+    // Le formulaire symfony se chargera d'hydrater ton input date avec la valeur du champ date de l'entité Actualites
+    $form = $this->createFormBuilder(new Actualites()); //nul besoin de set la date grâce au constructeur
+    // ...
+    }
 }
