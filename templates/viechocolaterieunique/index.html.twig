@@ -133,12 +133,51 @@
             </div>
             <div id="categories">
 
-                <a href="#" class="linkcateg">Tous les posts</a>
-                <a href="#" class="linkcateg" id="select">Animations</a>
-                <a href="#" class="linkcateg">Divers</a>
-                <a href="#" class="linkcateg">Vie de l'entreprise</a>
-                <a href="#" class="linkcateg">Améliorations</a>
-                <a href="#" class="linkcateg">Questions</a>
+                {% if post.categories == "Animations" %}
+                    <a href="#" class="linkcateg">Tous les posts</a>
+                    <a href="#" class="linkcateg" id="select">Animations</a>
+                    <a href="#" class="linkcateg">Divers</a>
+                    <a href="#" class="linkcateg">Vie de l'entreprise</a>
+                    <a href="#" class="linkcateg">Améliorations</a>
+                    <a href="#" class="linkcateg">Questions</a>
+                    {% else %}                   
+                    {% endif %}
+                    {% if post.categories == "Divers" %}
+                    <a href="#" class="linkcateg">Tous les posts</a>
+                    <a href="#" class="linkcateg">Animations</a>
+                    <a href="#" class="linkcateg" id="select">Divers</a>
+                    <a href="#" class="linkcateg">Vie de l'entreprise</a>
+                    <a href="#" class="linkcateg">Améliorations</a>
+                    <a href="#" class="linkcateg">Questions</a>
+                    {% else %}                  
+                    {% endif %}
+                    {% if post.categories == "Vie de l\'entreprise" %}
+                    <a href="#" class="linkcateg">Tous les posts</a>
+                    <a href="#" class="linkcateg">Animations</a>
+                    <a href="#" class="linkcateg">Divers</a>
+                    <a href="#" class="linkcateg" id="select">Vie de l'entreprise</a>
+                    <a href="#" class="linkcateg">Améliorations</a>
+                    <a href="#" class="linkcateg">Questions</a>
+                    {% else %}                  
+                    {% endif %}
+                    {% if post.categories == "Améliorations" %}
+                    <a href="#" class="linkcateg">Tous les posts</a>
+                    <a href="#" class="linkcateg">Animations</a>
+                    <a href="#" class="linkcateg">Divers</a>
+                    <a href="#" class="linkcateg">Vie de l'entreprise</a>
+                    <a href="#" class="linkcateg" id="select">Améliorations</a>
+                    <a href="#" class="linkcateg">Questions</a>
+                    {% else %}                  
+                    {% endif %}
+                    {% if post.categories == "Questions" %}
+                    <a href="#" class="linkcateg">Tous les posts</a>
+                    <a href="#" class="linkcateg">Animations</a>
+                    <a href="#" class="linkcateg">Divers</a>
+                    <a href="#" class="linkcateg">Vie de l'entreprise</a>
+                    <a href="#" class="linkcateg">Améliorations</a>
+                    <a href="#" class="linkcateg" id="select">Questions</a>
+                    {% else %}                  
+                    {% endif %}
             </div>
 
         </div>
