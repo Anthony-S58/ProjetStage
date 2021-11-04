@@ -296,6 +296,9 @@ a {
   justify-content: space-between;
   flex-direction: row;
 }
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postinteract a {
+  color: #191e39 !important;
+}
 #cadres #cadre2 #buttons {
   display: flex;
   flex-direction: column;
