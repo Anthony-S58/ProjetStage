@@ -41,7 +41,9 @@ class PostController extends AbstractController
             $entityManager->persist($post);
             $entityManager->flush();
 
-            return $this->redirectToRoute('profil', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('profil', [
+                'id' => $user->getId()
+            ], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('post/new.html.twig', [

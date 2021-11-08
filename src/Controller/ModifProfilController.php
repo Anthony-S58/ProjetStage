@@ -73,7 +73,9 @@ class ModifProfilController extends AbstractController
             
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('profil', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('profil', [
+                'id' => $user->getId()               
+            ], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('modif_profil/edit.html.twig', [

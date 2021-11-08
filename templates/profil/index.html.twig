@@ -1,4 +1,4 @@
-{# {% extends 'base.html.twig' %} #}
+{% extends 'base.html.twig' %}
 
 {% block title %}{% endblock %}
 
@@ -7,29 +7,7 @@
 {% endblock %}
 
 {% block body %}
-    <div id="bandeau">
-        <div id="bloc1">
-            <div id="imageprofil">
-                <img src="../img/profils/anthony riviere/anthony-riviere.jpg" width="150px" height="150px" alt="">
-            </div>
-            <div id="nomprofil">
-                <h2><span id="firstname">{{user.prenom}} </span><span id="lastname"> {{user.nom}}</span></h2>
-            </div>
-            <div id="button">
-                <button><a href="#"><i class="fas fa-user-alt"></i> Voir mon profil</a></button>
-            </div>      
-        </div>
-        <div id="bloc2">
-            <div id="liens">
-                <a href="/index">Accueil</a>
-                <a href="/actualites">Actualités de l'entreprise</a>
-                <a href="/trombinoscope">Trombinoscope</a>
-                <a href="/vie-des-chocolateries">La vie des chocolateries</a>
-                <a href="/logout"><i class="fas fa-power-off"></i> Déconnexion</a>
-            </div>
-            <img src="../img/logo-david-kenos-blanc.png" width="150px" height="150px" alt="">
-        </div>       
-    </div>
+    
 
 
         <div id="cadres">
@@ -39,25 +17,25 @@
             </div>
             <div id="cadre2">
                 <div id="descriptprofil">
-                    <div id="nomprenom"><h2><span id="firstname">{{user.prenom}} </span><span id="lastname"> {{user.nom}}</span></h2></div>
-                    <div id="posteville"><h3>{{user.poste}} - <span class="ville">{{user.chocolaterie}}</span></h3></div>
-                    <div id="description">{{user.description}}</div>
+                    <div id="nomprenom"><h2><span id="firstname">{{userid.prenom}} </span><span id="lastname"> {{userid.nom}}</span></h2></div>
+                    <div id="posteville"><h3>{{userid.poste}} - <span class="ville">{{userid.chocolaterie}}</span></h3></div>
+                    <div id="description">{{userid.description}}</div>
 
                     <div id="icones">
                     {% if user.facebook > 0 %}                    
-                            <a href="{{user.facebook}}" target="_blank"><div class="icone"><i class="fab fa-facebook-f"></i></div></a>
+                            <a href="{{userid.facebook}}" target="_blank"><div class="icone"><i class="fab fa-facebook-f"></i></div></a>
                     {% else %}                       
                     {% endif %}
                     {% if user.instagram > 0 %}                    
-                            <a href="{{user.instagram}}" target="_blank"><div class="icone"><i class="fab fa-instagram"></i></div></a>
+                            <a href="{{userid.instagram}}" target="_blank"><div class="icone"><i class="fab fa-instagram"></i></div></a>
                     {% else %}                       
                     {% endif %}
                     {% if user.twitter > 0 %}                    
-                            <a href="{{user.twitter}}" target="_blank"><div class="icone"><i class="fab fa-twitter"></i></div></a>
+                            <a href="{{userid.twitter}}" target="_blank"><div class="icone"><i class="fab fa-twitter"></i></div></a>
                     {% else %}                       
                     {% endif %}
                     {% if user.linkedin > 0 %}                    
-                            <a href="{{user.linkedin}}" target="_blank"><div class="icone"><i class="fab fa-linkedin-in"></i></div></a>
+                            <a href="{{userid.linkedin}}" target="_blank"><div class="icone"><i class="fab fa-linkedin-in"></i></div></a>
                     {% else %}                       
                     {% endif %}
                     </div>
