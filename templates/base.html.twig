@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %}{% endblock %}</title>
-    {# Run `composer require symfony/webpack-encore-bundle` and uncomment the
-    following Encore helpers to start using Symfony UX #}
-     {% block stylesheets%} 
-     {#{{encore_entry_link_tags("app")}}#}
-       {% endblock %}
-     {% block javascripts %}
-      {#{{encore_entry_script_tags("app")}}#}
-     {% endblock %}
-  </head>
-  <body>
-    <div id="bandeau">
-        <div id="bloc1">
-            <div id="imageprofil">
-                <img src="../img/profils/anthony riviere/anthony-riviere.jpg" width="150px" height="150px" alt="">
-            </div>
-            <div id="nomprofil">
-                <h2><span id="firstname">{{user.prenom}} </span><span id="lastname"> {{user.nom}}</span></h2>
-            </div>
-            <div id="button">
-                <button><a href="{{ path('profil', {'id': user.id}) }}"><i class="fas fa-user-alt"></i> Voir mon profil</a></button>
-            </div>      
-        </div>
-        <div id="bloc2">
-            <div id="liens">
-                <a href="/index">Accueil</a>
-                <a href="/actualites">Actualités de l'entreprise</a>
-                <a href="/trombinoscope">Trombinoscope</a>
-                <a href="/vie-des-chocolateries">La vie des chocolateries</a>
-                <a href="/logout"><i class="fas fa-power-off"></i> Déconnexion</a>
-            </div>
-            <img src="../img/logo-david-kenos-blanc.png" width="150px" height="150px" alt="">
-        </div>       
-    </div>
-    {% block body %}
-    {% endblock %}
-  </body>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>
+			{% block title %}{% endblock %}
+		</title>
+		{# Run `composer require symfony/webpack-encore-bundle` and uncomment the
+				    following Encore helpers to start using Symfony UX #}
+		{% block stylesheets%}
+			{#{{encore_entry_link_tags("app")}}#}
+		{% endblock %}
+		{% block javascripts %}
+			{#{{encore_entry_script_tags("app")}}#}
+		{% endblock %}
+	</head>
+	<body>
+		<div id="bandeau">
+			<div id="bloc1">
+				<div id="imageprofil">
+					<img src="../img/profils/anthony riviere/anthony-riviere.jpg" width="150px" height="150px" alt="">
+				</div>
+				<div id="nomprofil">
+					<h2>
+						<span id="firstname">user.prenom
+						</span>
+						<span id="lastname">user.nom</span>
+					</h2>
+				</div>
+				<div id="button">
+					<button>
+						<a href="{{ path('profil', {'id': user.id}) }}">
+							<i class="fas fa-user-alt"></i>
+							Voir mon profil</a>
+					</button>
+				</div>
+			</div>
+			<div id="bloc2">
+				<div id="liens">
+					<a href="/index">Accueil</a>
+					<a href="/actualites">Actualités de l'entreprise</a>
+					<a href="/trombinoscope">Trombinoscope</a>
+					<a href="/vie-des-chocolateries">La vie des chocolateries</a>
+					<a href="/logout">
+						<i class="fas fa-power-off"></i>
+						Déconnexion</a>
+				</div>
+				<img src="../img/logo-david-kenos-blanc.png" width="150px" height="150px" alt="">
+			</div>
+		</div>
+		{% block body %}{% endblock %}
+	</body>
 </html>

@@ -1,33 +1,83 @@
-{% extends 'base.html.twig' %}
+{% extends 'base2.html.twig' %}
 
-{% block title %}Employe index{% endblock %}
-
+{% block title %}Employe index
+{% endblock %}
+{% block stylesheets %}
+	<link
+	rel="stylesheet" href="{{ asset ('css/employestyle.css') }}"/>
+{#{{ encore_entry_link_tags("app") }}#}
+{% endblock %}
 {% block body %}
-    <h1>Employe index</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for employe in employes %}
-            <tr>
-                <td>{{ employe.id }}</td>
-                <td>
-                    <a href="{{ path('employe_show', {'id': employe.id}) }}">show</a>
-                    <a href="{{ path('employe_edit', {'id': employe.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="2">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+	<header>
+		<div class="logoheader">
+			<img src="../img/logo-david-kenos.png" alt="logo de David Kenos"/>
+		</div>
 
-    <a href="{{ path('employe_new') }}">Create new</a>
+		<div class="menuheader">
+			<nav class="menu">
+				<ul>
+					<div class="rond">
+						<li class="menu">
+							<a href="#">
+								Chocolaterie Nevers</a>
+						</li>
+						<div id="circle"></div>
+					</div>
+					<li class="menu">
+						<a href="{{ path('admin') }}">
+							Accueil
+						</a>
+					</li>
+
+					<li class="menu">
+						<a href="{{ path('app_logout') }}">
+							Déconnexion
+							<i class="fas fa-power-off"></i>
+						</a>
+					</li>
+
+
+				</ul>
+			</nav>
+		</div>
+		<div id="liens">
+			<a href="#">UTILISATEURS</a>
+			<a href="#">CATÉGORIES</a>
+			<a href="#">POSTS</a>
+			<a href="#">ACTUALITÉS</a>
+			<a href="#">CHOCOLATERIES</a>
+		</div>
+
+
+	</header>
+
+	<div class="titre">
+		<h1>Index Employé</h1>
+	</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for employe in employes %}
+				<tr>
+					<td>{{ employe.id }}</td>
+					<td>
+						<a class="nouveau" href="{{ path('employe_show', {'id': employe.id}) }}">Afficher</a>
+						<a class="nouveau" href="{{ path('employe_edit', {'id': employe.id}) }}">Modifier</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="2">no records found</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<a class="nouveau2" href="{{ path('employe_new') }}">Create new</a>
 {% endblock %}
