@@ -40,7 +40,10 @@
                     {% endif %}
                     </div>
                     <div id="mail">
-                    <button>Envoyer un mail</button>
+                        {% if user == userid %}
+                        {% else %}
+                            <button>Envoyer un mail</button>
+                        {% endif %}
                     </div>
                 </div>
 

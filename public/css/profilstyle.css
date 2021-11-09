@@ -27,7 +27,6 @@ header {
   width: 20%;
 }
 #bandeau {
-  width: 280px;
   height: 100%;
   background-color: #191e39;
 }
@@ -151,7 +150,7 @@ a {
   padding-right: 20px;
 }
 #cadres #cadre2 #descriptprofil {
-  height: 65%;
+  height: 330px;
   width: 20%;
   margin-top: 30px;
   background-color: #fff;
@@ -181,7 +180,7 @@ a {
   padding-inline: 20px;
 }
 #cadres #cadre2 #descriptprofil #icones {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -219,7 +218,7 @@ a {
   margin: 30px;
   margin-top: 80px;
   width: 50%;
-  height: 85%;
+  height: 450px;
 }
 #cadres #cadre2 #lastposts span {
   font-weight: 300;
@@ -228,6 +227,7 @@ a {
   width: 105%;
   height: 85%;
   margin-top: 20px;
+  padding-inline: 20px;
   overflow-y: scroll;
 }
 #cadres #cadre2 #lastposts #cadrespost .cadrepost {
