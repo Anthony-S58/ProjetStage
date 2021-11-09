@@ -27,7 +27,6 @@ header {
   width: 20%;
 }
 #bandeau {
-  width: 280px;
   height: 100%;
   background-color: #191e39;
 }
@@ -134,7 +133,7 @@ a {
 }
 #cadre #search {
   width: 93%;
-  height: 100px;
+  height: 60px;
   padding-inline: 0px;
   background-color: #fff;
   display: flex;
@@ -176,7 +175,7 @@ a {
   padding-left: 30px;
 }
 #cadre #actus {
-  height: 50rem;
+  height: 520px;
   width: 93%;
   margin-inline: 45px;
   border-top: 5px solid #f2bf2c;
@@ -199,14 +198,16 @@ a {
   width: 300px;
   margin-inline: 40px;
   margin-bottom: 30px;
+  margin-top: 30px;
+  position: relative;
 }
 #cadre #actus #lastactus #actu1 .ville {
-  height: 30px;
-  width: 100px;
+  height: 20px;
+  width: 140px;
   background-color: #f2bf2c;
-  position: relative;
-  top: 45px;
-  left: 215px;
+  position: absolute;
+  top: 15px;
+  right: -15px;
   display: flex;
   justify-content: center;
   text-align: center;
