@@ -22,6 +22,10 @@ body {
   display: flex;
   flex-direction: row;
 }
+header {
+  height: 100vh;
+  width: 20%;
+}
 #bandeau {
   width: 280px;
   height: 100%;
