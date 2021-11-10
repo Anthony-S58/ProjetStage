@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}Vie des chocolateries{% endblock %}
 
 {% block stylesheets %}         
     <link rel="stylesheet" href="{{ asset ('css/viechocolateriesstyle.css') }}">
@@ -22,7 +22,7 @@
                         <p class="prenom">{{user.prenom}}</p><p class="nom">{{user.nom}}</p>
                         </div>
                 </div>
-                {% endfor %}                
+                {% endfor %}           
             </div>
 
             <div id="lastposts">
@@ -52,13 +52,12 @@
                 
             </div>
             <div id="categories">
-
-                <a href="#" class="linkcateg" id="select">Tous les posts</a>
-                <a href="#" class="linkcateg">Animations</a>
-                <a href="#" class="linkcateg">Divers</a>
-                <a href="#" class="linkcateg">Vie de l'entreprise</a>
-                <a href="#" class="linkcateg">Améliorations</a>
-                <a href="#" class="linkcateg">Questions</a>
+                <a href="/vie-des-chocolateries" class="linkcateg">Tous les posts</a>
+                {% for categ in categories %}
+                   
+                <a href="{{ path('viechoco', {'id' : categ.id}) }}" class="linkcateg">{{categ.nom}}</a>
+                    
+                {% endfor %}
             </div>
 
         </div>

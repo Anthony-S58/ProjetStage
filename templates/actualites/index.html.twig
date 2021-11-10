@@ -1,21 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}Actualités{% endblock %}
 
 {% block stylesheets %}         
     <link rel="stylesheet" href="{{ asset ('css/actualitesstyle.css') }}">
 {% endblock %}
 
 {% block body %}
-    
 
-   <div id="cadre">
+   <div id="cadres">
         <div id="title"><h1>Les actualités, <span id="soustitre">des chocolateries</span></h1></div>
 
 
         <div id="search">
            <div id="villes">
-                <a href="#">Nevers</a> | <a href="">La Charité</a> | <a href="">Pougues-les-eaux</a> | <a href="">Sancerre</a> | <a href="">Marzy</a>
+           {% for chocolaterie in chocolateries %}
+               
+                <a href="{{ path('actu', {'id' : chocolaterie.id}) }}">{{chocolaterie.ville}}</a> | 
+           {% endfor %}
                 <div id="btnsearch"><i class="fas fa-search"></div></i><input type="text" placeholder="Rechercher...">
            </div>
 
@@ -23,7 +25,8 @@
         <div id="actus">
 
             <div id="lastactus">
-            {% for actu in actus %}
+                        {% for actu in actus %}
+
                 <div id="actu1">
                     <div class="ville">{{actu.chocolaterie}}</div>
                     <div class="imageactus">
@@ -34,7 +37,9 @@
                         <p>{{actu.texte}}</p>
                     </div>
                 </div>
-            {% endfor %}               
+                        {% endfor %}
+
+                
             </div>
             
         </div>
