@@ -1,4 +1,4 @@
-{% extends 'base2.html.twig' %}
+{% extends 'baseadmin3.html.twig' %}
 {% block title %}Hello AdminController!
 {%
 endblock %}
@@ -9,41 +9,6 @@ endblock %}
 {% endblock %}
 {% block body %}
 
-	<header>
-		<div class="logoheader">
-			<img src="../img/logo-david-kenos.png" alt="logo de David Kenos"/>
-		</div>
-
-		<div class="titreheader">
-			<h1>Bienvenue,</h1>
-			<h2>dans votre administration</h2>
-		</div>
-
-		<div class="menuheader">
-			<nav class="menu">
-				<ul>
-					<li class="menu">
-						<a href="#">
-							Accueil
-						</a>
-					</li>
-
-					<li class="menu">
-						<a href="{{ path('logout') }}">
-							Déconnexion
-							<i class="fas fa-power-off"></i>
-						</a>
-					</li>
-
-					<li class="menu">
-						<a href="#">
-							Chocolaterie Nevers</a>
-					</li>
-					<div id="circle"></div>
-				</ul>
-			</nav>
-		</div>
-	</header>
 
 	<div class="grandblock">
 		<div class="block1">

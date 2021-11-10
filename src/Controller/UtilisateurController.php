@@ -11,7 +11,7 @@ use App\Entity\Employe;
 class UtilisateurController extends AbstractController
 {
     /**
-     * @Route("/utilisateur", name="utilisateur")
+     * @Route("admin/utilisateur", name="admin_utilisateur")
      */
     public function index(): Response
     {
@@ -19,7 +19,7 @@ class UtilisateurController extends AbstractController
         $employes = $this->getDoctrine()->getRepository(Employe::class)->findBy([], ['id' => 'DESC']);
         dump($employes);
 
-        return $this->render('utilisateur/index.html.twig', [
+        return $this->render('admin_utilisateur/index.html.twig', [
             'employes' => $employes
         ]);
     }

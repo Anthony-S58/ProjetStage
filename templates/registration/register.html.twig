@@ -1,47 +1,47 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Inscription{% endblock %}
+{% block title %}Inscription
+{% endblock %}
 {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-            <link rel="stylesheet" href="{{ asset ('css/registerstyle.css') }}">
-        {% endblock %}
+	{#{{ encore_entry_link_tags('app') }}#}
+	<link rel="stylesheet" href="{{ asset ('css/registerstyle.css') }}">
+{% endblock %}
 
 {% block body %}
 
-    <div id="register">
+	<div id="register">
 
-        <div id="registerlogo">
-            <img src="../img/logo-david-kenos-blanc.png" alt="logo david kenos artisan chocolatier" height="250px" width="250px">
-        </div>
+		<div id="registerlogo">
+			<img src="../img/logo-david-kenos-blanc.png" alt="logo david kenos artisan chocolatier" height="250px" width="250px">
+		</div>
 
-        <div id="registertitle">
-            <h2> Hâte de nous retrouver ?</h2>
-            <h1>Inscris-toi !</h1>
-        </div>
-        
-        <div id="registerform">
-                {{ form_start(registrationForm) }}
-                {{ form_row(registrationForm.username) }}
-                {{ form_row(registrationForm.email) }}
-                {{ form_row(registrationForm.plainPassword, {
+		<div id="registertitle">
+			<h2>
+				Hâte de nous retrouver ?</h2>
+			<h1>Inscris-toi !</h1>
+		</div>
+
+		<div id="registerform">
+			{{ form_start(registrationForm) }}
+			{{ form_row(registrationForm.username) }}
+			{{ form_row(registrationForm.email) }}
+			{{ form_row(registrationForm.plainPassword, {
                     label: 'Password'
-                }) }}                
-                {{ form_row(registrationForm.chocolaterie)}}
-                {{ form_row(registrationForm.poste) }}
-                {# {{ form_row(registrationForm.description) }}
-                {{ form_row(registrationForm.photoprofil) }}
-                {{ form_row(registrationForm.photobandeau) }}
-                {{ form_row(registrationForm.facebook) }}
-                {{ form_row(registrationForm.twitter) }}
-                {{ form_row(registrationForm.instagram) }}
-                {{ form_row(registrationForm.linkedin) }} #}
-                {# {{ form_row(registrationForm.roles)}} #}
-        </div>
-        <div id="validform">
-            {{ form_row(registrationForm.agreeTerms, { label: "J'accepte les conditions"}) }}
-            <button type="submit" class="btn">Inscription</button>
-            {{ form_end(registrationForm) }}
-        </div>
+                }) }}
+			{{ form_row(registrationForm.chocolaterie)}}
+			{{ form_row(registrationForm.poste) }}
+		{# {{ form_row(registrationForm.description) }}
+		                {{ form_row(registrationForm.photoprofil) }}
+		                {{ form_row(registrationForm.photobandeau) }}
+		                {{ form_row(registrationForm.facebook) }}
+		                {{ form_row(registrationForm.twitter) }}
+		                {{ form_row(registrationForm.instagram) }}
+		                {{ form_row(registrationForm.linkedin) }} #}
+			{# {{ form_row(registrationForm.roles)}} #}
+		</div>
+		<div id="validform">
+			{{ form_row(registrationForm.agreeTerms, { label: "J'accepte les conditions"}) }}
+			<button type="submit" class="btn">Inscription</button>
+			{{ form_end(registrationForm) }}
+		</div>
 
-    </div>
+	</div>
 {% endblock %}

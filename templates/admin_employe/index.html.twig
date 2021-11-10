@@ -1,0 +1,46 @@
+{% extends 'baseadmin2.html.twig' %}
+
+{% block title %}Employe index
+{% endblock %}
+{% block stylesheets %}
+	<link
+	rel="stylesheet" href="{{ asset ('css/employestyle.css') }}"/>
+{#{{ encore_entry_link_tags("app") }}#}
+{% endblock %}
+{% block body %}
+
+
+	<div class="titre">
+		<h1>Index Employé</h1>
+	</div>
+	<a class="nouveau2" href="{{ path('admin_employe_new') }}">Créer un nouvel utilisateur</a>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for employe in employes %}
+				<tr>
+					<td>{{ employe.id }}</td>
+					<td>
+						<a class="nouveau" href="{{ path('admin_employe_show', {'id': employe.id}) }}">Afficher</a>
+						<a class="nouveau" href="{{ path('admin_employe_edit', {'id': employe.id}) }}">Modifier</a>
+
+
+					</td>
+
+				</tr>
+			{% else %}
+
+				<tr>
+					<td colspan="2">no records found</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+{% endblock %}

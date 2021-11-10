@@ -1,0 +1,70 @@
+{% extends 'baseadmin2.html.twig' %}
+
+{% block title %}Hello UtilisateurController!
+{% endblock %}
+{% block stylesheets %}
+	<link
+	rel="stylesheet" href="{{ asset ('css/utilisateursstyle.css') }}"/>
+{#{{ encore_entry_link_tags("app") }}#}
+{% endblock %}
+{% block body %}
+
+
+	<div class="grandblock">
+		<p class="titre">
+			Gérer les utilisateurs
+		</p>
+
+
+		<div class="tableau">
+			<table>
+
+				<thead>
+					<tr>
+						<th>Nom</th>
+						<th>Prénom</th>
+						<th>Poste</th>
+						<th>Chocolaterie</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+
+				<tbody>
+
+					{% for employe in employes %}
+
+						<tr>
+							<td>{{employe.user.nom}}</td>
+							<td>{{employe.user.prenom}}</td>
+							<td>{{employe.user.poste}}
+							</td>
+
+
+							<td>
+								{{employe.user.chocolaterie}}
+							</td>
+							<td>
+
+								<button class="modifier">
+									<a href="{{ path('admin_employe_edit', {'id': employe.id}) }}">Modifier</a>
+								</button>
+								<button class="supprimer">
+									<a href="{{ path('admin_employe_delete', {'id': employe.id}) }}">Supprimer</a>
+								</button>
+
+
+							</td>
+
+						</tr>
+					{% endfor %}
+
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
+
+
+{% endblock %}
