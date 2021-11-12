@@ -3,7 +3,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v25/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Montserrat';
@@ -66,6 +66,7 @@ a {
 #bloc1 #imageprofil img {
   overflow: hidden;
   border-radius: 50%;
+  object-fit: cover;
 }
 #bloc1 button {
   width: 200px;
@@ -206,6 +207,7 @@ a {
 }
 #cadres #cadre2 #lastposts #cadrespost .cadrepost #postimgprofil img {
   border-radius: 150px;
+  object-fit: cover;
 }
 #cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent {
   display: flex;

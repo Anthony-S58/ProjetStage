@@ -9,6 +9,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 /**
  * @Route("/modif/profil")
@@ -35,6 +37,29 @@ class ModifProfilController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+             //On récupère les images transmises
+        $picture = $form->getData();
+        $images = $form->get('photoprofil')->getData();
+        if ($images){
+            //    On génère un nouveau nom de fichier
+            $fichier= md5(uniqid()) . '.' . $images->guessExtension();
+            try{
+            // On copie le fichier dans le dossier uploads
+
+            $images->move(
+                $this->getParameter('images_directory'),
+                $fichier
+            );
+        }
+        catch (FileException $e) {
+            // ... handle exception if something happens during file upload
+         }
+            // On stock l'image dans la base de données (son nom)
+            $picture->setPhotoprofil($fichier);
+        }
+            
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
@@ -70,6 +95,29 @@ class ModifProfilController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+             //On récupère les images transmises
+        $picture = $form->getData();
+        $images = $form->get('photoprofil')->getData();
+        if ($images){
+            //    On génère un nouveau nom de fichier
+            $fichier= md5(uniqid()) . '.' . $images->guessExtension();
+            try{
+            // On copie le fichier dans le dossier uploads
+
+            $images->move(
+                $this->getParameter('images_directory'),
+                $fichier
+            );
+        }
+        catch (FileException $e) {
+            // ... handle exception if something happens during file upload
+         }
+            // On stock l'image dans la base de données (son nom)
+            $picture->setPhotoprofil($fichier);
+        }
+            
+
             
             $this->getDoctrine()->getManager()->flush();
 

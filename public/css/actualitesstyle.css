@@ -3,7 +3,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v25/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Montserrat';
@@ -65,6 +65,7 @@ a {
 }
 #bloc1 #imageprofil img {
   overflow: hidden;
+  object-fit: cover;
   border-radius: 50%;
 }
 #bloc1 button {

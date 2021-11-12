@@ -17,7 +17,7 @@
                 <h2>Les derniers inscrits</h2>
                 {% for user in users %}
                 <div class="person">
-                    <img src="../img/profils/arthur allemand/arthur-allemand-homme.jpeg" width="60px" height="60px" alt="">   
+                    <img src="{{ asset('/uploads/' ~ user.photoprofil) }}" width="60px" height="60px" alt="">   
                         <div class="identite">
                         <p class="prenom">{{user.prenom}}</p><p class="nom">{{user.nom}}</p>
                         </div>
@@ -30,7 +30,7 @@
                         <div class="cadrepost">
 
                             <div id="postimgprofil">
-                                <img src="../img/profils/anthony riviere/anthony-riviere.jpg" width="100px" height="100px" alt="">   
+                                <img src="{{ asset('/uploads/' ~ post.user.photoprofil) }}" width="100px" height="100px" alt="">   
                             </div>
                             <div id="postcontent">
                                 <div id="postnomprenom"><h2><span id="firstname">{{post.user.prenom}} </span><span id="lastname"> {{post.user.nom}}</span></h2></div>

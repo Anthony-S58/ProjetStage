@@ -13,7 +13,7 @@
         <div id="cadres">
             <div id="banniere" style="background-image:url('../img/profils/anthony riviere/foret-bandeau-profil.jpeg');">
             
-                <img src="../img/profils/anthony riviere/anthony-riviere.jpg" width="180px" height="180px" alt="">
+                <img src="{{ asset('/uploads/' ~ user.photoprofil) }}" width="180px" height="180px" alt="">
             </div>
             <div id="cadre2">
                 <div id="descriptprofil">
@@ -54,7 +54,7 @@
                         <div class="cadrepost">
 
                             <div id="postimgprofil">
-                                <img src="../img/profils/anthony riviere/anthony-riviere.jpg" width="100px" height="100px" alt="">   
+                                <img src="{{ asset('/uploads/' ~ post.user.photoprofil) }}" width="100px" height="100px" alt="">   
                             </div>
                             <div id="postcontent">
                                 <div id="postnomprenom"><h2><span id="firstname">{{post.user.prenom}} </span><span id="lastname"> {{post.user.nom}}</span></h2></div>

@@ -6,6 +6,8 @@ use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+
 
 class UserType extends AbstractType
 {
@@ -20,8 +22,14 @@ class UserType extends AbstractType
             ->add('prenom')
             ->add('poste')
             ->add('description')
-            ->add('photoprofil')
-            ->add('photobandeau')
+            ->add('photoprofil', FileType::class, [
+                'mapped' => false,
+                'required' => false
+            ])
+            ->add('photobandeau', FileType::class, [
+                'mapped' => false,
+                'required' => false
+            ])
             ->add('facebook')
             ->add('instagram')
             ->add('twitter')
