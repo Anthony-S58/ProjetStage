@@ -15,9 +15,9 @@ body{
 }
 header{
     height: 100vh;
-    width: 20%;
 }
 #bandeau{
+    width: 280px;
     height: 100%;
     background-color: @color3;
 }
@@ -134,13 +134,23 @@ flex-direction: column;
 
         img{
             overflow: hidden;
-            border-radius: 150px;
             position: relative;
             object-fit: cover;
-            border: 10px solid #fff;
+            height: 100%;
+            width: 100%;
+        } 
+        #cadreprofil{
+            position: absolute;
+            height: 150px;
+            width: 150px;
             left: 42%;
-            top: 30px;
-        }     
+            top: 50px;
+            img{
+            overflow: hidden;
+            border-radius: 150px;
+            object-fit: cover;
+            border: 10px solid #fff;
+        }}
     }
 
     
@@ -156,7 +166,7 @@ flex-direction: column;
         padding-right: 20px;
 
         #descriptprofil{
-            height: 330px;
+            height: 340px;
             width: 20%;
             margin-top: 30px;
             background-color: #fff;
@@ -190,7 +200,7 @@ flex-direction: column;
 
             }
             #icones{
-                margin-top: 30px;
+                margin-top: 20px;
                 display: flex;
                 justify-content: center;
                 flex-direction: row;
@@ -205,9 +215,9 @@ flex-direction: column;
                     align-items: center;
                     margin-inline: 10px;
                 }
-                a{
-                    color: black;
-                }
+            }
+            #icones a{
+                color: black!important;
             }
             #mail{
                 display: flex;
@@ -232,26 +242,26 @@ flex-direction: column;
             margin: 30px;
             margin-top: 80px;
             width: 50%;
-            height: 450px;
+            height: 85%;
             
             span{
                 font-weight: 300;
             }
             #cadrespost{
-                width: 105%;
-                height: 85%;
+                width: 100%;
+                height: 450px;
                 margin-top: 20px;
                 padding-inline: 20px;
                 overflow-y: scroll;
-                
-                
-                .cadrepost{
-                    width: 95%;
-                    height: 190px;
-                    margin-top: 30px;
-                    margin-bottom: 20px;
-                    background-color: #fff;
-                    position: relative;
+
+           
+            .cadrepost{
+                width: 95%;
+                height: 190px;
+                margin-top: 30px;
+                margin-bottom: 20px;
+                background-color: #fff;
+                position: relative;
                 display: flex;
                 flex-direction: row;
             box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
@@ -262,7 +272,7 @@ flex-direction: column;
 
                     img{
                         border-radius: 150px;
-                        object-fit: cover;
+                    object-fit: cover;
 
                     }
                 }
@@ -287,7 +297,7 @@ flex-direction: column;
                     }
                     #postdatepubli{
                         color: @color2;
-                        font-size: 0.8em;
+                        font-size: 0.7em;
                         font-weight: bold;
                     }
                     #posttitre{
@@ -321,11 +331,11 @@ flex-direction: column;
                         display: flex;
                         justify-content: space-between;
                         flex-direction: row;
-
                     }
-                    #postinteract a{
-                         color: @color3!important;
-                     }
+                    #comments a{
+                        color: @color3;
+                    }
+                   
                 }
             }
         }

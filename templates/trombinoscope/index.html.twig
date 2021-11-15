@@ -10,9 +10,12 @@
     
     <div id="cadres">
 
-        <div id="banniere" style="background-image:url('../img/profils/anthony riviere/foret-bandeau-profil.jpeg');">
-            <img src="{{ asset('/uploads/' ~ user.photoprofil) }}" width="180px" height="180px" alt="">
-        </div>
+        <div id="banniere">
+            <img src="{{ asset('/uploads/' ~ user.photobandeau) }}" alt="">
+                <div id="cadreprofil">
+                    <img src="{{ asset('/uploads/' ~ user.photoprofil) }}" width="180px" height="180px" alt="">
+                </div>
+            </div>
 
         <h1>Le Trombinoscope</h1>
 
@@ -24,8 +27,11 @@
         <div id="cartes">
             {% for user in users %}
             <div id="carte">
-                <div id="imgfond" style="background-image:url('../img/profils/evelyne alebat/paysage-montagne-bandeau.jpeg');">
-                    <img src="{{ asset('/uploads/' ~ user.photoprofil) }}" width="80px" height="80px" alt="">
+                <div id="imgfond">
+                    <img src="{{ asset('/uploads/' ~ user.photobandeau) }}"alt="">
+                    <div id="picprofil">
+                        <img src="{{ asset('/uploads/' ~ user.photoprofil) }}"alt="">
+                    </div>
                 </div>
                 <div class="ville">{{user.chocolaterie}}</div>
                     <div id="identite">

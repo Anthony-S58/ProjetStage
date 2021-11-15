@@ -40,24 +40,44 @@ class ModifProfilController extends AbstractController
 
              //On récupère les images transmises
         $picture = $form->getData();
-        $images = $form->get('photoprofil')->getData();
-        if ($images){
+        $photoprofil = $form->get('photoprofil')->getData();
+        $photobandeau = $form->get('photobandeau')->getData();
+        if ($photoprofil){
             //    On génère un nouveau nom de fichier
-            $fichier= md5(uniqid()) . '.' . $images->guessExtension();
+            $fichier= md5(uniqid()) . '.' . $photoprofil->guessExtension();
             try{
             // On copie le fichier dans le dossier uploads
 
-            $images->move(
+            $photoprofil->move(
                 $this->getParameter('images_directory'),
                 $fichier
             );
         }
+
         catch (FileException $e) {
             // ... handle exception if something happens during file upload
-         }
-            // On stock l'image dans la base de données (son nom)
-            $picture->setPhotoprofil($fichier);
         }
+        // On stock l'image dans la base de données (son nom)
+        $picture->setPhotoprofil($fichier);
+    }
+    if ($photobandeau){
+        $fichier2= md5(uniqid()) . '.' . $photobandeau->guessExtension();
+        try{
+            // On copie le fichier dans le dossier uploads
+
+            $photobandeau->move(
+                $this->getParameter('images_directory'),
+                $fichier2
+            );
+        }
+
+        catch (FileException $e) {
+            // ... handle exception if something happens during file upload
+        }
+        // On stock l'image dans la base de données (son nom)
+        $picture->setPhotobandeau($fichier2);
+    }
+    
             
 
             $entityManager = $this->getDoctrine()->getManager();
@@ -98,24 +118,44 @@ class ModifProfilController extends AbstractController
 
              //On récupère les images transmises
         $picture = $form->getData();
-        $images = $form->get('photoprofil')->getData();
-        if ($images){
+        $photoprofil = $form->get('photoprofil')->getData();
+        $photobandeau = $form->get('photobandeau')->getData();
+        if ($photoprofil){
             //    On génère un nouveau nom de fichier
-            $fichier= md5(uniqid()) . '.' . $images->guessExtension();
+            $fichier= md5(uniqid()) . '.' . $photoprofil->guessExtension();
             try{
             // On copie le fichier dans le dossier uploads
 
-            $images->move(
+            $photoprofil->move(
                 $this->getParameter('images_directory'),
                 $fichier
             );
         }
+
         catch (FileException $e) {
             // ... handle exception if something happens during file upload
-         }
-            // On stock l'image dans la base de données (son nom)
-            $picture->setPhotoprofil($fichier);
         }
+        // On stock l'image dans la base de données (son nom)
+        $picture->setPhotoprofil($fichier);
+    }
+    if ($photobandeau){
+        $fichier2= md5(uniqid()) . '.' . $photobandeau->guessExtension();
+        try{
+            // On copie le fichier dans le dossier uploads
+
+            $photobandeau->move(
+                $this->getParameter('images_directory'),
+                $fichier2
+            );
+        }
+
+        catch (FileException $e) {
+            // ... handle exception if something happens during file upload
+        }
+        // On stock l'image dans la base de données (son nom)
+        $picture->setPhotobandeau($fichier2);
+    }
+    
             
 
             
