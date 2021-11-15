@@ -1,0 +1,35 @@
+{% extends 'baseadmin2.html.twig' %}
+
+{% block title %}Actualites
+{% endblock %}
+
+{% block body %}
+	<h1>Actualites</h1>
+
+	<table class="table">
+		<tbody>
+			<tr>
+				<th>Id</th>
+				<td>{{ actualite.id }}</td>
+			</tr>
+			<tr>
+				<th>Titre</th>
+				<td>{{ actualite.titre }}</td>
+			</tr>
+			<tr>
+				<th>Date</th>
+				<td>{{ actualite.date ? actualite.date|date('Y-m-d') : '' }}</td>
+			</tr>
+			<tr>
+				<th>Texte</th>
+				<td>{{ actualite.texte }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<a href="{{ path('admin_actualites_index') }}">back to list</a>
+
+	<a href="{{ path('admin_actualites_edit', {'id': actualite.id}) }}">edit</a>
+
+	{{ include('admin_actualites/_delete_form.html.twig') }}
+{% endblock %}

@@ -15,21 +15,22 @@ endblock %}
 			<div class="utilisateur">
 				<div class="utilisateur2">
 					<div id="circle2">
-						<p class="circle">10</p>
+						<p class="circle">{{utilisateurs|length}}</p>
 					</div>
 					<div class="utilisateur3">
 						<p class="texte1">UTILISATEURS</p>
 						<p class="texte2">sont inscrits</p>
 					</div>
 				</div>
-
-				<button class="bouton" type="button">Gérer les utilisateurs</button>
+				<a href="{{ path('admin_utilisateur') }}">
+					<button class="bouton" type="button">Gérer les utilisateurs</button>
+				</a>
 			</div>
 
 			<div class="categorie">
 				<div class="categorie2">
 					<div id="circle2">
-						<p class="circle3">5</p>
+						<p class="circle3">{{categories|length}}</p>
 					</div>
 					<div class="categorie3">
 						<p class="texte1">CATÉGORIES</p>
@@ -38,6 +39,7 @@ endblock %}
 				</div>
 
 				<button class="bouton" type="button">Gérer les catégories</button>
+
 			</div>
 		</div>
 
@@ -45,7 +47,7 @@ endblock %}
 			<div class="actualite">
 				<div class="actualite1">
 					<div id="circle2">
-						<p class="circle">35</p>
+						<p class="circle">{{actualites|length}}</p>
 					</div>
 					<div class="actualite2">
 						<p class="texte1">ACTUALITÉS</p>
@@ -79,7 +81,7 @@ endblock %}
 			<div class="post">
 				<div class="post2">
 					<div id="circle2">
-						<p class="circle">48</p>
+						<p class="circle">{{post|length}}</p>
 					</div>
 					<div class="post3">
 						<p class="texte1">POSTS</p>

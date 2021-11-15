@@ -1,0 +1,12 @@
+{% extends 'baseadmin2.html.twig' %}
+
+{% block title %}New Chocolaterie
+{% endblock %}
+
+{% block body %}
+	<h1>Create new Chocolaterie</h1>
+
+	{{ include('admin_chocolaterie/_form.html.twig') }}
+
+	<a href="{{ path('admin_chocolaterie_index') }}">back to list</a>
+{% endblock %}

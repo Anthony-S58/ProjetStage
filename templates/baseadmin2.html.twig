@@ -8,7 +8,7 @@
 			{% block title %}{% endblock %}
 		</title>
 		{# Run `composer require symfony/webpack-encore-bundle` and uncomment the
-										    following Encore helpers to start using Symfony UX #}
+																												    following Encore helpers to start using Symfony UX #}
 		<link rel="stylesheet" href="{{ asset ('css/styleadmin.css') }}"/>
 		{% block stylesheets %}
 			{#{{encore_entry_link_tags("app")}}#}
@@ -51,11 +51,11 @@
 				</nav>
 			</div>
 			<div id="liens">
-				<a href="#">UTILISATEURS</a>
-				<a href="#">CATÉGORIES</a>
-				<a href="#">POSTS</a>
-				<a href="#">ACTUALITÉS</a>
-				<a href="#">CHOCOLATERIES</a>
+				<a href="{{ path('admin_utilisateur') }}">UTILISATEURS</a>
+				<a href="{{ path('admin_categories_index') }}">CATÉGORIES</a>
+				<a href="{{ path('admin_post_index') }}">POSTS</a>
+				<a href="{{ path('admin_actualites_index') }}">ACTUALITÉS</a>
+				<a href="{{ path('admin_chocolaterie_index') }}">CHOCOLATERIES</a>
 			</div>
 
 

@@ -4,9 +4,17 @@
 {% endblock %}
 
 {% block body %}
-	<h1>Create new Employe</h1>
+	<h1>Enregistrer un employé
+	</h1>
 
-	{{ include('admin_employe/_form.html.twig') }}
 
-	<a href="{{ path('admin_employe_index') }}">back to list</a>
+	<div class="user">
+
+		{{ include('admin_employe/_form.html.twig') }}
+	</div>
+
+	<a class="retour" href="{{ path('admin_employe_index') }}">Retour à la liste
+
+
+	</a>
 {% endblock %}
