@@ -77,7 +77,8 @@
 #cadres .btn {
   width: 180px;
   height: 40px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   border-radius: 5px;
   border: none;
   background-color: #191e39;
