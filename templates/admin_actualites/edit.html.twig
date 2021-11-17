@@ -4,11 +4,12 @@
 {% endblock %}
 
 {% block body %}
-	<h1>Edit Actualites</h1>
+	<h1>
+		Actualités</h1>
 
-	{{ include('admin_actualites/_form.html.twig', {'button_label': 'Update'}) }}
+	{{ include('admin_actualites/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-	<a href="{{ path('admin_actualites_index') }}">back to list</a>
+	<a href="{{ path('admin_actualites_index') }}">Retour à la liste</a>
 
 	{{ include('admin_actualites/_delete_form.html.twig') }}
 {% endblock %}

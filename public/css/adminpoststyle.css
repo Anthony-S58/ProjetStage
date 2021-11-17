@@ -16,7 +16,6 @@ header {
   flex-direction: column;
   justify-content: space-around;
 }
-
 @media all and (max-width: 700px) {
   header {
     width: auto;
@@ -287,91 +286,46 @@ footer {
   src: url(https://fonts.gstatic.com/s/playfairdisplay/v25/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf)
     format("truetype");
 }
-* {
-  margin: 0;
-  padding: 0;
+.nouveau {
+  color: black;
 }
-body {
-  background-color: rgba(128, 128, 128, 0.3);
+.nouveau2 {
+  color: black;
+  width: 200px;
+  height: 60px;
+  margin: auto;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #f2bf2c;
+  background-color: #f2bf2c;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
-header {
-  background-image: url(../img/menu-admin-verticale.jpg);
-  background-repeat: no-repeat;
-  background-blend-mode: screen;
-  background-color: #19a498;
-  width: 330px;
-  height: 100vh;
+.grandblock {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  font-family: "Playfair Display Italic";
+}
+.titre {
+  font-size: 40px;
+  font: italic 5em "Fira Sans", serif;
+  margin-bottom: 70px;
+}
+.tableau {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
-@media all and (max-width: 500px) {
-  header {
-    display: flex;
-    flex-direction: row;
-  }
-}
-.logoheader img {
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
   width: 200px;
-}
-.menu {
-  padding: 3px;
-  margin-bottom: 30px;
-}
-.menuheader ul {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-}
-ul {
-  list-style-type: none;
-}
-.menuheader a {
-  padding: 20px;
-  text-decoration: none;
-  color: black;
-}
-#circle {
-  border: 2px solid white;
-  background-color: black;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin-left: 10px;
-}
-.rond {
-  display: flex;
-  flex-direction: row;
-}
-a {
-  color: white;
-  text-decoration: none;
-}
-#liens {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-#liens a {
-  width: 250px;
-  height: 40px;
-  padding: 10px;
-  padding-left: 40px;
-}
-a:hover {
-  color: white;
-  background-color: #0baa9f;
-}
-.user {
-  margin-top: 200px;
-}
-.retour {
-  margin-top: 200px;
-  color: black;
-  padding: 20px;
+  height: 320px;
 }
 thead th {
   background-color: #f2bf2c;
@@ -385,4 +339,22 @@ tbody td {
 tbody tr {
   border-bottom: 2px solid;
   border-bottom-color: rgba(128, 128, 128, 0.308);
+}
+.afficher {
+  background-color: #0baa9f;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+.modifier {
+  background-color: #191e39;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+.supprimer {
+  background-color: #d12121;
+  color: white;
+  border-radius: 5px;
+  border: none;
 }

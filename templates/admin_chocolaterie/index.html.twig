@@ -3,34 +3,47 @@
 {% block title %}Chocolaterie index
 {% endblock %}
 
+{% block stylesheets %}
+	<link
+	rel="stylesheet" href="{{ asset ('css/adminchocolaterie.css') }}"/>
+{#{{ encore_entry_link_tags("app") }}#}
+{% endblock %}
+
 {% block body %}
-	<h1>Chocolaterie index</h1>
 
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Id</th>
-				<th>Ville</th>
-				<th>actions</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for chocolaterie in chocolateries %}
-				<tr>
-					<td>{{ chocolaterie.id }}</td>
-					<td>{{ chocolaterie.ville }}</td>
-					<td>
-						<a href="{{ path('admin_chocolaterie_show', {'id': chocolaterie.id}) }}">show</a>
-						<a href="{{ path('admin_chocolaterie_edit', {'id': chocolaterie.id}) }}">edit</a>
-					</td>
-				</tr>
-			{% else %}
-				<tr>
-					<td colspan="3">no records found</td>
-				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+	<div class="grandblock">
+		<p class="titre">
+			Gérer les chocolateries
+		</p>
 
-	<a href="{{ path('admin_chocolaterie_new') }}">Create new</a>
+		<a class="nouveau2" href="{{ path('admin_chocolaterie_new') }}">Créer une nouvelle chocolaterie</a>
+		<div class="tableau">
+			<table>
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Ville</th>
+						<th>actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for chocolaterie in chocolateries %}
+						<tr>
+							<td>{{ chocolaterie.id }}</td>
+							<td>{{ chocolaterie.ville }}</td>
+							<td>
+								<a class="afficher" href="{{ path('admin_chocolaterie_show', {'id': chocolaterie.id}) }}">Afficher</a>
+								<a class="modifier" href="{{ path('admin_chocolaterie_edit', {'id': chocolaterie.id}) }}">Modifier</a>
+								<a class="supprimer" href="{{ path('admin_chocolaterie_delete', {'id': chocolaterie.id}) }}">Supprimer</a>
+							</td>
+						</tr>
+					{% else %}
+						<tr>
+							<td colspan="3">no records found</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
 {% endblock %}

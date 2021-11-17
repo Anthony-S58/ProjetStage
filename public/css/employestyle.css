@@ -6,14 +6,14 @@ body {
   background-color: rgba(128, 128, 128, 0.3);
 }
 header {
-  background-image: url(../img/bandeau-menu-admin-horizontale.jpg);
+  background-image: url(../img/menu-admin-verticale.jpg);
   background-repeat: no-repeat;
   background-blend-mode: screen;
   background-color: #19a498;
-  width: 100%;
-  height: 200px;
+  width: 20%;
+  /* height: 200px; */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
 }
 @media all and (max-width: 700px) {
@@ -55,7 +55,7 @@ h1 {
   justify-content: flex-end;
   padding: 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 @media all and (max-width: 700px) {
   .menuheader ul {
@@ -263,25 +263,28 @@ footer {
   justify-content: center;
 }
 @font-face {
-  font-family: 'Playfair Display';
+  font-family: "Playfair Display";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v25/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v25/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf)
+    format("truetype");
 }
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm45xW4.ttf)
+    format("truetype");
 }
 @font-face {
-  font-family: 'Playfair Display';
+  font-family: "Playfair Display";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v25/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v25/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf)
+    format("truetype");
 }
 * {
   margin: 0;
@@ -397,4 +400,22 @@ tbody tr {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.afficher {
+  background-color: #0baa9f;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+.modifier {
+  background-color: #191e39;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+.supprimer {
+  background-color: #d12121;
+  color: white;
+  border-radius: 5px;
+  border: none;
 }

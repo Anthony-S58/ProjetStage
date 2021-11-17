@@ -3,34 +3,48 @@
 {% block title %}Categories index
 {% endblock %}
 
+{% block stylesheets %}
+	<link
+	rel="stylesheet" href="{{ asset ('css/admincategoriesstyle.css') }}"/>
+{#{{ encore_entry_link_tags("app") }}#}
+{% endblock %}
+
+
 {% block body %}
-	<h1>Categories index</h1>
 
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Id</th>
-				<th>Nom</th>
-				<th>actions</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for category in categories %}
-				<tr>
-					<td>{{ category.id }}</td>
-					<td>{{ category.nom }}</td>
-					<td>
-						<a href="{{ path('admin_categories_show', {'id': category.id}) }}">show</a>
-						<a href="{{ path('admin_categories_edit', {'id': category.id}) }}">edit</a>
-					</td>
-				</tr>
-			{% else %}
-				<tr>
-					<td colspan="3">no records found</td>
-				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+	<div class="grandblock">
+		<p class="titre">
+			Gérer les catégories
+		</p>
 
-	<a href="{{ path('admin_categories_new') }}">Create new</a>
+		<a class="nouveau2" href="{{ path('admin_categories_new') }}">Créer une nouvelle catégorie</a>
+		<div class="tableau">
+			<table>
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Nom</th>
+						<th>actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for category in categories %}
+						<tr>
+							<td>{{ category.id }}</td>
+							<td>{{ category.nom }}</td>
+							<td>
+								<a class="afficher" href="{{ path('admin_categories_show', {'id': category.id}) }}">Afficher</a>
+								<a class="modifier" href="{{ path('admin_categories_edit', {'id': category.id}) }}">Modifier</a>
+								<a class="supprimer" href="{{ path('admin_categories_delete', {'id': category.id}) }}">Supprimer</a>
+							</td>
+						</tr>
+					{% else %}
+						<tr>
+							<td colspan="3">no records found</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
 {% endblock %}

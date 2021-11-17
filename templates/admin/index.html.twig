@@ -37,9 +37,9 @@ endblock %}
 						<p class="texte2">de posts sont disponibles</p>
 					</div>
 				</div>
-
-				<button class="bouton" type="button">Gérer les catégories</button>
-
+				<a href="{{ path('admin_categories_index') }}">
+					<button class="bouton" type="button">Gérer les catégories</button>
+				</a>
 			</div>
 		</div>
 
@@ -72,8 +72,9 @@ endblock %}
 						<p class="texte1">Lorem ipsum dolor sit amet</p>
 					</div>
 				</div>
-
-				<button class="bouton" type="button">Gérer les actualités</button>
+				<a href="{{ path('admin_actualites_index') }}">
+					<button class="bouton" type="button">Gérer les actualités</button>
+				</a>
 			</div>
 		</div>
 
@@ -88,8 +89,9 @@ endblock %}
 						<p class="texte2">sont disponibles</p>
 					</div>
 				</div>
-
-				<button class="bouton" type="button">Gérer les posts</button>
+				<a href="{{ path('admin_actualites_index') }}">
+					<button class="bouton" type="button">Gérer les posts</button>
+				</a>
 			</div>
 		</div>
 	</div>

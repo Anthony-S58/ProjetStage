@@ -3,38 +3,53 @@
 {% block title %}Post index
 {% endblock %}
 
+{% block stylesheets %}
+	<link
+	rel="stylesheet" href="{{ asset ('css/adminpoststyle.css') }}"/>
+{#{{ encore_entry_link_tags("app") }}#}
+{% endblock %}
+
+
 {% block body %}
-	<h1>Post index</h1>
 
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Id</th>
-				<th>Titre</th>
-				<th>Description</th>
-				<th>Date</th>
-				<th>actions</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for post in posts %}
-				<tr>
-					<td>{{ post.id }}</td>
-					<td>{{ post.titre }}</td>
-					<td>{{ post.description }}</td>
-					<td>{{ post.date ? post.date|date('Y-m-d') : '' }}</td>
-					<td>
-						<a href="{{ path('admin_post_show', {'id': post.id}) }}">show</a>
-						<a href="{{ path('admin_post_edit', {'id': post.id}) }}">edit</a>
-					</td>
-				</tr>
-			{% else %}
-				<tr>
-					<td colspan="5">no records found</td>
-				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+	<div class="grandblock">
+		<p class="titre">
+			Gérer les posts
+		</p>
 
-	<a href="{{ path('admin_post_new') }}">Create new</a>
+		<a class="nouveau2" href="{{ path('admin_post_new') }}">Créer un nouveau post</a>
+		<div class="tableau">
+			<table>
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Titre</th>
+						<th>Description</th>
+						<th>Date</th>
+						<th>actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for post in posts %}
+						<tr>
+							<td>{{ post.id }}</td>
+							<td>{{ post.titre }}</td>
+							<td>{{ post.description }}</td>
+							<td>{{ post.date ? post.date|date('Y-m-d') : '' }}</td>
+							<td>
+								<a class="afficher" href="{{ path('admin_post_show', {'id': post.id}) }}">Afficher</a>
+								<a class="modifier" href="{{ path('admin_post_edit', {'id': post.id}) }}">Modifier</a>
+								<a class="supprimer" href="{{ path('admin_post_delete', {'id': post.id}) }}">Supprimer</a>
+							</td>
+						</tr>
+					{% else %}
+						<tr>
+							<td colspan="5">no records found</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
 {% endblock %}

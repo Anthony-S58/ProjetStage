@@ -4,11 +4,11 @@
 {% endblock %}
 
 {% block body %}
-	<h1>Edit Employe</h1>
+	<h1>Employé</h1>
 
-	{{ include('admin_employe/_form.html.twig', {'button_label': 'Update'}) }}
+	{{ include('admin_employe/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-	<a href="{{ path('admin_employe_index') }}">back to list</a>
+	<a href="{{ path('admin_employe_index') }}">Retour à la liste</a>
 
 	{{ include('admin_employe/_delete_form.html.twig') }}
 {% endblock %}

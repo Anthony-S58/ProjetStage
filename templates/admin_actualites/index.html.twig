@@ -3,38 +3,52 @@
 {% block title %}Actualites index
 {% endblock %}
 
+{% block stylesheets %}
+	<link
+	rel="stylesheet" href="{{ asset ('css/adminactualitesstyle.css') }}"/>
+{#{{ encore_entry_link_tags("app") }}#}
+{% endblock %}
+
 {% block body %}
-	<h1>Actualites index</h1>
 
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Id</th>
-				<th>Titre</th>
-				<th>Date</th>
-				<th>Texte</th>
-				<th>actions</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for actualite in actualites %}
-				<tr>
-					<td>{{ actualite.id }}</td>
-					<td>{{ actualite.titre }}</td>
-					<td>{{ actualite.date ? actualite.date|date('Y-m-d') : '' }}</td>
-					<td>{{ actualite.texte }}</td>
-					<td>
-						<a href="{{ path('admin_actualites_show', {'id': actualite.id}) }}">show</a>
-						<a href="{{ path('admin_actualites_edit', {'id': actualite.id}) }}">edit</a>
-					</td>
-				</tr>
-			{% else %}
-				<tr>
-					<td colspan="5">no records found</td>
-				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+	<div class="grandblock">
+		<p class="titre">
+			Gérer les actualités
+		</p>
 
-	<a href="{{ path('admin_actualites_new') }}">Create new</a>
+		<a class="nouveau2" href="{{ path('admin_actualites_new') }}">Créer une nouvelle actualité</a>
+		<div class="tableau">
+			<table>
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Titre</th>
+						<th>Date</th>
+						<th>Texte</th>
+						<th>actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for actualite in actualites %}
+						<tr>
+							<td>{{ actualite.id }}</td>
+							<td>{{ actualite.titre }}</td>
+							<td>{{ actualite.date ? actualite.date|date('Y-m-d') : '' }}</td>
+							<td>{{ actualite.texte }}</td>
+							<td>
+								<a class="afficher" href="{{ path('admin_actualites_show', {'id': actualite.id}) }}">Afficher</a>
+								<a class="modifier" href="{{ path('admin_actualites_edit', {'id': actualite.id}) }}">Modifier</a>
+								<a class="supprimer" href="{{ path('admin_actualites_delete', {'id': actualite.id}) }}">Supprimer</a>
+							</td>
+						</tr>
+					{% else %}
+						<tr>
+							<td colspan="5">no records found</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
 {% endblock %}
