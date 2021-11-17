@@ -1,23 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}Ajouter un Post{% endblock %}
 
 {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-            <link rel="stylesheet" href="{{ asset ('css/addpoststyle.css') }}">
-        {% endblock %}
+    {#{{ encore_entry_link_tags('app') }}#}
+    <link rel="stylesheet" href="{{ asset ('css/addpoststyle.css') }}">
+{% endblock %}
 
 {% block body %}
-
-    <div id="cadres">
+    <section id="cadres">
+        <div id="menu"><div id="openbutton"><i class="fas fa-bars"></i></div></div>
         <div id="title">
             <h1>Ajouter un Post</h1>
         </div>
-
-    {{ include('post/_form.html.twig') }}
-    <a href="{{ path('profil', {'id' : user.id}) }}">Retour au profil</a>
-    </div>
-
+        <div id="formulairepost">
+            {{ include('post/_form.html.twig') }}
+            <a href="{{ path('profil', {'id' : user.id}) }}">Retour au profil</a>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
     {# <a href="{{ path('post_index') }}">back to list</a> #}
-
 {% endblock %}
