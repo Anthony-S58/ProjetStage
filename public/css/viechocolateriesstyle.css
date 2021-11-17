@@ -12,115 +12,17 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background-color: rgba(128, 128, 128, 0.3);
-  display: flex;
-  flex-direction: row;
-}
-header {
-  height: 100vh;
-  width: 20%;
-}
-#bandeau {
-  height: 100%;
-  background-color: #191e39;
-}
-a {
-  color: #fff;
-  text-decoration: none;
-}
-#bloc1 {
-  width: 100%;
-  height: 45%;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-}
-#bloc1 #nomprofil {
-  color: #fff;
-  margin-top: 20px;
-}
-#bloc1 #nomprofil #firstname {
-  font-family: 'Playfair Display', serif;
-  font-weight: 200;
-}
-#bloc1 #nomprofil #lastname {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
-}
-#bloc1 #imageprofil {
-  border-radius: 200px;
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-}
-#bloc1 #imageprofil img {
-  overflow: hidden;
-  border-radius: 50%;
-  object-fit: cover;
-}
-#bloc1 button {
-  width: 200px;
-  height: 40px;
-  margin-top: 30px;
-  background-color: #0baa9f;
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
-}
-#bloc2 {
-  width: 100%;
-  height: 55%;
-  display: flex;
-  color: #fff;
-  background-color: #13172c;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
-}
-#bloc2 h3 {
-  margin-bottom: 20px;
-}
-#bloc2 #liens {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  width: 100%;
-}
-#bloc2 #liens a {
-  width: 100%;
-  height: 40px;
-  padding: 10px;
-  padding-left: 40px;
-}
-#bloc2 #liens a:hover {
-  color: #f2bf2c;
-  background-color: #191e39;
-}
-#bloc2 #liens #select {
-  background-color: #0baa9f4f;
-}
 #cadres {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   height: 100%;
-  width: 90%;
+  width: 100%;
   font-family: 'Montserrat', sans-serif;
+  padding-inline: 40px;
+}
+#cadres #menu {
+  display: none;
 }
 #cadres #title {
   padding: 50px;
@@ -136,13 +38,12 @@ a {
   justify-content: space-between;
   flex-direction: row;
   width: 100%;
-  height: 75%;
-  padding-left: 55px;
-  padding-right: 40px;
+  height: 100%;
+  flex-wrap: wrap;
 }
 #cadres #cadre2 #lastregister {
-  width: 25%;
-  height: 90%;
+  width: 300px;
+  height: 100%;
   background-color: #fff;
   box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
   border-top: 5px solid #f2bf2c;
@@ -180,26 +81,28 @@ a {
 }
 #cadres #cadre2 #lastposts {
   width: 50%;
-  height: 600px;
+  height: 90%;
 }
 #cadres #cadre2 #lastposts span {
   font-weight: 300;
 }
 #cadres #cadre2 #lastposts #cadrespost {
   width: 100%;
-  height: 100%;
+  height: 600px;
   overflow-y: scroll;
   padding-inline: 20px;
 }
 #cadres #cadre2 #lastposts #cadrespost .cadrepost {
-  width: 95%;
-  height: 190px;
+  width: 100%;
+  height: auto;
   margin-top: 30px;
   margin-bottom: 20px;
+  padding: 20px;
   background-color: #fff;
   position: relative;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
 }
 #cadres #cadre2 #lastposts #cadrespost .cadrepost #postimgprofil {
@@ -212,6 +115,7 @@ a {
 #cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 #cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postnomprenom {
   padding-top: 20px;
@@ -263,8 +167,9 @@ a {
   justify-content: space-between;
   flex-direction: row;
 }
-#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postinteract #comments a {
+#cadres #cadre2 #comments a {
   color: #191e39 !important;
+  text-decoration: none;
 }
 #cadres #cadre2 #categories {
   width: 20%;
@@ -291,4 +196,87 @@ a {
 }
 #cadres #cadre2 #categories #select {
   background-color: #f1d787;
+}
+#cadres #cadre2 #categories a {
+  text-decoration: none;
+}
+@media screen and (max-width: 350px) {
+  #closebutton {
+    display: flex!important;
+  }
+  #menu {
+    display: flex!important;
+    width: 100%;
+    height: 60px;
+    background-color: #191e39;
+    position: fixed;
+    z-index: 20;
+    padding: 10px;
+    top: 0;
+    left: 0;
+  }
+  #menu #openbutton {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f2bf2c;
+  }
+  section {
+    z-index: 15;
+  }
+  header {
+    display: none;
+    width: 100%!important;
+    height: 100vh!important;
+    z-index: 30;
+    position: fixed;
+  }
+  header #imageprofil {
+    margin-top: 30px!important;
+  }
+  header button {
+    margin-top: 20px!important;
+  }
+  #cadres {
+    padding-inline: 20px!important;
+  }
+  #cadres #title {
+    padding: 0px!important;
+    margin-bottom: 20px;
+  }
+  #cadres #title h1 {
+    margin-top: 80px!important;
+  }
+  #cadres #cadre2 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #cadres #cadre2 #lastregister {
+    margin-bottom: 30px!important;
+    order: 1;
+  }
+  #cadres #cadre2 #lastposts {
+    width: 100%!important;
+    margin-bottom: 30px!important;
+    order: 3;
+  }
+  #cadres #cadre2 #lastposts #cadrespost {
+    overflow-y: hidden;
+    height: auto;
+  }
+  #cadres #cadre2 #lastposts #postinteract {
+    width: 150px!important;
+    flex-direction: column-reverse !important;
+  }
+  #cadres #categories {
+    width: 100%!important;
+    flex: 1;
+    order: 2;
+    margin-bottom: 10px;
+  }
 }

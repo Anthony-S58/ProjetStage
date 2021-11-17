@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="{{ asset ('css/chocolateriesuniquestyle.css') }}">
 {% endblock %}
 
-{% block body %}
-    
-    <div id="cadres">
+{% block body %}   
+    <section id="cadres">
+        <div id="menu"><div id="openbutton"><i class="fas fa-bars"></i></div></div>
         <div id="title">
             <h1>La vie <span class="lighter">des chocolateries,</span> <span class="categ">Animations</span></h1>
         </div>
@@ -18,31 +18,27 @@
                 {% for user in users %}
                 <div class="person">
                     <img src="{{ asset('/uploads/' ~ user.photoprofil) }}" width="60px" height="60px" alt="">   
-                        <div class="identite">
+                    <div class="identite">
                         <p class="prenom">{{user.prenom}}</p><p class="nom">{{user.nom}}</p>
-                        </div>
+                    </div>
                 </div>
                 {% endfor %}              
             </div>
-
             <div id="lastposts">
-                    <div id="cadrespost">
-                        <div class="cadrepost">
-
-                            <div id="postimgprofil">
-                                <img src="{{ asset('/uploads/' ~ post.user.photoprofil) }}" width="100px" height="100px" alt="">   
-                            </div>
-                            <div id="postcontent">
-                                <div id="postnomprenom"><h2><span id="firstname">{{post.user.prenom}} </span><span id="lastname"> {{post.user.nom}}</span></h2></div>
-                                <div id="postdatepubli"><p>Publié le {{post.date|date('d/m/Y')}}</p></div>
-
+                <div id="cadrespost">
+                    <div class="cadrepost">
+                        <div id="postimgprofil">
+                            <img src="{{ asset('/uploads/' ~ post.user.photoprofil) }}" width="100px" height="100px" alt="">   
+                        </div>
+                        <div id="postcontent">
+                            <div id="postnomprenom"><h2><span id="firstname">{{post.user.prenom}} </span><span id="lastname"> {{post.user.nom}}</span></h2></div>
+                            <div id="postdatepubli"><p>Publié le {{post.date|date('d/m/Y')}}</p></div>
                                 <div id="posttitre"><h3>{{post.titre}}</h3></div>
                                 <div id="postdescript"><p>{{post.description}}</p></div>
                                 <div id="postcategorie">{{post.categories}}</div>
-
                                 <div id="postinteract">
-                                <div id="comments">5 <i class="far fa-comments"></i>&nbsp; commentaires</div>
-                                <div id="likes">3 <i class="far fa-heart"></i>&nbsp; j'aime</div>
+                                    <div id="comments">5 <i class="far fa-comments"></i>&nbsp; commentaires</div>
+                                    <div id="likes">3 <i class="far fa-heart"></i>&nbsp; j'aime</div>
                                 </div>
                             </div>
                         </div>
@@ -63,8 +59,8 @@
                                             <img src="../img/profils/evelyne alebat/woman-blond-smile.jpeg" width="40px" height="40px" alt="">   
                                         </div>
                                         <div class="textcomment">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium </p>
-                                        <p class="date">le 19/09/2019</p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium </p>
+                                            <p class="date">le 19/09/2019</p>
                                         </div>
                                     </div>
                                 </div>
@@ -74,20 +70,19 @@
                                             <img src="../img/profils/evelyne alebat/woman-blond-smile.jpeg" width="40px" height="40px" alt="">   
                                         </div>
                                         <div class="textcomment">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium </p>
-                                        <p class="date">le 19/09/2019</p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium </p>
+                                            <p class="date">le 19/09/2019</p>
                                         </div>
                                     </div>
                                 </div>
-                                
                                 <div class="commentrow2">
                                     <div class="comment2">
                                         <div class="imgcomment">
                                                 <img src="../img/profils/anthony riviere/anthony-riviere.jpg" width="40px" height="40px" alt="">   
                                         </div>
                                         <div class="textcomment">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium </p>
-                                        <p class="date">le 19/09/2019</p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium </p>
+                                            <p class="date">le 19/09/2019</p>
                                         </div>
                                     </div>
                                 </div>
@@ -97,20 +92,17 @@
                                             <img src="../img/profils/evelyne alebat/woman-blond-smile.jpeg" width="40px" height="40px" alt="">   
                                         </div>
                                         <div class="textcomment">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium </p>
-                                        <p class="date">le 19/09/2019</p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium </p>
+                                            <p class="date">le 19/09/2019</p>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-
-                    </div>
-                
-            </div>
+                    </div>   
+                </div>
+           
             <div id="categories">
-
                 {% if post.categories == "Animations" %}
                     <a href="#" class="linkcateg">Tous les posts</a>
                     <a href="#" class="linkcateg" id="select">Animations</a>
@@ -118,51 +110,46 @@
                     <a href="#" class="linkcateg">Vie de l'entreprise</a>
                     <a href="#" class="linkcateg">Améliorations</a>
                     <a href="#" class="linkcateg">Questions</a>
-                    {% else %}                   
-                    {% endif %}
-                    {% if post.categories == "Divers" %}
+                {% else %}                   
+                {% endif %}
+                {% if post.categories == "Divers" %}
                     <a href="#" class="linkcateg">Tous les posts</a>
                     <a href="#" class="linkcateg">Animations</a>
                     <a href="#" class="linkcateg" id="select">Divers</a>
                     <a href="#" class="linkcateg">Vie de l'entreprise</a>
                     <a href="#" class="linkcateg">Améliorations</a>
                     <a href="#" class="linkcateg">Questions</a>
-                    {% else %}                  
-                    {% endif %}
-                    {% if post.categories == "Vie de l\'entreprise" %}
+                {% else %}                  
+                {% endif %}
+                {% if post.categories == "Vie de l\'entreprise" %}
                     <a href="#" class="linkcateg">Tous les posts</a>
                     <a href="#" class="linkcateg">Animations</a>
                     <a href="#" class="linkcateg">Divers</a>
                     <a href="#" class="linkcateg" id="select">Vie de l'entreprise</a>
                     <a href="#" class="linkcateg">Améliorations</a>
                     <a href="#" class="linkcateg">Questions</a>
-                    {% else %}                  
-                    {% endif %}
-                    {% if post.categories == "Améliorations" %}
+                {% else %}                  
+                {% endif %}
+                {% if post.categories == "Améliorations" %}
                     <a href="#" class="linkcateg">Tous les posts</a>
                     <a href="#" class="linkcateg">Animations</a>
                     <a href="#" class="linkcateg">Divers</a>
                     <a href="#" class="linkcateg">Vie de l'entreprise</a>
                     <a href="#" class="linkcateg" id="select">Améliorations</a>
                     <a href="#" class="linkcateg">Questions</a>
-                    {% else %}                  
-                    {% endif %}
-                    {% if post.categories == "Questions" %}
+                {% else %}                  
+                {% endif %}
+                {% if post.categories == "Questions" %}
                     <a href="#" class="linkcateg">Tous les posts</a>
                     <a href="#" class="linkcateg">Animations</a>
                     <a href="#" class="linkcateg">Divers</a>
                     <a href="#" class="linkcateg">Vie de l'entreprise</a>
                     <a href="#" class="linkcateg">Améliorations</a>
                     <a href="#" class="linkcateg" id="select">Questions</a>
-                    {% else %}                  
-                    {% endif %}
+                {% else %}                  
+                {% endif %}
             </div>
-
         </div>
-
-
-
-    </div>   
-        <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
-
+    </section>   
+    <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
 {% endblock %}

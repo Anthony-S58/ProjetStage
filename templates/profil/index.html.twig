@@ -7,92 +7,76 @@
 {% endblock %}
 
 {% block body %}
-    
-
-
-        <div id="cadres">
-            <div id="banniere">
-                <img src="{{ asset('/uploads/' ~ userid.photobandeau) }}" alt="">
-                <div id="cadreprofil">
-                    <img src="{{ asset('/uploads/' ~ userid.photoprofil) }}" width="180px" height="180px" alt="">
-                </div>
+    <section id="cadres">
+        <div id="menu"><div id="openbutton"><i class="fas fa-bars"></i></div></div>
+        <div id="banniere">
+            <img src="{{ asset('/uploads/' ~ userid.photobandeau) }}" alt="">
+            <div id="cadreprofil">
+                <img src="{{ asset('/uploads/' ~ userid.photoprofil) }}" width="180px" height="180px" alt="">
             </div>
-            <div id="cadre2">
-                <div id="descriptprofil">
-                    <div id="nomprenom"><h2><span id="firstname">{{userid.prenom}} </span><span id="lastname"> {{userid.nom}}</span></h2></div>
-                    <div id="posteville"><h3>{{userid.poste}} - <span class="ville">{{userid.chocolaterie}}</span></h3></div>
-                    <div id="description">{{userid.description}}</div>
-
-                    <div id="icones">
+        </div>
+        <div id="cadre2">
+            <div id="descriptprofil">
+                <div id="nomprenom"><h2><span id="firstname">{{userid.prenom}} </span><span id="lastname"> {{userid.nom}}</span></h2></div>
+                <div id="posteville"><h3>{{userid.poste}} - <span class="ville">{{userid.chocolaterie}}</span></h3></div>
+                <div id="description">{{userid.description}}</div>
+                <div id="icones">
                     {% if user.facebook > 0 %}                    
-                            <a href="{{userid.facebook}}" target="_blank"><div class="icone"><i class="fab fa-facebook-f"></i></div></a>
+                        <a href="{{userid.facebook}}" target="_blank"><div class="icone"><i class="fab fa-facebook-f"></i></div></a>
                     {% else %}                       
                     {% endif %}
                     {% if user.instagram > 0 %}                    
-                            <a href="{{userid.instagram}}" target="_blank"><div class="icone"><i class="fab fa-instagram"></i></div></a>
+                        <a href="{{userid.instagram}}" target="_blank"><div class="icone"><i class="fab fa-instagram"></i></div></a>
                     {% else %}                       
                     {% endif %}
                     {% if user.twitter > 0 %}                    
-                            <a href="{{userid.twitter}}" target="_blank"><div class="icone"><i class="fab fa-twitter"></i></div></a>
+                        <a href="{{userid.twitter}}" target="_blank"><div class="icone"><i class="fab fa-twitter"></i></div></a>
                     {% else %}                       
                     {% endif %}
                     {% if user.linkedin > 0 %}                    
-                            <a href="{{userid.linkedin}}" target="_blank"><div class="icone"><i class="fab fa-linkedin-in"></i></div></a>
+                        <a href="{{userid.linkedin}}" target="_blank"><div class="icone"><i class="fab fa-linkedin-in"></i></div></a>
                     {% else %}                       
                     {% endif %}
-                    </div>
-                    <div id="mail">
-                        {% if user == userid %}
-                        {% else %}
-                            <button>Envoyer un mail</button>
-                        {% endif %}
-                    </div>
                 </div>
-
-                <div id="lastposts">
-                    <h1>Les derniers <span>posts publiés</span></h1>
-                    <div id="cadrespost">
-                        {% for post in posts %}
-                        <div class="cadrepost">
-
-                            <div id="postimgprofil">
-                                <img src="{{ asset('/uploads/' ~ post.user.photoprofil) }}" width="100px" height="100px" alt="">   
-                            </div>
-                            <div id="postcontent">
-                                <div id="postnomprenom"><h2><span id="firstname">{{post.user.prenom}} </span><span id="lastname"> {{post.user.nom}}</span></h2></div>
-                                <div id="postdatepubli"><p>Publié le {{post.date|date('d/m/Y')}}</p></div>
-
-                                <div id="posttitre"><h3>{{post.titre}}</h3></div>
-                                <div id="postdescript"><p>{{post.description}}</p></div>
-                                <div id="postcategorie">{{post.categories}}</div>
-
-                                <div id="postinteract">
-                                <div id="comments">5 <a href="{{ path('viechocolaterieunique', {'id': post.id}) }}"><i class="far fa-comments"></i>&nbsp; commentaires</a></div>
-                                <div id="likes">3 <i class="far fa-heart"></i>&nbsp; j'aime</div>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                
-                </div>
-
-                <div id="buttons">
-                    {% if is_granted ("ROLE_ADMIN") %}
-                    <button><a href="{{ path('admin') }}">Admin</a></button>
+                <div id="mail">
+                    {% if user == userid %}
+                    {% else %}
+                        <button>Envoyer un mail</button>
                     {% endif %}
-                    <button><a href="{{ path('modif_profil_edit', {'id': user.id}) }}">Modifier mon profil</a></button>
-                    <button><a href="{{ path('post_new') }}">Publier un post</a></button>
-                    <button id="selected">Trombinoscope</button>
                 </div>
             </div>
-        
-        </div>
-
-
-        
-
-       
-        <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
-
+            <div id="lastposts">
+                <h1>Les derniers <span>posts publiés</span></h1>
+                <div id="cadrespost">
+                    {% for post in posts %}
+                    <div class="cadrepost">
+                        <div id="postimgprofil">
+                            <img src="{{ asset('/uploads/' ~ post.user.photoprofil) }}" width="100px" height="100px" alt="">   
+                        </div>
+                        <div id="postcontent">
+                            <div id="postnomprenom"><h2><span id="firstname">{{post.user.prenom}} </span><span id="lastname"> {{post.user.nom}}</span></h2></div>
+                            <div id="postdatepubli"><p>Publié le {{post.date|date('d/m/Y')}}</p></div>
+                            <div id="posttitre"><h3>{{post.titre}}</h3></div>
+                            <div id="postdescript"><p>{{post.description}}</p></div>
+                            <div id="postcategorie">{{post.categories}}</div>
+                            <div id="postinteract">
+                                <div id="comments">5 <a href="{{ path('viechocolaterieunique', {'id': post.id}) }}"><i class="far fa-comments"></i>&nbsp; commentaires</a></div>
+                                <div id="likes">3 <i class="far fa-heart"></i>&nbsp; j'aime</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>  
+            </div>
+            <div id="buttons">
+                {% if is_granted ("ROLE_ADMIN") %}
+                <button><a href="{{ path('admin') }}">Admin</a></button>
+                {% endif %}
+                <button><a href="{{ path('modif_profil_edit', {'id': user.id}) }}">Modifier mon profil</a></button>
+                <button><a href="{{ path('post_new') }}">Publier un post</a></button>
+                <button id="selected">Trombinoscope</button>
+            </div>
+        </div>   
+    </section>   
+    <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
 {% endblock %}

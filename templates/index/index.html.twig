@@ -6,21 +6,17 @@
     <link rel="stylesheet" href="{{ asset ('css/accueilstyle.css') }}">
 {% endblock %}
 
-{% block body %}
-    
-    <div id="cadres">
-
+{% block body %}   
+    <section id="cadres">
+        <div id="menu"><div id="openbutton"><i class="fas fa-bars"></i></div></div>
         <div id="posts">
-
             <div id="titleposts">
                 <h2>Bienvenue sur ton espace,</h2>
                 <h3>voici les derniers posts publiés</h3>
             </div>
-
-            <div id="lastposts">
-                          
+            <div id="lastposts">                        
                 <div class="col">
-                        {% for post in postcol1 %}
+                    {% for post in postcol1 %}
                     <div class="art1">
                         <img src="img/posts/restaurant-1.jpeg" alt="">
                         <div class="containarticle">
@@ -28,11 +24,10 @@
                             <p>{{post.description}} <span> {{post.categories}}</span></p>
                         </div>
                     </div>
-                        {% endfor %}
+                    {% endfor %}
                 </div>
-
                 <div class="col">
-                        {% for post in postcol2 %}
+                    {% for post in postcol2 %}
                     <div class="art2">
                         <img src="img/posts/team-soleil.jpeg" alt="">
                         <div class="containarticle">
@@ -40,11 +35,10 @@
                             <p>{{post.description}} <span> {{post.categories}}</span></p>
                         </div>
                     </div>
-                        {% endfor %}
+                    {% endfor %}
                 </div>
-
                 <div class="col">
-                        {% for post in postcol3 %}
+                    {% for post in postcol3 %}
                     <div class="art3">
                         <img src="img/posts/restaurant-2.jpeg" alt="">
                         <div class="containarticle">
@@ -52,9 +46,8 @@
                             <p>{{post.description}} <span> {{post.categories}}</span></p>
                         </div>
                     </div>
-                        {% endfor %}
-                </div>
-                    
+                    {% endfor %}
+                </div>                
             </div>           
         </div>
         <div id="actus">
@@ -64,20 +57,20 @@
             </div>
             <div id="lastactus">
                 {% for actu in actus %}
-                <div class="ville">{{actu.chocolaterie}}</div>
-                <div class="imageactus">
-                    <img src="../img/posts/paysage.jpeg" width="380px" height="160px" alt="">
-                </div>
-                <div class="descriptactus">
-                    <h3>{{actu.titre}}</h3>
-                    <p>{{actu.texte}}</p>
+                <div id="cadreactu">
+                    <div class="ville">{{actu.chocolaterie}}</div>
+                    <div class="imageactus">
+                        <img src="../img/posts/paysage.jpeg" width="380px" height="160px" alt="">
+                    </div>
+                    <div class="descriptactus">
+                        <h3>{{actu.titre}}</h3>
+                        <p>{{actu.texte}}</p>
+                    </div>
                 </div>
                 <br>
                 {% endfor %}
             </div>                
         </div>
-    </div>
-
-        <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
-
+    </section>
+    <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
 {% endblock %}

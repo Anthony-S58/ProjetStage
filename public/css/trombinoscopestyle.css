@@ -12,123 +12,23 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background-color: rgba(128, 128, 128, 0.3);
-  display: flex;
-  flex-direction: row;
-}
-header {
-  height: 100vh;
-  width: 20%;
-}
-#bandeau {
-  width: 280px;
-  height: 100%;
-  background-color: #191e39;
-}
-a {
-  color: #fff;
-  text-decoration: none;
-}
-#bloc1 {
-  width: 100%;
-  height: 45%;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-}
-#bloc1 #nomprofil {
-  color: #fff;
-  margin-top: 20px;
-}
-#bloc1 #nomprofil #firstname {
-  font-family: 'Playfair Display', serif;
-  font-weight: 200;
-}
-#bloc1 #nomprofil #lastname {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
-}
-#bloc1 #imageprofil {
-  border-radius: 200px;
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-}
-#bloc1 #imageprofil img {
-  overflow: hidden;
-  border-radius: 50%;
-  object-fit: cover;
-}
-#bloc1 button {
-  width: 200px;
-  height: 40px;
-  margin-top: 30px;
-  background-color: #0baa9f;
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
-}
-#bloc2 {
-  width: 100%;
-  height: 55%;
-  display: flex;
-  color: #fff;
-  background-color: #13172c;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
-}
-#bloc2 h3 {
-  margin-bottom: 20px;
-}
-#bloc2 #liens {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  width: 100%;
-}
-#bloc2 #liens a {
-  width: 100%;
-  height: 40px;
-  padding: 10px;
-  padding-left: 40px;
-}
-#bloc2 #liens a:hover {
-  color: #f2bf2c;
-  background-color: #191e39;
-}
-#bloc2 #liens #select {
-  background-color: #0baa9f4f;
-}
 #cadres {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   height: 100%;
-  width: 90%;
+  width: 100%;
+  padding-inline: 40px;
   font-family: 'Montserrat', sans-serif;
 }
+#cadres #menu {
+  display: none;
+}
 #cadres #banniere {
-  width: 92%;
-  height: 10rem;
+  width: auto;
+  height: 180px;
   position: relative;
   top: 0;
-  margin-left: 55px;
   margin-top: 30px;
   border-bottom: 5px solid #f2bf2c;
 }
@@ -144,13 +44,13 @@ a {
   height: 150px;
   width: 150px;
   left: 42%;
-  top: 50px;
+  top: 70px;
 }
 #cadres #banniere #cadreprofil img {
   overflow: hidden;
   border-radius: 150px;
   object-fit: cover;
-  border: 10px solid #fff;
+  border: 8px solid #fff;
 }
 #cadres h1 {
   display: flex;
@@ -160,25 +60,23 @@ a {
 }
 #cadres #search {
   margin-top: 20px;
-  width: 93%;
+  width: 100%;
   height: 60px;
-  padding-inline: 0px;
+  padding-inline: 30px;
   background-color: #fff;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
-  margin-inline: 45px;
   margin-bottom: 30px;
   box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
 }
-#cadres #search #villes {
+#cadres #search #research {
+  width: 280px;
   display: flex;
   flex-direction: row;
-  text-align: center;
-  align-items: center;
 }
-#cadres #search #btnsearch {
+#cadres #search #research #btnsearch {
   background-color: #f2bf2c;
   height: 40px;
   width: 40px;
@@ -186,19 +84,17 @@ a {
   justify-content: center;
   align-items: center;
 }
-#cadres #search input {
+#cadres #search #research input {
   height: 40px;
-  width: 350px;
+  width: 240px;
   border: 1px solid #f2bf2c;
-  margin-right: 150px;
 }
-#cadres #search ::placeholder {
-  padding-left: 30px;
+#cadres #search #research ::placeholder {
+  padding-left: 10px;
 }
 #cadres #cartes {
   height: 360px;
-  width: 93%;
-  margin-inline: 45px;
+  width: 100%;
   padding-bottom: 20px;
   background-color: transparent;
   display: flex;
@@ -230,7 +126,7 @@ a {
 }
 #cadres #cartes #carte #imgfond {
   width: 100%;
-  height: 35%;
+  height: 30%;
   background-size: cover;
   background-position: top;
 }
@@ -262,7 +158,7 @@ a {
   font-size: 0.8em;
 }
 #cadres #cartes #carte #identite h2 {
-  margin-top: 30px;
+  margin-top: 50px;
   font-family: 'Playfair Display', serif;
 }
 #cadres #cartes #carte #identite h3 {
@@ -300,4 +196,80 @@ a {
   height: 30px;
   border: none;
   border-radius: 5px;
+}
+@media screen and (max-width: 350px) {
+  #closebutton {
+    display: flex!important;
+  }
+  #menu {
+    display: flex!important;
+    width: 100%;
+    height: 60px;
+    background-color: #191e39;
+    position: fixed;
+    z-index: 20;
+    padding: 10px;
+    top: 0;
+    left: 0;
+  }
+  #menu #openbutton {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f2bf2c;
+  }
+  section {
+    z-index: 15;
+  }
+  header {
+    display: none;
+    width: 100%!important;
+    height: 100vh!important;
+    z-index: 30;
+    position: fixed;
+  }
+  header #imageprofil {
+    margin-top: 30px!important;
+  }
+  header button {
+    margin-top: 20px!important;
+  }
+  #cadres {
+    padding-inline: 20px!important;
+  }
+  #cadres #banniere {
+    margin-top: 80px!important;
+    height: 80px;
+  }
+  #cadres #banniere #cadreprofil {
+    height: 100px;
+    width: 100px;
+    left: 35%;
+    top: 10px;
+  }
+  #cadres #banniere #cadreprofil img {
+    border: 4px solid #fff;
+  }
+  #cadres h1 {
+    margin-top: 40px;
+  }
+  #cadres #search {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  #cadres #search #research {
+    width: 100%;
+    padding-top: 40px;
+  }
+  #cadres #cartes {
+    overflow-y: hidden;
+    height: auto;
+  }
+  #cadres #cartes #carte {
+    margin-bottom: 20px;
+  }
 }

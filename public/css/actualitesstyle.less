@@ -2,188 +2,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: rgba(128, 128, 128, 0.300);
-    display: flex;
-    flex-direction: row;
-}
-header{
-    height: 100vh;
-    width: 20%;
-}
-#bandeau{
-    height: 100%;
-    background-color: @color3;
-}
-a{
-    color: #fff;
-    text-decoration: none;   
-}
-#bloc1{
-width: 100%;
-height:45%;
-display: flex;
-text-align: center;
-align-items: center;
-flex-direction: column;
-
-    #nomprofil {
-        color:#fff;
-        margin-top: 20px;
-        #firstname{
-        font-family: 'Playfair Display', serif;
-        font-weight: 200;
-        }
-        #lastname{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: lighter;
-        }   
-    }
-
-    #imageprofil{
-    border-radius: 200px;
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-
-        img{
-            overflow: hidden;
-            object-fit: cover;
-            border-radius: 50%;
-        }     
-    }
-    
-    button{
-        width: 200px;
-        height: 40px;
-        margin-top: 30px;
-        background-color: @color2;
-        border-radius: 5px;
-        border: none;
-        color:#fff;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: lighter;
-    }
-}
-#bloc2{
-    width: 100%;
-    height:55%;
-    display: flex;
-    color: #fff;
-    background-color: #13172c;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: lighter;
-
-    h3{
-        margin-bottom: 20px;
-    }
-    #liens{
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        width: 100%;
-
-        a{
-            width: 100%;
-            height: 40px;
-            padding: 10px;
-            padding-left:40px;
-        }
-        a:hover{
-            color: @color1;
-            background-color: @color3 ;
-        }
-        #select{
-            background-color: #0baa9f4f;
-        }
-    }
-}
-
-    #cadre{
+#cadres{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 93%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
     font-family: 'Montserrat', sans-serif;
-
+    padding-inline: 40px;
+    
+    #menu{
+        display: none;
+        
+    }
     #title{
-        margin: 50px;
-        padding-inline: 20px;
-
+        margin-top: 50px;
+        margin-bottom: 50px;
+        
         h1{
             font-weight: bold;
         }
-
+        
         #soustitre{
             font-weight: 50;
         }
     }
-
+    
     #search {
-        width: 93%;
-        height: 60px;
-        padding-inline: 0px;
+        width: 100%;
+        height: 70px;
         background-color: #fff;
         display: flex;
+        justify-content: space-around;
         align-items: center; 
         flex-direction: row;
-        margin-inline: 45px;
+        flex-wrap: wrap;
         margin-bottom: 30px;
         box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
         #villes{
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             text-align: center;
             align-items: center;
         }
         a{
         color: black;
-        margin-inline: 10px;
-        padding-inline: 10px;
-        
-    }
-    a:hover{
+        padding-inline: 10px;  
+        }
+        a:hover{
         color: @color2;
-    }
-
-        #btnsearch{
-            background-color: @color1; 
-            height: 40px;
-            width: 40px;
+        }
+        #research{
+            width: 280px;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 150px;
-        }
-        input{
-            height: 40px;
-            width: 350px;
-            border: 1px solid @color1;
-        }
-        ::placeholder{
-            padding-left: 30px;
+            flex-direction: row;
+
+            #btnsearch{
+                background-color: @color1; 
+                height: 40px;
+                width: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            input{
+                height: 40px;
+                width: 240px;
+                border: 1px solid @color1;
+            }
+            ::placeholder{
+                padding-left: 10px;
+            }
         }
 
 
     }
     #actus{
-    height: 520px;
-    width: 93%;
-    margin-inline: 45px;
+    height: 500px;
+    width: 100%;
     border-top: 5px solid @color1;
     box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
     background-color: #fff;
@@ -194,6 +92,7 @@ flex-direction: column;
     overflow-y: scroll;
 
     #lastactus{
+      
         width: 100%;
         display: flex;
     justify-content: center;
@@ -201,15 +100,15 @@ flex-direction: column;
     flex-direction: row;
 
         #actu1{
-            width: 300px;
-            margin-inline: 40px;
-            margin-bottom: 30px;
+            width: 280px;
+            margin-inline: 20px;
             margin-top: 30px;
+            margin-bottom: 30px;
             position: relative;
 
             .ville{
                 height: 20px;
-                width: 140px;
+                width: 120px;
                 background-color: @color1;
                 position: absolute;
                 top: 15px;
@@ -223,6 +122,14 @@ flex-direction: column;
             }
             .imageactus{
                 display: flex;
+                height: 150px;
+                width: 280px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
                 
 
             }
@@ -237,5 +144,93 @@ flex-direction: column;
             }
         }
     }
+    }
+}
+
+
+// responsive
+
+@media screen and (max-width: 350px) {
+
+
+    #closebutton{
+        display: flex!important;
+    }
+    #menu{
+        display: flex!important;
+        width: 100%;
+        height: 60px;
+        background-color: @color3;
+        position: fixed;
+        z-index: 20;
+        padding: 10px;
+        top: 0;
+        left: 0;
+
+        #openbutton{
+            width: 40px;
+            height: 40px;
+            border: 1px solid white;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: @color1;
+            
+        }
+
+    }
+    section{
+        z-index: 15;
+    }
+    header{
+        display: none;
+        width: 100%!important;
+        height: 100vh!important;
+        z-index: 30;
+        position: fixed;
+
+        #imageprofil{
+            margin-top: 30px!important;
+        }
+        button{
+            margin-top: 20px!important;
+        }
+    }
+
+    #cadres{
+        padding-inline: 20px!important;
+
+        h1{
+            margin-top: 40px;
+        }
+        #search{
+            padding-top: 15px;
+
+            #research{
+                padding-top: 40px;
+            }
+        }
+
+        #actus{
+            margin-top: 60px;
+            margin-bottom: 40px;
+           overflow-y: hidden;
+           height: auto;
+
+            #actu1{
+                padding-inline: 10px;
+                width: 280px!important;
+                // border: 1px solid red;
+
+                .imageactus{
+                    width: 260px!important;
+                }
+                .ville{
+                    right:10px!important;
+                }
+            }
+            
+        }
     }
 }

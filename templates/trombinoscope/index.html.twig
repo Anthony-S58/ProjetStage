@@ -6,21 +6,18 @@
     <link rel="stylesheet" href="{{ asset ('css/trombinoscopestyle.css') }}">
 {% endblock %}
 
-{% block body %}
-    
-    <div id="cadres">
-
+{% block body %}   
+    <section id="cadres">
+        <div id="menu"><div id="openbutton"><i class="fas fa-bars"></i></div></div>
         <div id="banniere">
             <img src="{{ asset('/uploads/' ~ user.photobandeau) }}" alt="">
-                <div id="cadreprofil">
-                    <img src="{{ asset('/uploads/' ~ user.photoprofil) }}" width="180px" height="180px" alt="">
-                </div>
+            <div id="cadreprofil">
+                <img src="{{ asset('/uploads/' ~ user.photoprofil) }}" width="180px" height="180px" alt="">
             </div>
-
+        </div>
         <h1>Le Trombinoscope</h1>
-
         <div id="search">
-            <div id="villes">    
+            <div id="research">
                 <div id="btnsearch"><i class="fas fa-search"></div></i><input type="text" placeholder="Rechercher...">
             </div>
         </div>
@@ -44,19 +41,11 @@
                         <div class="icone"><i class="fab fa-twitter"></i></div>
                         <div class="icone"><i class="fab fa-linkedin-in"></i></div>
                     </div>
-
                     <a href="{{ path('profil', {'id': user.id}) }}"><button><i class="fas fa-eye"></i> Voir le profil </button></a>
                 </div>
             {% endfor %}
             </div>
-            </div>
-
         </div>
-    </div>
-        
-
-
-       
-        <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
-
+    </section>      
+    <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
 {% endblock %}

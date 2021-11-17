@@ -7,8 +7,8 @@
 {% endblock %}
 
 {% block body %}
-    
-    <div id="cadres">
+    <section id="cadres">
+        <div id="menu"><div id="openbutton"><i class="fas fa-bars"></i></div></div>
         <div id="title">
             <h1>La vie <span class="lighter">des chocolateries,</span> <span class="categ">Animations</span></h1>
         </div>
@@ -18,53 +18,41 @@
                 {% for user in users %}
                 <div class="person">
                     <img src="{{ asset('/uploads/' ~ user.photoprofil) }}" width="60px" height="60px" alt="">   
-                        <div class="identite">
+                    <div class="identite">
                         <p class="prenom">{{user.prenom}}</p><p class="nom">{{user.nom}}</p>
-                        </div>
+                    </div>
                 </div>
                 {% endfor %}           
             </div>
-
             <div id="lastposts">
-                    <div id="cadrespost">
-                        {% for post in posts %}
-                        <div class="cadrepost">
-
-                            <div id="postimgprofil">
-                                <img src="{{ asset('/uploads/' ~ post.user.photoprofil) }}" width="100px" height="100px" alt="">   
-                            </div>
-                            <div id="postcontent">
-                                <div id="postnomprenom"><h2><span id="firstname">{{post.user.prenom}} </span><span id="lastname"> {{post.user.nom}}</span></h2></div>
-                                <div id="postdatepubli"><p>Publié le {{post.date|date('d/m/Y')}}</p></div>
-
-                                <div id="posttitre"><h3>{{post.titre}}</h3></div>
-                                <div id="postdescript"><p>{{post.description}}</p></div>
-                                <div id="postcategorie">{{post.categories}}</div>
-
-                                <div id="postinteract">
+                <div id="cadrespost">
+                    {% for post in posts %}
+                    <div class="cadrepost">
+                        <div id="postimgprofil">
+                            <img src="{{ asset('/uploads/' ~ post.user.photoprofil) }}" width="100px" height="100px" alt="">   
+                        </div>
+                        <div id="postcontent">
+                            <div id="postnomprenom"><h2><span id="firstname">{{post.user.prenom}} </span><span id="lastname"> {{post.user.nom}}</span></h2></div>
+                            <div id="postdatepubli"><p>Publié le {{post.date|date('d/m/Y')}}</p></div>
+                            <div id="posttitre"><h3>{{post.titre}}</h3></div>
+                            <div id="postdescript"><p>{{post.description}}</p></div>
+                            <div id="postcategorie">{{post.categories}}</div>
+                            <div id="postinteract">
                                 <div id="comments">5 <a href="{{ path('viechocolaterieunique', {'id': post.id}) }}" id="linkcomment"><i class="far fa-comments"></i>&nbsp; commentaires</a></div>
                                 <div id="likes">3 <i class="far fa-heart"></i>&nbsp; j'aime</div>
-                                </div>
                             </div>
                         </div>
-                        {% endfor %}
                     </div>
-                
+                    {% endfor %}
+                </div>   
             </div>
             <div id="categories">
                 <a href="/vie-des-chocolateries" class="linkcateg">Tous les posts</a>
-                {% for categ in categories %}
-                   
-                <a href="{{ path('viechoco', {'id' : categ.id}) }}" class="linkcateg">{{categ.nom}}</a>
-                    
+                {% for categ in categories %}      
+                <a href="{{ path('viechoco', {'id' : categ.id}) }}" class="linkcateg">{{categ.nom}}</a>        
                 {% endfor %}
             </div>
-
         </div>
-
-
-
-    </div>   
-        <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
-
+    </section>   
+    <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
 {% endblock %}

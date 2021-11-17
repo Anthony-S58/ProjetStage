@@ -7,26 +7,22 @@
 {% endblock %}
 
 {% block body %}
-
-   <div id="cadres">
+    <section id="cadres">
+        <div id="menu"><div id="openbutton"><i class="fas fa-bars"></i></div></div>
         <div id="title"><h1>Les actualités, <span id="soustitre">des chocolateries</span></h1></div>
-
-
         <div id="search">
-           <div id="villes">
-           {% for chocolaterie in chocolateries %}
-               
+            <div id="villes">
+            {% for chocolaterie in chocolateries %}           
                 <a href="{{ path('actu', {'id' : chocolaterie.id}) }}">{{chocolaterie.ville}}</a> | 
-           {% endfor %}
+            {% endfor %}
+            </div>
+            <div id="research">
                 <div id="btnsearch"><i class="fas fa-search"></div></i><input type="text" placeholder="Rechercher...">
-           </div>
-
+            </div>
         </div>
         <div id="actus">
-
             <div id="lastactus">
-                        {% for actu in actus %}
-
+                {% for actu in actus %}
                 <div id="actu1">
                     <div class="ville">{{actu.chocolaterie}}</div>
                     <div class="imageactus">
@@ -37,15 +33,9 @@
                         <p>{{actu.texte}}</p>
                     </div>
                 </div>
-                        {% endfor %}
-
-                
-            </div>
-            
+                {% endfor %}          
+            </div>         
         </div>
-    </div>
-   
-       
-        <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
-
+    </section>     
+    <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
 {% endblock %}

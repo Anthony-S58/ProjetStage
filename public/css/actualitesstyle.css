@@ -12,173 +12,79 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background-color: rgba(128, 128, 128, 0.3);
-  display: flex;
-  flex-direction: row;
-}
-header {
-  height: 100vh;
-  width: 20%;
-}
-#bandeau {
-  height: 100%;
-  background-color: #191e39;
-}
-a {
-  color: #fff;
-  text-decoration: none;
-}
-#bloc1 {
-  width: 100%;
-  height: 45%;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-}
-#bloc1 #nomprofil {
-  color: #fff;
-  margin-top: 20px;
-}
-#bloc1 #nomprofil #firstname {
-  font-family: 'Playfair Display', serif;
-  font-weight: 200;
-}
-#bloc1 #nomprofil #lastname {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
-}
-#bloc1 #imageprofil {
-  border-radius: 200px;
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-}
-#bloc1 #imageprofil img {
-  overflow: hidden;
-  object-fit: cover;
-  border-radius: 50%;
-}
-#bloc1 button {
-  width: 200px;
-  height: 40px;
-  margin-top: 30px;
-  background-color: #0baa9f;
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
-}
-#bloc2 {
-  width: 100%;
-  height: 55%;
-  display: flex;
-  color: #fff;
-  background-color: #13172c;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
-}
-#bloc2 h3 {
-  margin-bottom: 20px;
-}
-#bloc2 #liens {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  width: 100%;
-}
-#bloc2 #liens a {
-  width: 100%;
-  height: 40px;
-  padding: 10px;
-  padding-left: 40px;
-}
-#bloc2 #liens a:hover {
-  color: #f2bf2c;
-  background-color: #191e39;
-}
-#bloc2 #liens #select {
-  background-color: #0baa9f4f;
-}
-#cadre {
+#cadres {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 93%;
-  width: 90%;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
   font-family: 'Montserrat', sans-serif;
+  padding-inline: 40px;
 }
-#cadre #title {
-  margin: 50px;
-  padding-inline: 20px;
+#cadres #menu {
+  display: none;
 }
-#cadre #title h1 {
+#cadres #title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#cadres #title h1 {
   font-weight: bold;
 }
-#cadre #title #soustitre {
+#cadres #title #soustitre {
   font-weight: 50;
 }
-#cadre #search {
-  width: 93%;
-  height: 60px;
-  padding-inline: 0px;
+#cadres #search {
+  width: 100%;
+  height: 70px;
   background-color: #fff;
   display: flex;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  margin-inline: 45px;
+  flex-wrap: wrap;
   margin-bottom: 30px;
   box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
 }
-#cadre #search #villes {
+#cadres #search #villes {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   text-align: center;
   align-items: center;
 }
-#cadre #search a {
+#cadres #search a {
   color: black;
-  margin-inline: 10px;
   padding-inline: 10px;
 }
-#cadre #search a:hover {
+#cadres #search a:hover {
   color: #0baa9f;
 }
-#cadre #search #btnsearch {
+#cadres #search #research {
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+}
+#cadres #search #research #btnsearch {
   background-color: #f2bf2c;
   height: 40px;
   width: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 150px;
 }
-#cadre #search input {
+#cadres #search #research input {
   height: 40px;
-  width: 350px;
+  width: 240px;
   border: 1px solid #f2bf2c;
 }
-#cadre #search ::placeholder {
-  padding-left: 30px;
+#cadres #search #research ::placeholder {
+  padding-left: 10px;
 }
-#cadre #actus {
-  height: 520px;
-  width: 93%;
-  margin-inline: 45px;
+#cadres #actus {
+  height: 500px;
+  width: 100%;
   border-top: 5px solid #f2bf2c;
   box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
   background-color: #fff;
@@ -188,23 +94,23 @@ a {
   flex-direction: row;
   overflow-y: scroll;
 }
-#cadre #actus #lastactus {
+#cadres #actus #lastactus {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
 }
-#cadre #actus #lastactus #actu1 {
-  width: 300px;
-  margin-inline: 40px;
-  margin-bottom: 30px;
+#cadres #actus #lastactus #actu1 {
+  width: 280px;
+  margin-inline: 20px;
   margin-top: 30px;
+  margin-bottom: 30px;
   position: relative;
 }
-#cadre #actus #lastactus #actu1 .ville {
+#cadres #actus #lastactus #actu1 .ville {
   height: 20px;
-  width: 140px;
+  width: 120px;
   background-color: #f2bf2c;
   position: absolute;
   top: 15px;
@@ -216,13 +122,90 @@ a {
   font-size: smaller;
   font-weight: bold;
 }
-#cadre #actus #lastactus #actu1 .imageactus {
+#cadres #actus #lastactus #actu1 .imageactus {
   display: flex;
+  height: 150px;
+  width: 280px;
 }
-#cadre #actus #lastactus #actu1 .descriptactus {
+#cadres #actus #lastactus #actu1 .imageactus img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#cadres #actus #lastactus #actu1 .descriptactus {
   font-size: smaller;
 }
-#cadre #actus #lastactus #actu1 .descriptactus h3 {
+#cadres #actus #lastactus #actu1 .descriptactus h3 {
   padding-top: 10px;
   color: #0baa9f;
+}
+@media screen and (max-width: 350px) {
+  #closebutton {
+    display: flex!important;
+  }
+  #menu {
+    display: flex!important;
+    width: 100%;
+    height: 60px;
+    background-color: #191e39;
+    position: fixed;
+    z-index: 20;
+    padding: 10px;
+    top: 0;
+    left: 0;
+  }
+  #menu #openbutton {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f2bf2c;
+  }
+  section {
+    z-index: 15;
+  }
+  header {
+    display: none;
+    width: 100%!important;
+    height: 100vh!important;
+    z-index: 30;
+    position: fixed;
+  }
+  header #imageprofil {
+    margin-top: 30px!important;
+  }
+  header button {
+    margin-top: 20px!important;
+  }
+  #cadres {
+    padding-inline: 20px!important;
+  }
+  #cadres h1 {
+    margin-top: 40px;
+  }
+  #cadres #search {
+    padding-top: 15px;
+  }
+  #cadres #search #research {
+    padding-top: 40px;
+  }
+  #cadres #actus {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    overflow-y: hidden;
+    height: auto;
+  }
+  #cadres #actus #actu1 {
+    padding-inline: 10px;
+    width: 280px!important;
+  }
+  #cadres #actus #actu1 .imageactus {
+    width: 260px!important;
+  }
+  #cadres #actus #actu1 .ville {
+    right: 10px!important;
+  }
 }
