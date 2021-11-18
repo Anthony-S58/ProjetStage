@@ -39,7 +39,10 @@
 							<td>
 								<a class="afficher" href="{{ path('admin_post_show', {'id': post.id}) }}">Afficher</a>
 								<a class="modifier" href="{{ path('admin_post_edit', {'id': post.id}) }}">Modifier</a>
-								<a class="supprimer" href="{{ path('admin_post_delete', {'id': post.id}) }}">Supprimer</a>
+								<form method="post" action="{{ path('admin_employe_delete', {'id': post.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+									<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ post.id) }}">
+									<button class="supprimer">Supprimer</button>
+								</form>
 							</td>
 						</tr>
 					{% else %}
