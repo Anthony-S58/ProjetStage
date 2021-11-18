@@ -131,3 +131,24 @@ a {
 #bloc2 #liens #select {
   background-color: #0baa9f4f;
 }
+@media screen and (max-width: 350px) {
+  header {
+    animation: slideopen 0.7s ease;
+  }
+  @keyframes slideopen {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes slideopen {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}

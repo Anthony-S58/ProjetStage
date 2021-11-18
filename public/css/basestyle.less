@@ -16,6 +16,7 @@ header{
     height: 100vh;
     width: 20%;
     display: flex;
+   
 }
 #bandeau{
     width: 100%;
@@ -128,6 +129,34 @@ position: relative;
             background-color: #0baa9f4f;
         }
     }
+}
+
+@media screen and (max-width: 350px) {
+
+    header{
+    animation: slideopen .7s ease;
+    .open{
+
+        @keyframes slideopen {
+            0% {
+              transform: translateX(0%);
+            }      
+            100% {
+              transform: translateX(-100%);
+            }
+          }
+    }
+    .close{
+        @keyframes slideopen {
+            0% {
+              transform: translateX(-100%);
+            }      
+            100% {
+              transform: translateX(0%);
+            }
+          }
+    }}
+
 }
 
 
