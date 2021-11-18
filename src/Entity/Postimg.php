@@ -18,22 +18,22 @@ class Postimg
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $alt;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $titre;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Post::class)
+     * @ORM\ManyToOne(targetEntity=Post::class, fetch="EAGER")
      * @ORM\JoinColumn(nullable=false)
      */
     private $post;

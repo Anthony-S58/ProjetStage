@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Post;
+use App\Entity\Postimg;
 use App\Form\PostType;
 use App\Repository\PostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -32,13 +33,16 @@ class PostController extends AbstractController
     {
         $user = $this->getUser();
         $post = new Post();
+        $postimg = new Postimg();
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $post->setUser($user);
+            $postimg->setPost($post);
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($post);
+            $entityManager->persist($postimg);
             $entityManager->flush();
 
             return $this->redirectToRoute('profil', [
