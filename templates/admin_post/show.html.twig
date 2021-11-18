@@ -29,7 +29,7 @@
 
 	<a href="{{ path('admin_post_index') }}">Retour à la liste</a>
 
-	<a href="{{ path('admin_post_edit', {'id': post.id}) }}">Modifier</a>
+	<a href="{{ path('admin_post_edit', {'id': post.id} , {'titre': titre.id} , {'description': description.id} , {'date': date.id} ) }}">Modifier</a>
 
 	{{ include('admin_post/_delete_form.html.twig') }}
 {% endblock %}

@@ -46,11 +46,14 @@
 							<td>
 
 								<button class="modifier">
-									<a href="{{ path('admin_employe_edit', {'id': employe.id}) }}">Modifier</a>
+									<i class="fas fa-edit"></i>
+									<a href="{{ path('admin_employe_edit', {'id': employe.id}, ) }}">Modifier</a>
 								</button>
 								<form method="post" action="{{ path('admin_employe_delete', {'id': employe.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+
 									<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ employe.id) }}">
-									<button class="supprimer">Supprimer</button>
+									<button class="supprimer">
+										<i class="far fa-trash-alt"></i>Supprimer</button>
 								</form>
 
 

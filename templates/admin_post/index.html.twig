@@ -45,14 +45,13 @@
 								</form>
 							</td>
 						</tr>
-					{% else %}
-						<tr>
-							<td colspan="5">no records found</td>
-						</tr>
-					{% endfor %}
+					</td>
 				</tbody>
-			</table>
-		</div>
-	</div>
-
-{% endblock %}
+			</tr>
+		{% else %}
+			<tr>
+				<td colspan="5">no records found</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table></div></div>{% endblock %}
