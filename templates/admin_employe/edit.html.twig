@@ -3,12 +3,22 @@
 {% block title %}Edit Employe
 {% endblock %}
 
+{% block stylesheets %}
+	<link
+	rel="stylesheet" href="{{ asset ('css/admincrudstyle.css') }}"/>
+{#{{ encore_entry_link_tags("app") }}#}
+{% endblock %}
+
+
 {% block body %}
-	<h1>Employé</h1>
+	<div class="tout">
+		<h1 class="titre">Employé</h1>
+		<div class="contenu">
+			{{ include('admin_employe/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-	{{ include('admin_employe/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+			<a class="retour2" href="{{ path('admin_employe_index') }}">Retour à la liste</a>
 
-	<a href="{{ path('admin_employe_index') }}">Retour à la liste</a>
-
-	{{ include('admin_employe/_delete_form.html.twig') }}
+			{{ include('admin_employe/_delete_form.html.twig') }}
+		</div>
+	</div>
 {% endblock %}

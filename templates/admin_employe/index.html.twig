@@ -30,10 +30,12 @@
 					<td>
 						<a class="afficher" href="{{ path('admin_employe_show', {'id': employe.id}) }}">Afficher</a>
 						<a class="modifier" href="{{ path('admin_employe_edit', {'id': employe.id}) }}">Modifier</a>
-						<a class="supprimer" href="{{ path('admin_employe_delete', {'id': employe.id}) }}">Supprimer</a>
-
+						{# <a class="supprimer" href="{{ path('admin_employe_delete', {'id': employe.id}) }}">Supprimer</a> #}
+						<form method="post" action="{{ path('admin_employe_delete', {'id': employe.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+							<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ employe.id) }}">
+							<button class="supprimer">Supprimer</button>
+						</form>
 					</td>
-
 				</tr>
 			{% else %}
 
@@ -42,6 +44,5 @@
 				</tr>
 			{% endfor %}
 		</tbody>
-	</table>
-
-{% endblock %}
+	</tr>
+</tbody></tbody></table>{% endblock %}
