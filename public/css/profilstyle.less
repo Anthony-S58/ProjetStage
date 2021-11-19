@@ -147,95 +147,104 @@
                 overflow-y: scroll;
 
            
-            .cadrepost{
-                width: 100%;
-                height: auto;
-                margin-top: 30px;
-                margin-bottom: 20px;
-                padding: 20px;
-                background-color: #fff;
-                position: relative;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-            box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
-
-
-                #postimgprofil{
-                    margin: 20px;
-
-                    img{
-                        border-radius: 150px;
-                    object-fit: cover;
-
-                    }
-                }
-                
-                #postcontent{
-                    
+                .cadrepost{
+                    width: 100%;
+                    height: auto;
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                    padding: 20px;
+                    background-color: #fff;
+                    position: relative;
                     display: flex;
-                    flex-direction: column;
-                    overflow: hidden;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.5);
 
 
-                    #postnomprenom{
-                        padding-top: 20px;
-                        font-size: 0.8em;
-                        #firstname{
-                            font-family: 'Playfair Display', serif;
-                            font-weight: 500;
+                    #postimgprofil{
+                        margin: 20px;
+
+                        img{
+                            border-radius: 150px;
+                        object-fit: cover;
+
+                        }
+                    }
+                    
+                    #postcontent{
+                        
+                        display: flex;
+                        flex-direction: column;
+                        overflow: hidden;
+
+
+                        #postnomprenom{
+                            font-size: 0.8em;
+                            #firstname{
+                                font-family: 'Playfair Display', serif;
+                                font-weight: 500;
+                                }
+                                #lastname{
+                                font-family: 'Montserrat', sans-serif;
+                                font-weight: lighter;
+                                }   
+            
+                        }
+                        #postdatepubli{
+                            color: @color2;
+                            font-size: 0.7em;
+                            font-weight: bold;
+                        }
+                        #posttitre{
+                            margin-top: 10px;
+                            font-weight: bold;
+                            font-size: 0.8em;
+                        }
+                        #postdescript{
+                            font-size: 0.8em;
+                            padding-right: 10px;
+
+                        }
+                        #postcategorie{
+                            height: 20px;
+                            width: 150px;
+                            background-color: @color1;
+                            position: absolute;
+                            top: 15px;
+                            right: -15px;
+                            display: flex;
+                            justify-content: center;
+                            text-align: center;
+                            align-items: center;
+                            font-size: smaller;
+                            font-weight: bold;
+                        }
+                        #postinteract{
+                            margin-top: 20px;
+                            width: 250px;
+                            font-size: 0.8em;
+                            font-weight: bold;
+                            color: @color3;
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: row;
+                            button{
+                                border:none;
                             }
-                            #lastname{
-                            font-family: 'Montserrat', sans-serif;
-                            font-weight: lighter;
-                            }   
-        
+                            #delete {
+                                color:red;
+                                position: absolute;
+                                bottom: 20px;
+                                right: 10px;
+                                cursor: pointer;
+                            }
+                        }
+                        #comments a{
+                            color: @color3;
+                        }
+                    
                     }
-                    #postdatepubli{
-                        color: @color2;
-                        font-size: 0.7em;
-                        font-weight: bold;
-                    }
-                    #posttitre{
-                        margin-top: 10px;
-                        font-weight: bold;
-                        font-size: 0.8em;
-                    }
-                    #postdescript{
-                        font-size: 0.8em;
-                        padding-right: 10px;
-
-                    }
-                    #postcategorie{
-                        height: 20px;
-                        width: 150px;
-                        background-color: @color1;
-                        position: absolute;
-                        top: 15px;
-                        right: -15px;
-                        display: flex;
-                        justify-content: center;
-                        text-align: center;
-                        align-items: center;
-                        font-size: smaller;
-                        font-weight: bold;
-                    }
-                    #postinteract{
-                        margin-top: 20px;
-                        width: 250px;
-                        font-size: 0.8em;
-                        font-weight: bold;
-                        color: @color3;
-                        display: flex;
-                        justify-content: space-between;
-                        flex-direction: row;
-                    }
-                    #comments a{
-                        color: @color3;
-                    }
-                   
                 }
-            }
         }
     }
 

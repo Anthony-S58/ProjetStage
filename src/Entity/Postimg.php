@@ -33,10 +33,11 @@ class Postimg
     private $titre;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Post::class, fetch="EAGER")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToOne(targetEntity=Post::class, inversedBy="postimg")
      */
     private $post;
+
+  
 
     public function getId(): ?int
     {
@@ -79,15 +80,17 @@ class Postimg
         return $this;
     }
 
-    public function getPost(): ?post
+    public function getPost(): ?Post
     {
         return $this->post;
     }
 
-    public function setPost(?post $post): self
+    public function setPost(?Post $post): self
     {
         $this->post = $post;
 
         return $this;
     }
+
+   
 }

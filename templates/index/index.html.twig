@@ -18,7 +18,9 @@
                 <div class="col">
                     {% for post in postcol1 %}
                     <div class="art1">
-                        <img src="img/posts/restaurant-1.jpeg" alt="">
+                        {% for postimg in post.postimg %}   
+                            <img src={{ asset('uploads/' ~ postimg.image) }} alt="">
+                        {% endfor %}
                         <div class="containarticle">
                             <a href="{{ path('viechocolaterieunique', {'id': post.id}) }}"><h3>{{post.titre}}</h3></a>
                             <p>{{post.description}} <span> {{post.categories}}</span></p>
@@ -29,7 +31,9 @@
                 <div class="col">
                     {% for post in postcol2 %}
                     <div class="art2">
-                        <img src="img/posts/team-soleil.jpeg" alt="">
+                        {% for postimg in post.postimg %}   
+                            <img src={{ asset('uploads/' ~ postimg.image) }} alt="">
+                        {% endfor %}
                         <div class="containarticle">
                             <a href="{{ path('viechocolaterieunique', {'id': post.id}) }}"><h3>{{post.titre}}</h3></a>
                             <p>{{post.description}} <span> {{post.categories}}</span></p>
@@ -40,7 +44,9 @@
                 <div class="col">
                     {% for post in postcol3 %}
                     <div class="art3">
-                        <img src="img/posts/restaurant-2.jpeg" alt="">
+                        {% for postimg in post.postimg %}   
+                            <img src={{ asset('uploads/' ~ postimg.image) }} alt="">
+                        {% endfor %}
                         <div class="containarticle">
                             <a href="{{ path('viechocolaterieunique', {'id': post.id}) }}"><h3>{{post.titre}}</h3></a>
                             <p>{{post.description}} <span> {{post.categories}}</span></p>

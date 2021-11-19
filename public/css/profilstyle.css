@@ -166,7 +166,6 @@
   overflow: hidden;
 }
 #cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postnomprenom {
-  padding-top: 20px;
   font-size: 0.8em;
 }
 #cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postnomprenom #firstname {
@@ -214,6 +213,16 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postinteract button {
+  border: none;
+}
+#cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #postinteract #delete {
+  color: red;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  cursor: pointer;
 }
 #cadres #cadre2 #lastposts #cadrespost .cadrepost #postcontent #comments a {
   color: #191e39;
