@@ -3,7 +3,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf)
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v25/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf)
     format("truetype");
 }
 @font-face {
@@ -19,7 +19,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf)
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v25/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf)
     format("truetype");
 }
 * {
@@ -34,11 +34,12 @@ header {
   background-repeat: no-repeat;
   background-blend-mode: screen;
   background-color: #19a498;
-  width: 20%;
-  /* height: 200px; */
+  width: 330px;
+  height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  justify-content: space-around;
 }
 @media all and (max-width: 700px) {
   header {
