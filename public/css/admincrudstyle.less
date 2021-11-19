@@ -2,23 +2,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital@1&display=swap");
 
-.tout {
-  width: 500px;
-  height: 200px;
-}
-
 .titre {
+  font-size: 50px;
   text-align: center;
+  width: 100%;
+  margin: 70px auto;
+  font: italic 5em "Fira Sans", serif;
 }
 
-.contenu {
+.bloc-form {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 30px;
+  width: 70%;
   display: flex;
   justify-content: center;
-  text-align: center;
-  padding: 60px;
+  margin: auto;
+
+  label {
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 5px 12px;
+    width: 100%;
+    display: block;
+  }
+
+  textarea {
+    height: 150px;
+  }
+
+  .btns {
+    width: 100%;
+    margin-top: 20px;
+
+    .btn {
+      display: inline-block;
+      padding: 8px 20px;
+      background-color: @color2;
+      border: none;
+      color: #333;
+      margin: 0 10px;
+    }
+  }
 }
 
 .retour2 {
-  margin-top: 50px;
+  margin-top: 100px;
   color: black;
+  width: 120px;
+  height: 50px;
+  display: inline-block;
+  background-color: gray;
 }

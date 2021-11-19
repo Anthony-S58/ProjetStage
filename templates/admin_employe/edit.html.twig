@@ -11,14 +11,23 @@
 
 
 {% block body %}
-	<div class="tout">
-		<h1 class="titre">Employé</h1>
-		<div class="contenu">
-			{{ include('admin_employe/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-			<a class="retour2" href="{{ path('admin_employe_index') }}">Retour à la liste</a>
+	<h1 class="titre">Employé</h1>
 
-			{{ include('admin_employe/_delete_form.html.twig') }}
+	<div class="bloc-form">
+
+		{{ form_start(form) }}
+		{{ form_widget(form) }}
+
+		<div class="btns">
+			<a class="btn" href="{{ path('admin_utilisateur') }}">Retour à la liste</a>
+			<button class="btn">{{ button_label|default('Enregistrer') }}</button>
 		</div>
+
+
+		{{ form_end(form) }}
+
+
 	</div>
+
 {% endblock %}

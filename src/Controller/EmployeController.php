@@ -69,7 +69,7 @@ class EmployeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('admin_employe_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('admin_utilisateur', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('admin_employe/edit.html.twig', [
@@ -89,6 +89,6 @@ class EmployeController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin_employe_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('admin_utilisateur', [], Response::HTTP_SEE_OTHER);
     }
 }

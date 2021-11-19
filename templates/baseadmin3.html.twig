@@ -8,8 +8,8 @@
 			{% block title %}{% endblock %}
 		</title>
 		{# Run `composer require symfony/webpack-encore-bundle` and uncomment the
-												    following Encore helpers to start using Symfony UX #}
-
+																		    following Encore helpers to start using Symfony UX #}
+		<link rel="stylesheet" href="{{ asset ('css/styleadmin.css') }}"/>
 		{% block stylesheets %}
 			{#{{encore_entry_link_tags("app")}}#}
 		{% endblock %}
@@ -18,7 +18,7 @@
 		{% endblock %}
 	</head>
 	<body>
-		<header>
+		<header id="header3">
 			<div class="logoheader">
 				<img src="../img/logo-david-kenos.png" alt="logo de David Kenos"/>
 			</div>
