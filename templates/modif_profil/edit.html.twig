@@ -10,14 +10,20 @@
 {% block body %}
 
     
-    <div id="cadres">
+    <section id="cadres">
+        <div id="menu"><div id="openbutton"><i class="fas fa-bars"></i></div></div>
         <div id="title">
             <h1>Modifier mon profil</h1>
         </div>
-    {{ include('modif_profil/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+        <div id="formulairepost">
 
-    <a href="{{ path('profil', {'id' : user.id}) }}">Retour au profil</a>
-    </div>
+        {{ include('modif_profil/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+        <a href="{{ path('profil', {'id' : user.id}) }}">Retour au profil</a>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/508ebce8fc.js"></script>
+
 
     {# <a href="{{ path('modif_profil_index') }}">back to list</a> #}
 
