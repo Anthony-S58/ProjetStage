@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block stylesheets %}         
     <link rel="stylesheet" href="{{ asset ('css/accueilstyle.css') }}">
@@ -19,7 +19,7 @@
                     {% for post in postcol1 %}
                     <div class="art1">
                         {% for postimg in post.postimg %}   
-                            <img src={{ asset('uploads/' ~ postimg.image) }} alt="">
+                            <img src={{ asset('uploads/' ~ postimg.image) }} alt="{{post.titre}}">
                         {% endfor %}
                         <div class="containarticle">
                             <a href="{{ path('viechocolaterieunique', {'id': post.id}) }}"><h3>{{post.titre}}</h3></a>
@@ -32,7 +32,7 @@
                     {% for post in postcol2 %}
                     <div class="art2">
                         {% for postimg in post.postimg %}   
-                            <img src={{ asset('uploads/' ~ postimg.image) }} alt="">
+                            <img src={{ asset('uploads/' ~ postimg.image) }} alt="{{post.titre}}">
                         {% endfor %}
                         <div class="containarticle">
                             <a href="{{ path('viechocolaterieunique', {'id': post.id}) }}"><h3>{{post.titre}}</h3></a>
@@ -45,7 +45,7 @@
                     {% for post in postcol3 %}
                     <div class="art3">
                         {% for postimg in post.postimg %}   
-                            <img src={{ asset('uploads/' ~ postimg.image) }} alt="">
+                            <img src={{ asset('uploads/' ~ postimg.image) }} alt="{{post.titre}}">
                         {% endfor %}
                         <div class="containarticle">
                             <a href="{{ path('viechocolaterieunique', {'id': post.id}) }}"><h3>{{post.titre}}</h3></a>
@@ -66,7 +66,7 @@
                 <div id="cadreactu">
                     <div class="ville">{{actu.chocolaterie}}</div>
                     <div class="imageactus">
-                        <img src="../img/posts/paysage.jpeg" width="380px" height="160px" alt="">
+                        <img src="../img/posts/paysage.jpeg" width="380px" height="160px" alt="image actualites">
                     </div>
                     <div class="descriptactus">
                         <h3>{{actu.titre}}</h3>

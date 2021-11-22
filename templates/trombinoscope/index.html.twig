@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}Trombinoscope{% endblock %}
 
 {% block stylesheets %}         
     <link rel="stylesheet" href="{{ asset ('css/trombinoscopestyle.css') }}">
@@ -10,9 +10,9 @@
     <section id="cadres">
         <div id="menu"><div id="openbutton"><i class="fas fa-bars"></i></div></div>
         <div id="banniere">
-            <img src="{{ asset('/uploads/' ~ user.photobandeau) }}" alt="">
+            <img src="{{ asset('/uploads/' ~ user.photobandeau) }}" alt="photo bannière">
             <div id="cadreprofil">
-                <img src="{{ asset('/uploads/' ~ user.photoprofil) }}" width="180px" height="180px" alt="">
+                <img src="{{ asset('/uploads/' ~ user.photoprofil) }}" width="180px" height="180px" alt="photo profil">
             </div>
         </div>
         <h1>Le Trombinoscope</h1>
@@ -25,9 +25,9 @@
             {% for user in users %}
             <div id="carte">
                 <div id="imgfond">
-                    <img src="{{ asset('/uploads/' ~ user.photobandeau) }}"alt="">
+                    <img src="{{ asset('/uploads/' ~ user.photobandeau) }}"alt="photo bannière">
                     <div id="picprofil">
-                        <img src="{{ asset('/uploads/' ~ user.photoprofil) }}"alt="">
+                        <img src="{{ asset('/uploads/' ~ user.photoprofil) }}"alt="photo profil">
                     </div>
                 </div>
                 <div class="ville">{{user.chocolaterie}}</div>

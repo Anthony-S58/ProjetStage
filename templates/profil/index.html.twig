@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}Mon Profil{% endblock %}
 
 {% block stylesheets %}         
     <link rel="stylesheet" href="{{ asset ('css/profilstyle.css') }}">
@@ -10,9 +10,9 @@
     <section id="cadres">
         <div id="menu"><div id="openbutton"><i class="fas fa-bars"></i></div></div>
         <div id="banniere">
-            <img src="{{ asset('/uploads/' ~ userid.photobandeau) }}" alt="">
+            <img src="{{ asset('/uploads/' ~ userid.photobandeau) }}" alt="photo bannière">
             <div id="cadreprofil">
-                <img src="{{ asset('/uploads/' ~ userid.photoprofil) }}" width="180px" height="180px" alt="">
+                <img src="{{ asset('/uploads/' ~ userid.photoprofil) }}" width="180px" height="180px" alt="photo profil">
             </div>
         </div>
         <div id="cadre2">
@@ -51,7 +51,7 @@
                     {% for post in posts %}
                     <div class="cadrepost">
                         <div id="postimgprofil">
-                            <img src="{{ asset('/uploads/' ~ post.user.photoprofil) }}" width="100px" height="100px" alt="">   
+                            <img src="{{ asset('/uploads/' ~ post.user.photoprofil) }}" width="100px" height="100px" alt="photo profil">   
                         </div>
                         <div id="postcontent">
                             <div id="postnomprenom"><h2><span id="firstname">{{post.user.prenom}} </span><span id="lastname"> {{post.user.nom}}</span></h2></div>

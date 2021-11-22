@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}Vie des chocolateries{% endblock %}
 
 {% block stylesheets %}         
     <link rel="stylesheet" href="{{ asset ('css/chocolateriesuniquestyle.css') }}">
@@ -17,7 +17,7 @@
                 <h2>Les derniers inscrits</h2>
                 {% for user in users %}
                 <div class="person">
-                    <img src="{{ asset('/uploads/' ~ user.photoprofil) }}" width="60px" height="60px" alt="">   
+                    <img src="{{ asset('/uploads/' ~ user.photoprofil) }}" width="60px" height="60px" alt="photo profil">   
                     <div class="identite">
                         <p class="prenom">{{user.prenom}}</p><p class="nom">{{user.nom}}</p>
                     </div>
@@ -28,7 +28,7 @@
                 <div id="cadrespost">
                     <div class="cadrepost">
                         <div id="postimgprofil">
-                            <img src="{{ asset('/uploads/' ~ post.user.photoprofil) }}" width="100px" height="100px" alt="">   
+                            <img src="{{ asset('/uploads/' ~ post.user.photoprofil) }}" width="100px" height="100px" alt="photo profil">   
                         </div>
                         <div id="postcontent">
                             <div id="postnomprenom"><h2><span id="firstname">{{post.user.prenom}} </span><span id="lastname"> {{post.user.nom}}</span></h2></div>
@@ -56,7 +56,7 @@
                                 <div class="commentrow1">
                                     <div class="comment1">
                                         <div class="imgcomment">
-                                            <img src="../img/profils/evelyne alebat/woman-blond-smile.jpeg" width="40px" height="40px" alt="">   
+                                            <img src="../img/profils/evelyne alebat/woman-blond-smile.jpeg" width="40px" height="40px" alt="photo profil">   
                                         </div>
                                         <div class="textcomment">
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium </p>
@@ -67,7 +67,7 @@
                                 <div class="commentrow1">
                                     <div class="comment1">
                                         <div class="imgcomment">
-                                            <img src="../img/profils/evelyne alebat/woman-blond-smile.jpeg" width="40px" height="40px" alt="">   
+                                            <img src="../img/profils/evelyne alebat/woman-blond-smile.jpeg" width="40px" height="40px" alt="photo profil">   
                                         </div>
                                         <div class="textcomment">
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium </p>
@@ -78,7 +78,7 @@
                                 <div class="commentrow2">
                                     <div class="comment2">
                                         <div class="imgcomment">
-                                                <img src="../img/profils/anthony riviere/anthony-riviere.jpg" width="40px" height="40px" alt="">   
+                                                <img src="../img/profils/anthony riviere/anthony-riviere.jpg" width="40px" height="40px" alt="photo profil">   
                                         </div>
                                         <div class="textcomment">
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium </p>
@@ -89,7 +89,7 @@
                                 <div class="commentrow1">
                                     <div class="comment1">
                                         <div class="imgcomment">
-                                            <img src="../img/profils/evelyne alebat/woman-blond-smile.jpeg" width="40px" height="40px" alt="">   
+                                            <img src="../img/profils/evelyne alebat/woman-blond-smile.jpeg" width="40px" height="40px" alt="photo profil">   
                                         </div>
                                         <div class="textcomment">
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium </p>
