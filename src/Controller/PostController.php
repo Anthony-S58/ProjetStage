@@ -54,14 +54,14 @@ class PostController extends AbstractController
                 $this->getParameter('images_directory'),
                 $fichier
             );
-        }
+            }
 
-        catch (FileException $e) {
-            // ... handle exception if something happens during file upload
+            catch (FileException $e) {
+                // ... handle exception if something happens during file upload
+            }
+            // On stock l'image dans la base de données (son nom)
+            $postimg->setImage($fichier);
         }
-        // On stock l'image dans la base de données (son nom)
-        $postimg->setImage($fichier);
-    }
 
 
             $post->setUser($user);
