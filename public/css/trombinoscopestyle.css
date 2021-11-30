@@ -102,6 +102,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   overflow-y: scroll;
+  padding-inline: 20px;
 }
 #cadres #cartes #carte {
   margin-top: 20px;

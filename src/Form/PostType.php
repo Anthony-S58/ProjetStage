@@ -18,7 +18,8 @@ class PostType extends AbstractType
             ->add('description')
             ->add('categories')
             ->add('image', Filetype::class, [
-                'mapped' => false
+                'mapped' => false,
+                'required' => false
             ])
             // ->add('date')
             // ->add('user')
